@@ -1,0 +1,16 @@
+node_modules/
+.next/
+__pycache__/
+*.pyc
+.env*
+ENTREGA_CODIGO/
+entregas/
+reports/
+*.pptx
+*.pdf
+*.bin
+*.zip
+*.bundle
+data/status_cameras/
+web/public/reports/*.pdf
+web/public/previews/*.png

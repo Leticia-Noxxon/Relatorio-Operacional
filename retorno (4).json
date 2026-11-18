@@ -1,0 +1,492 @@
+{
+  "trocas": 51,
+  "buckets": [
+    {
+      "name": "sem falha",
+      "count": 22
+    },
+    {
+      "name": "1 a 7 dias",
+      "count": 19
+    },
+    {
+      "name": "8 a 15 dias",
+      "count": 5
+    },
+    {
+      "name": "16 a 30 dias",
+      "count": 0
+    },
+    {
+      "name": "31 a 60 dias",
+      "count": 0
+    },
+    {
+      "name": "acima de 60 dias",
+      "count": 0
+    }
+  ],
+  "mediana": 3,
+  "media": 4.0,
+  "rows": [
+    {
+      "Garagem": "Viação Metrópole AE Carvalho",
+      "Data da troca": "14/09/2026",
+      "Prefixo": "32062",
+      "Data da falha (OFFLINE)": "22/09/2026",
+      "Dias até a falha": "8",
+      "Faixa": "8 a 15 dias",
+      "Situação": "OFFLINE"
+    },
+    {
+      "Garagem": "Via Sudeste Cursino",
+      "Data da troca": "14/09/2026",
+      "Prefixo": "51061",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Grajaú",
+      "Data da troca": "15/09/2026",
+      "Prefixo": "61314",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole Imperador",
+      "Data da troca": "16/09/2026",
+      "Prefixo": "31210",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole Imperador",
+      "Data da troca": "17/09/2026",
+      "Prefixo": "31212",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Grajaú",
+      "Data da troca": "17/09/2026",
+      "Prefixo": "61334",
+      "Data da falha (OFFLINE)": "18/09/2026",
+      "Dias até a falha": "1",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "A2 Transportes",
+      "Data da troca": "17/09/2026",
+      "Prefixo": "68639",
+      "Data da falha (OFFLINE)": "21/09/2026",
+      "Dias até a falha": "4",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "Santa Brigida",
+      "Data da troca": "22/09/2026",
+      "Prefixo": "11072",
+      "Data da falha (OFFLINE)": "30/09/2026",
+      "Dias até a falha": "8",
+      "Faixa": "8 a 15 dias",
+      "Situação": "OFFLINE"
+    },
+    {
+      "Garagem": "Santa Brigida",
+      "Data da troca": "22/09/2026",
+      "Prefixo": "11796",
+      "Data da falha (OFFLINE)": "28/09/2026",
+      "Dias até a falha": "6",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE"
+    },
+    {
+      "Garagem": "Viação Metrópole Iguatemi",
+      "Data da troca": "28/09/2026",
+      "Prefixo": "31101",
+      "Data da falha (OFFLINE)": "30/09/2026",
+      "Dias até a falha": "2",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE"
+    },
+    {
+      "Garagem": "Viação Metrópole M'Boi Mirim",
+      "Data da troca": "29/09/2026",
+      "Prefixo": "73218",
+      "Data da falha (OFFLINE)": "30/09/2026",
+      "Dias até a falha": "1",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "Viação Metrópole Pinedo",
+      "Data da troca": "01/10/2026",
+      "Prefixo": "73490",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole Pinedo",
+      "Data da troca": "02/10/2026",
+      "Prefixo": "73851",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole Pinedo",
+      "Data da troca": "02/10/2026",
+      "Prefixo": "73882",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole Pinedo",
+      "Data da troca": "03/10/2026",
+      "Prefixo": "73789",
+      "Data da falha (OFFLINE)": "09/10/2026",
+      "Dias até a falha": "6",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE"
+    },
+    {
+      "Garagem": "Viação Metrópole Imperador",
+      "Data da troca": "06/10/2026",
+      "Prefixo": "31281",
+      "Data da falha (OFFLINE)": "07/10/2026",
+      "Dias até a falha": "1",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "Viação Metrópole AE Carvalho",
+      "Data da troca": "06/10/2026",
+      "Prefixo": "32950",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole Pinedo",
+      "Data da troca": "06/10/2026",
+      "Prefixo": "73848",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole Pinedo",
+      "Data da troca": "06/10/2026",
+      "Prefixo": "73855",
+      "Data da falha (OFFLINE)": "07/10/2026",
+      "Dias até a falha": "1",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "Viação Metrópole Brás",
+      "Data da troca": "07/10/2026",
+      "Prefixo": "32699",
+      "Data da falha (OFFLINE)": "13/10/2026",
+      "Dias até a falha": "6",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE"
+    },
+    {
+      "Garagem": "Viação Metrópole Pinedo",
+      "Data da troca": "07/10/2026",
+      "Prefixo": "73798",
+      "Data da falha (OFFLINE)": "19/10/2026",
+      "Dias até a falha": "12",
+      "Faixa": "8 a 15 dias",
+      "Situação": "OFFLINE"
+    },
+    {
+      "Garagem": "Viação Metrópole Pinedo",
+      "Data da troca": "07/10/2026",
+      "Prefixo": "73804",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole Itaim",
+      "Data da troca": "08/10/2026",
+      "Prefixo": "31980",
+      "Data da falha (OFFLINE)": "09/10/2026",
+      "Dias até a falha": "1",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "Viação Metrópole AE Carvalho",
+      "Data da troca": "08/10/2026",
+      "Prefixo": "32052",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole Pinedo",
+      "Data da troca": "08/10/2026",
+      "Prefixo": "73836",
+      "Data da falha (OFFLINE)": "09/10/2026",
+      "Dias até a falha": "1",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "Viação Metrópole M'Boi Mirim",
+      "Data da troca": "08/10/2026",
+      "Prefixo": "73947",
+      "Data da falha (OFFLINE)": "19/10/2026",
+      "Dias até a falha": "11",
+      "Faixa": "8 a 15 dias",
+      "Situação": "OFFLINE"
+    },
+    {
+      "Garagem": "Viação Metrópole Imperador",
+      "Data da troca": "09/10/2026",
+      "Prefixo": "31213",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole AE Carvalho",
+      "Data da troca": "09/10/2026",
+      "Prefixo": "32014",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole AE Carvalho",
+      "Data da troca": "09/10/2026",
+      "Prefixo": "32045",
+      "Data da falha (OFFLINE)": "13/10/2026",
+      "Dias até a falha": "4",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "Via Sudeste Sapopemba",
+      "Data da troca": "09/10/2026",
+      "Prefixo": "52123",
+      "Data da falha (OFFLINE)": "13/10/2026",
+      "Dias até a falha": "4",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "Viação Metrópole AE Carvalho",
+      "Data da troca": "10/10/2026",
+      "Prefixo": "32057",
+      "Data da falha (OFFLINE)": "13/10/2026",
+      "Dias até a falha": "3",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "Viação Metrópole Itaim",
+      "Data da troca": "10/10/2026",
+      "Prefixo": "32170",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Grajaú",
+      "Data da troca": "10/10/2026",
+      "Prefixo": "61548",
+      "Data da falha (OFFLINE)": "19/10/2026",
+      "Dias até a falha": "9",
+      "Faixa": "8 a 15 dias",
+      "Situação": "OFFLINE"
+    },
+    {
+      "Garagem": "Viação Metrópole AE Carvalho",
+      "Data da troca": "17/10/2026",
+      "Prefixo": "32621",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole Imperador",
+      "Data da troca": "19/10/2026",
+      "Prefixo": "31945",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole AE Carvalho",
+      "Data da troca": "19/10/2026",
+      "Prefixo": "32423",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Grajaú",
+      "Data da troca": "20/10/2026",
+      "Prefixo": "61073",
+      "Data da falha (OFFLINE)": "21/10/2026",
+      "Dias até a falha": "1",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "Viação Metrópole M'Boi Mirim",
+      "Data da troca": "20/10/2026",
+      "Prefixo": "73357",
+      "Data da falha (OFFLINE)": "21/10/2026",
+      "Dias até a falha": "1",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "Viação Metrópole Imperador",
+      "Data da troca": "21/10/2026",
+      "Prefixo": "31090",
+      "Data da falha (OFFLINE)": "23/10/2026",
+      "Dias até a falha": "2",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE"
+    },
+    {
+      "Garagem": "Viação Metrópole Imperador",
+      "Data da troca": "21/10/2026",
+      "Prefixo": "31111",
+      "Data da falha (OFFLINE)": "22/10/2026",
+      "Dias até a falha": "1",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "Viação Metrópole Imperador",
+      "Data da troca": "21/10/2026",
+      "Prefixo": "31802",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole Brás",
+      "Data da troca": "21/10/2026",
+      "Prefixo": "31989",
+      "Data da falha (OFFLINE)": "23/10/2026",
+      "Dias até a falha": "2",
+      "Faixa": "1 a 7 dias",
+      "Situação": "OFFLINE já no primeiro relatório depois da troca"
+    },
+    {
+      "Garagem": "Viação Grajaú",
+      "Data da troca": "21/10/2026",
+      "Prefixo": "61642",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole M'Boi Mirim",
+      "Data da troca": "21/10/2026",
+      "Prefixo": "73351",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Metrópole M'Boi Mirim",
+      "Data da troca": "21/10/2026",
+      "Prefixo": "73614",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Grajaú",
+      "Data da troca": "22/10/2026",
+      "Prefixo": "61806",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "sem falha",
+      "Situação": "Sem falha até 23/10/2026"
+    },
+    {
+      "Garagem": "Viação Grajaú",
+      "Data da troca": "23/10/2026",
+      "Prefixo": "61736",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "",
+      "Situação": "Prefixo sem linha nos relatórios depois da troca"
+    },
+    {
+      "Garagem": "Viação Metrópole M'Boi Mirim",
+      "Data da troca": "23/10/2026",
+      "Prefixo": "73634",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "",
+      "Situação": "Prefixo sem linha nos relatórios depois da troca"
+    },
+    {
+      "Garagem": "Viação Metrópole Pinedo",
+      "Data da troca": "23/10/2026",
+      "Prefixo": "73828",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "",
+      "Situação": "Prefixo sem linha nos relatórios depois da troca"
+    },
+    {
+      "Garagem": "Viação Metrópole AE Carvalho",
+      "Data da troca": "24/10/2026",
+      "Prefixo": "32045",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "",
+      "Situação": "Prefixo sem linha nos relatórios depois da troca"
+    },
+    {
+      "Garagem": "Via Sudeste Sapopemba",
+      "Data da troca": "24/10/2026",
+      "Prefixo": "52156",
+      "Data da falha (OFFLINE)": "",
+      "Dias até a falha": "",
+      "Faixa": "",
+      "Situação": "Prefixo sem linha nos relatórios depois da troca"
+    }
+  ]
+}
