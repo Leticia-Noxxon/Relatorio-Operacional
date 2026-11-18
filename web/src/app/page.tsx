@@ -51,6 +51,20 @@ const TAB_ICON: Record<ReportId, ReactNode> = {
   retorno: <IconSwitch size={15} />,
 };
 
+/** GitHub Pages: sem rotas de API. Os JSON estáticos são servidos em /data. */
+const STATIC_EXPORT = process.env.NEXT_PUBLIC_GITHUB_PAGES === "true";
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+function statusUrl() {
+  if (STATIC_EXPORT) return `${BASE_PATH}/data/web_status.json`;
+  return "/api/status";
+}
+
+function datasetUrl(id: string) {
+  if (STATIC_EXPORT) return `${BASE_PATH}/data/datasets/${id}.json`;
+  return `/api/data/${id}?t=${Date.now()}`;
+}
+
 export default function HomePage() {
   const [tab, setTab] = useState<ReportId>("executivo");
   const [status, setStatus] = useState<StatusPayload | null>(null);
@@ -68,7 +82,7 @@ export default function HomePage() {
   const tabData = bundle[tab] || null;
 
   const loadStatus = useCallback(async () => {
-    const res = await fetch("/api/status", { cache: "no-store" });
+    const res = await fetch(statusUrl(), { cache: "no-store" });
     const parsed = await readJson<StatusPayload>(res);
     if (!parsed.ok) throw new Error(parsed.error);
     const payload = parsed.data;
@@ -84,7 +98,7 @@ export default function HomePage() {
     try {
       const results = await Promise.all(
         REPORT_IDS.map(async (id) => {
-          const res = await fetch(`/api/data/${id}?t=${Date.now()}`, {
+          const res = await fetch(datasetUrl(id), {
             cache: "no-store",
           });
           const parsed = await readJson<Record<string, unknown>>(res);
@@ -120,6 +134,7 @@ export default function HomePage() {
   }, [toast]);
 
   async function onRefresh() {
+    if (STATIC_EXPORT) return;
     setBusy(true);
     setBusyKind("refresh");
     setError(null);
@@ -149,6 +164,7 @@ export default function HomePage() {
   }
 
   async function onApplyFilter() {
+    if (STATIC_EXPORT) return;
     setBusy(true);
     setBusyKind("filter");
     setError(null);
@@ -242,7 +258,7 @@ export default function HomePage() {
                 >
                   <IconFilter />
                 </button>
-                {/* PDF desabilitado no app publicado (revisão de privacidade). */}
+                {/* PDF e prévia exigem o servidor; ficam desabilitados no Pages. */}
                 <span
                   title="Download de PDF desabilitado"
                   aria-label="Download de PDF desabilitado"
@@ -262,7 +278,7 @@ export default function HomePage() {
                     </strong>
                   </span>
                 </div>
-                {/* Refresh do pipeline desabilitado no app publicado (sem auth). */}
+                {/* Refresh, PDF e prévia exigem API; desabilitados no export estático. */}
                 <button
                   type="button"
                   onClick={onRefresh}

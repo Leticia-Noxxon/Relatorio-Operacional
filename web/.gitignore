@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# Copiado só durante o build estático do Pages
+/public/data
+
 # production
 /build
 

@@ -3,7 +3,7 @@
 
 Prioridade:
 1) JOTFORM_API_KEY → submissions API → XLSX
-2) JOTFORM_SHARE_URL / URL padrão com token st= (melhor esforço)
+2) JOTFORM_SHARE_URL (melhor esforço; sem URL embutida no código)
 3) Mantém o XLSX local mais recente se a coleta falhar
 """
 
@@ -24,13 +24,8 @@ OUT = ROOT / "data" / "jotform"
 OUT.mkdir(parents=True, exist_ok=True)
 
 FORM_ID = os.environ.get("JOTFORM_FORM_ID", "250754083828665")
-DEFAULT_SHARE = (
-    "https://www.jotform.com/tables/250754083828665"
-    "?st=RWprbDdhTVFlVUZLWVlHVm1hbHNqYWN0TVNHSjQ1ZWpVam0ydHZodUEzNGh5TlA1"
-    "Q3hINzV5bkgyZGxEWDZzZVNPbjBNNy93MHJVVk05UDZreDFPR2Q4U2hnb3BGb2tlTW1N"
-    "M1R3QWRTRWJvT0RhT1dJejJ5MU9ldlUvQ3grekI="
-)
-SHARE_URL = os.environ.get("JOTFORM_SHARE_URL", DEFAULT_SHARE)
+DEFAULT_SHARE = ""
+SHARE_URL = os.environ.get("JOTFORM_SHARE_URL", DEFAULT_SHARE).strip()
 API_KEY = os.environ.get("JOTFORM_API_KEY", "").strip()
 TZ = ZoneInfo("America/Sao_Paulo")
 
@@ -87,6 +82,8 @@ def from_api_key() -> Path | None:
 
 def probe_share_url() -> dict:
     """Verifica se o link compartilhado ainda libera a tabela sem login."""
+    if not SHARE_URL:
+        return {"status": None, "needs_login": True, "title": None}
     r = requests.get(
         SHARE_URL,
         timeout=30,
