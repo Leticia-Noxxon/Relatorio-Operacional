@@ -55,6 +55,13 @@ JOBS = [
     },
 ]
 
+_end_raw = os.environ.get("REPORT_PERIOD_END", "").strip()
+if _end_raw:
+    _period_end = date.fromisoformat(_end_raw)
+    for _job in JOBS:
+        if _period_end >= _job["inicio"]:
+            _job["fim"] = _period_end
+
 
 def daterange(a: date, b: date):
     d = a
@@ -69,8 +76,14 @@ def login() -> str:
         json={"email": EMAIL, "senha": PASSWORD},
         timeout=60,
     )
-    r.raise_for_status()
-    return r.json()["token"]
+    if not r.ok:
+        print(f"Login NxNet HTTP {r.status_code}", file=sys.stderr)
+        raise SystemExit(1)
+    token = (r.json() or {}).get("token") or ""
+    if not token:
+        print("Login NxNet sem token", file=sys.stderr)
+        raise SystemExit(1)
+    return token
 
 
 def fetch_day(session: requests.Session, operadora_id: int, day: date) -> dict:

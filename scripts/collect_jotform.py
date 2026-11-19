@@ -51,7 +51,9 @@ def from_api_key() -> Path | None:
     while True:
         params["offset"] = offset
         r = requests.get(url, params=params, timeout=60)
-        r.raise_for_status()
+        if not r.ok:
+            print(f"Jotform API HTTP {r.status_code}", file=sys.stderr)
+            return None
         payload = r.json()
         content = payload.get("content") or []
         if not content:

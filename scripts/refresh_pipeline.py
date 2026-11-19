@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 from datetime import date, datetime
@@ -26,58 +27,35 @@ def run(cmd: list[str], env: dict | None = None) -> None:
     subprocess.run(cmd, cwd=str(ROOT), check=True, env=merged)
 
 
-def patch_period(start: date, end: date) -> None:
-    """Ajusta PERIOD_END / fim de coleta nos scripts principais."""
-    replacements = {
-        ROOT / "generate_report.py": (
-            "PERIOD_END = date(",
-            f"PERIOD_END = date({end.year}, {end.month}, {end.day})",
-        ),
-        ROOT / "scripts" / "generate_retorno_switch.py": (
-            "PERIOD_END = date(",
-            f"PERIOD_END = date({end.year}, {end.month}, {end.day})",
-        ),
-    }
-    for path, (prefix, new_line) in replacements.items():
-        text = path.read_text(encoding="utf-8")
-        lines = []
-        for line in text.splitlines(True):
-            if line.lstrip().startswith(prefix):
-                indent = line[: len(line) - len(line.lstrip())]
-                lines.append(indent + new_line + "\n")
-            else:
-                lines.append(line)
-        path.write_text("".join(lines), encoding="utf-8")
+def configure_period(start: date, end: date) -> None:
+    """O período entra por variável de ambiente. Os scripts não são reescritos."""
+    os.environ["REPORT_PERIOD_START"] = start.isoformat()
+    os.environ["REPORT_PERIOD_END"] = end.isoformat()
+    print(f"periodo {start.isoformat()} .. {end.isoformat()}")
 
-    # coleta NxNet: historico até end (ou end-1 se for hoje incompleto)
-    collect = ROOT / "scripts" / "collect_status_api.py"
-    text = collect.read_text(encoding="utf-8")
-    # substitui ambos os fim= date(...)
-    import re
 
-    text2, n = re.subn(
-        r'"fim": date\(\d+, \d+, \d+\)',
-        f'"fim": date({end.year}, {end.month}, {end.day})',
-        text,
-    )
-    if n:
-        collect.write_text(text2, encoding="utf-8")
-        print(f"collect fim -> {end} ({n} ocorrências)")
+def require_secrets() -> None:
+    missing = [
+        name
+        for name in ("NOXXON_PASSWORD", "JOTFORM_API_KEY")
+        if not os.environ.get(name, "").strip()
+    ]
+    if missing:
+        print(
+            "Segredos ausentes: " + ", ".join(missing) + ". "
+            "Nenhum JSON do painel será alterado.",
+            file=sys.stderr,
+        )
+        raise SystemExit(2)
 
-    # PERIOD_START opcional
-    if start:
-        for path in (ROOT / "generate_report.py", ROOT / "scripts" / "generate_retorno_switch.py"):
-            t = path.read_text(encoding="utf-8")
-            lines = []
-            for line in t.splitlines(True):
-                if line.lstrip().startswith("PERIOD_START = date("):
-                    indent = line[: len(line) - len(line.lstrip())]
-                    lines.append(
-                        f"{indent}PERIOD_START = date({start.year}, {start.month}, {start.day})\n"
-                    )
-                else:
-                    lines.append(line)
-            path.write_text("".join(lines), encoding="utf-8")
+
+def run_optional(cmd: list[str], label: str, detail: dict) -> None:
+    try:
+        run(cmd)
+        detail["steps"].append(label)
+    except subprocess.CalledProcessError as exc:
+        detail.setdefault("warnings", []).append(f"{label} exit {exc.returncode}")
+        print(f"WARN {label} não bloqueia o JSON do painel", file=sys.stderr)
 
 
 def write_status(ok: bool, detail: dict) -> None:
@@ -86,11 +64,34 @@ def write_status(ok: bool, detail: dict) -> None:
         "ok": ok,
         "updated_at": now.isoformat(),
         "updated_at_label": now.strftime("%d/%m/%Y %H:%M"),
-        **detail,
+        "start": detail.get("start"),
+        "end": detail.get("end"),
+        "running": False,
+        "message": None if ok else "Falha na atualização",
     }
     STATUS.parent.mkdir(parents=True, exist_ok=True)
     STATUS.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     print("status", payload["updated_at_label"], "ok=", ok)
+
+
+def assert_published_datasets() -> None:
+    """Recusa publicar JSON vazio por cima do último dado bom."""
+    root = ROOT / "web" / "data" / "datasets"
+    checks = {
+        "executivo": lambda d: int((d.get("kpis") or {}).get("maintenances") or 0) > 0,
+        "santa": lambda d: bool(d.get("prefixes")),
+        "sdcard": lambda d: int((d.get("kpis") or {}).get("total_cards") or 0) > 0,
+        "conexao": lambda d: bool(d.get("all"))
+        or int((d.get("totais") or {}).get("unidades") or 0) > 0,
+        "retorno": lambda d: int(d.get("trocas") or 0) > 0 or bool(d.get("rows")),
+    }
+    for name, check in checks.items():
+        path = root / f"{name}.json"
+        if not path.is_file() or path.stat().st_size < 20:
+            raise RuntimeError(f"dataset ausente ou vazio: {path.name}")
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(data, dict) or not check(data):
+            raise RuntimeError(f"dataset sem dados utilizáveis: {path.name}")
 
 
 def main() -> int:
@@ -101,10 +102,15 @@ def main() -> int:
     args = ap.parse_args()
     start = date.fromisoformat(args.start)
     end = date.fromisoformat(args.end)
+    if end < start:
+        print("Período inválido: fim anterior ao início", file=sys.stderr)
+        return 2
 
     detail: dict = {"start": args.start, "end": args.end, "steps": []}
     try:
-        patch_period(start, end)
+        if not args.skip_collect:
+            require_secrets()
+        configure_period(start, end)
         if not args.skip_collect:
             run([sys.executable, "scripts/collect_jotform.py"])
             detail["steps"].append("jotform")
@@ -113,37 +119,56 @@ def main() -> int:
             run([sys.executable, "scripts/collect_conexao.py"])
             detail["steps"].append("nxnet_conexao")
 
-        run([sys.executable, "generate_report.py"])
-        run([sys.executable, "scripts/generate_status_pdfs.py"])
-        run([sys.executable, "scripts/generate_conexao_pdf.py"])
-        run([sys.executable, "scripts/generate_retorno_switch.py"])
-        try:
-            run([sys.executable, "scripts/apply_pptx_template.py"])
-        except subprocess.CalledProcessError as exc:
-            detail["pptx_warn"] = str(exc)
-        detail["steps"].append("generate")
+        run_optional([sys.executable, "generate_report.py"], "pdf_executivo", detail)
+        run_optional(
+            [sys.executable, "scripts/generate_status_pdfs.py"],
+            "pdf_status",
+            detail,
+        )
+        run_optional(
+            [sys.executable, "scripts/generate_conexao_pdf.py"],
+            "pdf_conexao",
+            detail,
+        )
+        retorno_src = ROOT / "data" / "relatorios" / "offline_apos_troca_switch_old.tsv"
+        if retorno_src.is_file():
+            run([sys.executable, "scripts/generate_retorno_switch.py"])
+            detail["steps"].append("retorno")
+        else:
+            detail.setdefault("warnings", []).append("retorno_source_absent")
+            print(
+                "WARN fonte de retorno ausente; JSON de retorno anterior permanece",
+                file=sys.stderr,
+            )
+        run_optional(
+            [sys.executable, "scripts/apply_pptx_template.py"],
+            "pptx",
+            detail,
+        )
 
-        # previews
-        run(
+        run_optional(
             [
                 sys.executable,
                 "-c",
                 "import fitz; from pathlib import Path\n"
-                "OUT=Path('reports/previews'); OUT.mkdir(exist_ok=True)\n"
+                "OUT=Path('reports/previews'); OUT.mkdir(parents=True, exist_ok=True)\n"
                 "pdfs=['relatorio_executivo_cftv','CFTV_Santa_Brigida','Analise_SDCard_Metropole_Expandir',"
                 "'Conexao_Cameras_por_Unidade','Retorno_Falhas_Switches_CFTV']\n"
                 "for stem in pdfs:\n"
                 " p=Path('reports')/f'{stem}.pdf'\n"
-                " if not p.exists(): continue\n"
+                " if not p.exists():\n"
+                "  print(stem, 'sem pdf'); continue\n"
                 " doc=fitz.open(p)\n"
                 " for i,page in enumerate(doc,1):\n"
                 "  page.get_pixmap(matrix=fitz.Matrix(1.4,1.4), alpha=False).save(OUT/f'{stem}_p{i}.png')\n"
                 " doc.close(); print(stem, 'ok')\n",
-            ]
+            ],
+            "previews",
+            detail,
         )
-        detail["steps"].append("previews")
         run([sys.executable, "scripts/export_web_data.py"])
         detail["steps"].append("web_json")
+        assert_published_datasets()
 
         # Espelha artefatos para o app Next (web/public)
         web_reports = ROOT / "web" / "public" / "reports"
@@ -168,10 +193,16 @@ def main() -> int:
             web_status.write_bytes(STATUS.read_bytes())
         return 0
     except Exception as exc:
-        detail["error"] = str(exc)
-        write_status(False, detail)
-        print("ERRO", exc, file=sys.stderr)
+        print("ERRO", _safe_error(exc), file=sys.stderr)
+        print("JSON do painel não será publicado.", file=sys.stderr)
         return 1
+
+
+def _safe_error(exc: BaseException) -> str:
+    raw = str(exc)
+    if re.search(r"(apiKey|api_key|senha|password|st)=", raw, re.I):
+        return type(exc).__name__
+    return f"{type(exc).__name__}: {raw[:300]}"
 
 
 if __name__ == "__main__":

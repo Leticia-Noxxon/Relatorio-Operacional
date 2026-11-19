@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import shutil
 import sys
@@ -16,7 +17,8 @@ from pathlib import Path
 from lxml import etree
 
 ROOT = Path(__file__).resolve().parents[1]
-UPLOADS = Path("/home/ubuntu/.cursor/projects/workspace/uploads")
+_extra_uploads = os.environ.get("REPORT_UPLOADS", "").strip()
+UPLOADS = Path(_extra_uploads) if _extra_uploads else ROOT / "uploads"
 TPL = ROOT / "data" / "pptx_templates"
 OUT = ROOT / "reports" / "pptx"
 DATA = ROOT / "data" / "status_cameras"

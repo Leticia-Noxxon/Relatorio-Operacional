@@ -259,7 +259,13 @@ def export_conexao() -> None:
 
 def export_retorno() -> None:
     tsv = ROOT / "data" / "relatorios" / "Retorno_Falhas_Switches_CFTV.tsv"
+    if not tsv.is_file():
+        print("WARN retorno: TSV ausente; JSON anterior permanece", file=sys.stderr)
+        return
     rows = list(csv.DictReader(tsv.open(encoding="utf-8"), delimiter="\t"))
+    if not rows:
+        print("WARN retorno: TSV vazio; JSON anterior permanece", file=sys.stderr)
+        return
     faixas = Counter((r.get("Faixa") or "").strip() for r in rows)
     order = [
         "sem falha",

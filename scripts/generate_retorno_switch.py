@@ -8,6 +8,8 @@ por prefixo. Faixas: sem falha · 1–7 · 8–15 · 16–30 · 31–60 · acima
 from __future__ import annotations
 
 import csv
+import os
+import sys
 from collections import Counter
 from datetime import date, datetime
 from pathlib import Path
@@ -34,8 +36,15 @@ OUT_XLSX = OUT_DIR / "Retorno_Falhas_Switches_CFTV.xlsx"
 OUT_TSV = OUT_DIR / "Retorno_Falhas_Switches_CFTV.tsv"
 OUT_PDF = REPORTS / "Retorno_Falhas_Switches_CFTV.pdf"
 
-PERIOD_START = date(2026, 9, 5)
-PERIOD_END = date(2026, 11, 17)
+def _env_date(name: str, default: date) -> date:
+    raw = os.environ.get(name, "").strip()
+    if not raw:
+        return default
+    return date.fromisoformat(raw)
+
+
+PERIOD_START = _env_date("REPORT_PERIOD_START", date(2026, 9, 5))
+PERIOD_END = _env_date("REPORT_PERIOD_END", date(2026, 11, 17))
 # Último dia com Relatório CFTV diário na base consolidada
 REPORTS_END = date(2026, 10, 23)
 
@@ -56,8 +65,12 @@ GREEN = "#7BC67E"
 AMBER = "#F0C36A"
 RED = "#E89A9A"
 
-FONT_REG = "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"
-FONT_BOLD = "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"
+def _register_fonts() -> None:
+    from font_paths import liberation_pair
+
+    regular, bold = liberation_pair()
+    pdfmetrics.registerFont(TTFont("Arial", regular))
+    pdfmetrics.registerFont(TTFont("Arial-Bold", bold))
 
 
 def parse_br(value: str) -> date | None:
@@ -336,8 +349,7 @@ def write_xlsx(rows: list[dict], summary: dict) -> None:
 
 
 def write_pdf(summary: dict) -> None:
-    pdfmetrics.registerFont(TTFont("Arial", FONT_REG))
-    pdfmetrics.registerFont(TTFont("Arial-Bold", FONT_BOLD))
+    _register_fonts()
     c = canvas.Canvas(str(OUT_PDF), pagesize=landscape(A4))
     width, height = landscape(A4)
 
@@ -458,7 +470,10 @@ def main() -> int:
     summary = summarize(rows)
     write_tsv(rows)
     write_xlsx(rows, summary)
-    write_pdf(summary)
+    try:
+        write_pdf(summary)
+    except Exception as exc:
+        print("WARN PDF de retorno ignorado:", exc, file=sys.stderr)
     print("OK", OUT_XLSX)
     print("OK", OUT_TSV)
     print("OK", OUT_PDF)

@@ -19,8 +19,12 @@ DATA = ROOT / "data" / "status_cameras"
 OUT = ROOT / "reports"
 OUT.mkdir(parents=True, exist_ok=True)
 
-FONT_REG = "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"
-FONT_BOLD = "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"
+def register_fonts():
+    from font_paths import liberation_pair
+
+    regular, bold = liberation_pair()
+    pdfmetrics.registerFont(TTFont("Arial", regular))
+    pdfmetrics.registerFont(TTFont("Arial-Bold", bold))
 
 NAVY = "#1F3340"
 GREEN = "#7BC67E"
@@ -29,11 +33,6 @@ OFF_BG = "#D9DEE3"
 CARD = "#F3F5F7"
 MUTED = "#5C6B73"
 INK = "#1F2933"
-
-
-def register_fonts():
-    pdfmetrics.registerFont(TTFont("Arial", FONT_REG))
-    pdfmetrics.registerFont(TTFont("Arial-Bold", FONT_BOLD))
 
 
 def daterange(a: date, b: date):

@@ -64,8 +64,14 @@ def login() -> str:
         json={"email": EMAIL, "senha": PASSWORD},
         timeout=60,
     )
-    r.raise_for_status()
-    return r.json()["token"]
+    if not r.ok:
+        print(f"Login NxNet HTTP {r.status_code}", file=sys.stderr)
+        raise SystemExit(1)
+    token = (r.json() or {}).get("token") or ""
+    if not token:
+        print("Login NxNet sem token", file=sys.stderr)
+        raise SystemExit(1)
+    return token
 
 
 def cam_num(cam: dict) -> int:

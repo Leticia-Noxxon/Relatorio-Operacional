@@ -3,7 +3,9 @@
 
 from __future__ import annotations
 
+import os
 import re
+import sys
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from datetime import date
@@ -19,14 +21,11 @@ from reportlab.pdfgen import canvas
 ROOT = Path(__file__).resolve().parent
 DATA_JOTFORM = ROOT / "data" / "jotform"
 DATA_STATUS = ROOT / "data" / "status"
-UPLOADS = [
-    ROOT / "uploads",
-    Path("/home/ubuntu/.cursor/projects/workspace/uploads"),
-]
+UPLOADS = [ROOT / "uploads"]
+_extra_uploads = os.environ.get("REPORT_UPLOADS", "").strip()
+if _extra_uploads:
+    UPLOADS.append(Path(_extra_uploads))
 OUT_PDF = ROOT / "reports" / "relatorio_executivo_cftv.pdf"
-
-FONT_REG = "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"
-FONT_BOLD = "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"
 
 # Paleta neutra
 NAVY = "#1F3340"
@@ -38,8 +37,15 @@ LINE = "#D7DEE3"
 HEADER_BG = "#1F3340"
 BAR_LIGHT = "#D9ECF5"
 
-PERIOD_START = date(2026, 9, 5)
-PERIOD_END = date(2026, 11, 17)
+def _env_date(name: str, default: date) -> date:
+    raw = os.environ.get(name, "").strip()
+    if not raw:
+        return default
+    return date.fromisoformat(raw)
+
+
+PERIOD_START = _env_date("REPORT_PERIOD_START", date(2026, 9, 5))
+PERIOD_END = _env_date("REPORT_PERIOD_END", date(2026, 11, 17))
 
 SLOT_CAM = {
     "Problemas Detectados: Câm. Frontal": 21,
@@ -194,8 +200,14 @@ MONTHS = {
 
 
 def register_fonts() -> None:
-    pdfmetrics.registerFont(TTFont("Arial", FONT_REG))
-    pdfmetrics.registerFont(TTFont("Arial-Bold", FONT_BOLD))
+    scripts = ROOT / "scripts"
+    if str(scripts) not in sys.path:
+        sys.path.insert(0, str(scripts))
+    from font_paths import liberation_pair
+
+    regular, bold = liberation_pair()
+    pdfmetrics.registerFont(TTFont("Arial", regular))
+    pdfmetrics.registerFont(TTFont("Arial-Bold", bold))
 
 
 def parse_date(value) -> pd.Timestamp:

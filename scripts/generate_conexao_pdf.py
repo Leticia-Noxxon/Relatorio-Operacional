@@ -16,18 +16,17 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "status_cameras" / "conexao_cameras_resumo.json"
 OUT = ROOT / "reports" / "Conexao_Cameras_por_Unidade.pdf"
 
-FONT_REG = "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"
-FONT_BOLD = "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"
+def register_fonts():
+    from font_paths import liberation_pair
+
+    regular, bold = liberation_pair()
+    pdfmetrics.registerFont(TTFont("Arial", regular))
+    pdfmetrics.registerFont(TTFont("Arial-Bold", bold))
 
 NAVY = "#1F3340"
 CARD = "#F5F7F9"
 MUTED = "#5C6B73"
 INK = "#1F2933"
-
-
-def register_fonts():
-    pdfmetrics.registerFont(TTFont("Arial", FONT_REG))
-    pdfmetrics.registerFont(TTFont("Arial-Bold", FONT_BOLD))
 
 
 def page_bg(c, width, height):
