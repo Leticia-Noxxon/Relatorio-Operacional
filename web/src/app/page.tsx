@@ -56,13 +56,34 @@ const STATIC_EXPORT = process.env.NEXT_PUBLIC_GITHUB_PAGES === "true";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 function statusUrl() {
-  if (STATIC_EXPORT) return `${BASE_PATH}/data/web_status.json`;
+  if (STATIC_EXPORT) return `${BASE_PATH}/data/web_status.json?v=${Date.now()}`;
   return "/api/status";
 }
 
 function datasetUrl(id: string) {
-  if (STATIC_EXPORT) return `${BASE_PATH}/data/datasets/${id}.json`;
+  if (STATIC_EXPORT) return `${BASE_PATH}/data/datasets/${id}.json?v=${Date.now()}`;
   return `/api/data/${id}?t=${Date.now()}`;
+}
+
+async function clearBrowserCaches() {
+  try {
+    window.localStorage.clear();
+  } catch {
+    /* armazenamento indisponível */
+  }
+  try {
+    window.sessionStorage.clear();
+  } catch {
+    /* armazenamento indisponível */
+  }
+  if ("serviceWorker" in navigator) {
+    const regs = await navigator.serviceWorker.getRegistrations();
+    await Promise.all(regs.map((reg) => reg.unregister()));
+  }
+  if ("caches" in window) {
+    const keys = await caches.keys();
+    await Promise.all(keys.map((key) => caches.delete(key)));
+  }
 }
 
 export default function HomePage() {
@@ -134,7 +155,23 @@ export default function HomePage() {
   }, [toast]);
 
   async function onRefresh() {
-    if (STATIC_EXPORT) return;
+    if (STATIC_EXPORT) {
+      setBusy(true);
+      setBusyKind("refresh");
+      setError(null);
+      setToast(null);
+      try {
+        await clearBrowserCaches();
+        const next = new URL(window.location.href);
+        next.searchParams.set("v", String(Date.now()));
+        window.location.replace(next.toString());
+      } catch (e) {
+        setError(e instanceof Error ? e.message : String(e));
+        setBusy(false);
+        setBusyKind(null);
+      }
+      return;
+    }
     setBusy(true);
     setBusyKind("refresh");
     setError(null);
@@ -278,13 +315,19 @@ export default function HomePage() {
                     </strong>
                   </span>
                 </div>
-                {/* Refresh, PDF e prévia exigem API; desabilitados no export estático. */}
+                {/* No Pages, recarrega os JSON publicados. No dev, a coleta continua desabilitada. */}
                 <button
                   type="button"
                   onClick={onRefresh}
-                  disabled
-                  title="Atualização desabilitada neste ambiente"
-                  className="inline-flex h-9 cursor-not-allowed items-center gap-2 rounded-lg bg-[#16A34A] px-3 text-[13px] font-semibold text-white opacity-50 shadow-sm md:h-10 md:px-3.5"
+                  disabled={!STATIC_EXPORT || busy}
+                  title={
+                    STATIC_EXPORT
+                      ? "Recarregar os dados publicados"
+                      : "Atualização desabilitada neste ambiente"
+                  }
+                  className={`inline-flex h-9 items-center gap-2 rounded-lg bg-[#16A34A] px-3 text-[13px] font-semibold text-white shadow-sm md:h-10 md:px-3.5 ${
+                    !STATIC_EXPORT || busy ? "cursor-not-allowed opacity-50" : ""
+                  }`}
                 >
                   <IconRefresh size={16} />
                   Atualizar dados

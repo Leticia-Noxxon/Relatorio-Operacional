@@ -16,7 +16,7 @@ sys.path[:0] = [str(ROOT), str(ROOT / "scripts")]
 OUT = ROOT / "data" / "web"
 OUT.mkdir(parents=True, exist_ok=True)
 
-from generate_report import PERIOD_END, PERIOD_START, analyze, load_maintenances  # noqa: E402
+from generate_report import PERIOD_END, PERIOD_START  # noqa: E402
 from generate_status_pdfs import (  # noqa: E402
     _day_has_cameras,
     analyze_sd,
@@ -57,44 +57,10 @@ def dump(name: str, payload: dict) -> None:
 
 
 def export_executivo() -> None:
-    report = analyze(load_maintenances())
-    dump(
-        "executivo",
-        {
-            "period": {
-                "start": PERIOD_START.isoformat(),
-                "end": PERIOD_END.isoformat(),
-                "label": f"{PERIOD_START.strftime('%d/%m')} a {PERIOD_END.strftime('%d/%m/%Y')}",
-            },
-            "kpis": {
-                "maintenances": report.n_maints,
-                "reincidences": report.n_reinc,
-                "prefixes": report.n_prefix,
-                "garages": report.n_garages,
-                "cameras_removed": report.n_cameras_retirada,
-            },
-            "problem_buckets": report.top_problem_buckets,
-            "action_buckets": report.top_action_buckets,
-            "top_problems": report.top_problems[:12],
-            "top_actions": report.top_actions[:12],
-            "garages": [
-                {
-                    "name": g,
-                    "maints": n,
-                    "reinc": r,
-                    "prefixes": int(
-                        report.maints.loc[
-                            report.maints["Garagem"] == g, "Prefixo"
-                        ].nunique()
-                    ),
-                }
-                for g, n, r in report.garage_rows
-            ],
-            "garage_bucket_problems": [
-                {"name": g, "buckets": buckets} for g, buckets in report.garage_bucket_problems
-            ],
-        },
-    )
+    from jotform_history import build_executivo_payload
+
+    payload, _stats = build_executivo_payload(PERIOD_START, PERIOD_END)
+    dump("executivo", payload)
 
 
 def export_santa() -> None:

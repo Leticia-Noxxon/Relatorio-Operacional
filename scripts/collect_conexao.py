@@ -107,10 +107,17 @@ def has_tech_problem(cam: dict) -> bool:
 
 def load_retirada_pairs() -> set[tuple[int, int]]:
     """(prefixo, câmera) marcados como retirados / sem câmera no Jotform."""
-    files = sorted(JOTFORM.glob("*.xlsx"))
-    if not files:
+    history_path = JOTFORM / "historico.json"
+    frames = []
+    if history_path.is_file():
+        payload = json.loads(history_path.read_text(encoding="utf-8"))
+        records = list((payload.get("records") or {}).values())
+        if records:
+            frames.append(pd.DataFrame(records))
+    files = sorted(p for p in JOTFORM.glob("*.xlsx") if p.is_file())
+    frames.extend(pd.read_excel(p) for p in files)
+    if not frames:
         return set()
-    frames = [pd.read_excel(p) for p in files]
     raw = pd.concat(frames, ignore_index=True)
     if "ID do Envio" in raw.columns:
         raw = raw.sort_values(["ID do Envio"]).drop_duplicates("ID do Envio", keep="last")

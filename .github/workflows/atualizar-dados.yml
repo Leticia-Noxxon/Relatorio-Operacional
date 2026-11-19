@@ -79,7 +79,8 @@ jobs:
             web/data/datasets \
             web/data/web_status.json \
             data/web \
-            data/web_status.json
+            data/web_status.json \
+            data/jotform/historico.json
           if git diff --cached --name-only | grep -E '\.(py|yml|ts|tsx|mjs)$'; then
             echo "Recusando commit que inclui código."
             exit 1
@@ -92,6 +93,12 @@ jobs:
               data = json.loads(path.read_text(encoding="utf-8"))
               if not isinstance(data, dict) or not data:
                   raise SystemExit(f"dataset vazio: {path}")
+          exec_n = int(json.loads(Path("web/data/datasets/executivo.json").read_text())["kpis"]["maintenances"])
+          if exec_n < 1690:
+              raise SystemExit(f"executivo com {exec_n} manutenções; o histórico exige >= 1690")
+          history = json.loads(Path("data/jotform/historico.json").read_text())
+          if not history.get("legacy") or not isinstance(history.get("records"), dict):
+              raise SystemExit("histórico Jotform inválido")
           PY
           if git diff --cached --quiet; then
             echo "Nenhuma mudança nos datasets."

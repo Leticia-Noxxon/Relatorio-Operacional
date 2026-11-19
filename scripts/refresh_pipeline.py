@@ -78,7 +78,7 @@ def assert_published_datasets() -> None:
     """Recusa publicar JSON vazio por cima do último dado bom."""
     root = ROOT / "web" / "data" / "datasets"
     checks = {
-        "executivo": lambda d: int((d.get("kpis") or {}).get("maintenances") or 0) > 0,
+        "executivo": lambda d: int((d.get("kpis") or {}).get("maintenances") or 0) >= 1690,
         "santa": lambda d: bool(d.get("prefixes")),
         "sdcard": lambda d: int((d.get("kpis") or {}).get("total_cards") or 0) > 0,
         "conexao": lambda d: bool(d.get("all"))

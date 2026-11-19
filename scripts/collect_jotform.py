@@ -41,8 +41,10 @@ def save_dataframe(df: pd.DataFrame) -> Path:
     return out
 
 
-def from_api_key() -> Path | None:
+def fetch_api_rows() -> list[dict] | None:
+    """None = erro da API. Lista vazia = API respondeu sem envios."""
     if not API_KEY:
+        print("JOTFORM_API_KEY ausente", file=sys.stderr)
         return None
     url = f"https://api.jotform.com/form/{FORM_ID}/submissions"
     params = {"apiKey": API_KEY, "limit": 1000, "orderby": "created_at"}
@@ -76,10 +78,7 @@ def from_api_key() -> Path | None:
         if len(content) < params["limit"]:
             break
         offset += params["limit"]
-    if not rows:
-        print("Jotform API: nenhuma submission", file=sys.stderr)
-        return None
-    return save_dataframe(pd.DataFrame(rows))
+    return rows
 
 
 def probe_share_url() -> dict:
@@ -106,33 +105,43 @@ def latest_local() -> Path | None:
 
 
 def main() -> int:
+    from jotform_history import HISTORY_PATH, load_history, merge_submissions, save_history
+
     probe = probe_share_url()
     print("Jotform share probe:", json.dumps(probe, ensure_ascii=False))
 
-    try:
-        path = from_api_key()
-        if path:
-            print("fonte=api_key")
-            return 0
-    except Exception as exc:
-        print("WARN Jotform API:", exc, file=sys.stderr)
+    if not HISTORY_PATH.is_file():
+        print("ERRO: histórico Jotform ainda não foi semeado", file=sys.stderr)
+        return 1
 
-    local = latest_local()
-    if local:
-        print(
-            "fonte=local_fallback",
-            local.name,
-            "(share URL exige login; defina JOTFORM_API_KEY para export automático)",
-        )
-        # Copia com data de hoje para marcar tentativa de atualização
-        stamped = OUT / f"Revisao_CFTV_{_stamp()}.xlsx"
-        if local.resolve() != stamped.resolve():
-            stamped.write_bytes(local.read_bytes())
-            print("cópia", stamped.name)
+    try:
+        rows = fetch_api_rows()
+    except Exception:
+        print("WARN Jotform API indisponível; histórico preservado", file=sys.stderr)
         return 0
 
-    print("ERRO: sem JOTFORM_API_KEY e sem XLSX local", file=sys.stderr)
-    return 1
+    if rows is None:
+        print("Jotform API com erro; histórico preservado")
+        return 0
+    if len(rows) == 0:
+        print("Jotform API sem envios; histórico preservado")
+        return 0
+
+    history = load_history()
+    before = len(history.get("records") or {})
+    added, updated = merge_submissions(history, rows)
+    save_history(history)
+    frame = pd.DataFrame(list(history["records"].values()))
+    save_dataframe(frame)
+    print(
+        "fonte=historico",
+        f"antes={before}",
+        f"api={len(rows)}",
+        f"novos={added}",
+        f"atualizados={updated}",
+        f"total={len(history['records'])}",
+    )
+    return 0
 
 
 if __name__ == "__main__":
