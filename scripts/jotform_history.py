@@ -2,8 +2,7 @@
 
 O Jotform apaga envios antigos. O arquivo data/jotform/historico.json guarda
 cada envio pela id (ou por uma chave composta) e nunca remove quem sumiu da API.
-O agregado de 1.690 manutenções anterior ao commit 50edbd7 entra como legado:
-os envios brutos daquele período não estavam no git.
+A base publicada é a contagem de envios distintos em baseline_maintenances.
 """
 
 from __future__ import annotations
@@ -23,6 +22,8 @@ LEGACY_PERIOD_END = "2026-11-17"
 def record_key(row: dict) -> str:
     sid = row.get("ID do Envio")
     text = "" if sid is None else str(sid).strip()
+    if row.get("id_aproximado") and text and text.lower() not in {"none", "nan"}:
+        return f"xls:{text}"
     if text and text.lower() not in {"none", "nan"}:
         return f"id:{text}"
     parts = [
@@ -75,6 +76,9 @@ def merge_submissions(history: dict, rows: list[dict]) -> tuple[int, int]:
     for row in rows:
         cleaned = clean_row(row)
         key = record_key(cleaned)
+        existing = records.get(key)
+        if existing is not None and not existing.get("id_aproximado") and cleaned.get("id_aproximado"):
+            continue
         if key in records:
             updated += 1
         else:
