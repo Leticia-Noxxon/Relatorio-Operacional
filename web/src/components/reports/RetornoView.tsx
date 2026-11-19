@@ -49,6 +49,7 @@ export function RetornoView({ data }: { data: RetornoData }) {
             <thead>
               <tr className="bg-[var(--p1)] text-white">
                 <th className="px-3 py-2 text-center">Prefixo</th>
+                <th className="px-3 py-2 text-left">Nome</th>
                 <th className="px-3 py-2 text-left">Garagem</th>
                 <th className="px-3 py-2 text-center">Troca</th>
                 <th className="px-3 py-2 text-center">Falha</th>
@@ -63,6 +64,7 @@ export function RetornoView({ data }: { data: RetornoData }) {
                   className={i % 2 ? "bg-[#f5fafc]" : "bg-white"}
                 >
                   <td className="px-3 py-2 text-center font-bold">{r.Prefixo}</td>
+                  <td className="px-3 py-2">{r.Nome || "—"}</td>
                   <td className="px-3 py-2">{r.Garagem}</td>
                   <td className="px-3 py-2 text-center">{r["Data da troca"]}</td>
                   <td className="px-3 py-2 text-center">

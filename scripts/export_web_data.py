@@ -199,6 +199,8 @@ def export_conexao() -> None:
         "conexao",
         {
             "coletado_em": raw.get("coletado_em"),
+            "posicoes": raw.get("posicoes") or [],
+            "veiculos": raw.get("veiculos") or [],
             "totais": {
                 "veiculos_problema": sum(int(r.get("veiculos_problema") or 0) for r in rows),
                 "cameras_problema": sum(int(r.get("cameras_problema") or 0) for r in rows),
@@ -248,9 +250,9 @@ def export_retorno() -> None:
             dias.append(int(r.get("Dias até a falha") or ""))
         except ValueError:
             pass
-    # Painel web público: não exportar nome de pessoa nem campos auxiliares sensíveis.
     safe_cols = [
         "Garagem",
+        "Nome",
         "Data da troca",
         "Prefixo",
         "Data da falha (OFFLINE)",

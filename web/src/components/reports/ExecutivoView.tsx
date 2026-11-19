@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import {
   Doughnut,
   InlineQtyBar,
@@ -45,40 +48,83 @@ export function ExecutivoView({ data }: { data: ExecData }) {
   const topActions = data.top_actions || [];
   const garages = data.garages || [];
   const occ = data.garage_bucket_problems || [];
+  const [garageFilter, setGarageFilter] = useState<string | null>(null);
+  const selected = garages.find((g) => g.name === garageFilter) || null;
+  const selectedOcc = occ.find((g) => g.name === garageFilter) || null;
+
+  function toggleGarage(name: string) {
+    setGarageFilter((current) => (current === name ? null : name));
+  }
+
+  const viewKpis = selected
+    ? {
+        maintenances: selected.maints,
+        reincidences: selected.reinc,
+        prefixes: selected.prefixes ?? 0,
+        garages: 1,
+        cameras_removed: null as number | null,
+      }
+    : { ...kpis, cameras_removed: kpis.cameras_removed as number | null };
+  const viewGarages = selected ? [selected] : garages;
+  const viewOcc = selectedOcc ? [selectedOcc] : occ;
+  const viewBuckets = selectedOcc
+    ? selectedOcc.buckets || []
+    : problemBuckets;
   const switchN =
-    problemBuckets.find(([k]) => k.toLowerCase().includes("switch"))?.[1] || 0;
-  const maxP = Math.max(...topProblems.map(([, v]) => v), 1);
-  const maxA = Math.max(...topActions.map(([, v]) => v), 1);
+    viewBuckets.find(([k]) => k.toLowerCase().includes("switch"))?.[1] || 0;
+  const viewProblems = selectedOcc
+    ? viewBuckets
+    : topProblems;
+  const viewActions = selected ? [] : topActions;
+  const maxP = Math.max(...viewProblems.map(([, v]) => v), 1);
+  const maxA = Math.max(...viewActions.map(([, v]) => v), 1);
 
   return (
     <div className="space-y-3">
+      {selected ? (
+        <div className="flex flex-wrap items-center gap-2 rounded-xl bg-[#135487] px-3 py-2 text-sm font-semibold text-white">
+          <span>Filtro: {selected.name}</span>
+          <button
+            type="button"
+            onClick={() => setGarageFilter(null)}
+            className="rounded-md bg-white/15 px-2 py-0.5 text-xs"
+          >
+            Limpar
+          </button>
+          <span className="text-xs font-normal text-white/80">
+            Clique de novo na garagem para ver todas.
+          </span>
+        </div>
+      ) : null}
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
         <KpiCard
           label="Manutenções"
-          value={fmt(kpis.maintenances)}
+          value={fmt(viewKpis.maintenances)}
           icon={<IconWrench />}
         />
         <KpiCard
           label="Reincidências"
-          value={fmt(kpis.reincidences)}
+          value={fmt(viewKpis.reincidences)}
           icon={<IconRepeat />}
           iconColor="#2F87B5"
         />
         <KpiCard
           label="Prefixos"
-          value={fmt(kpis.prefixes)}
+          value={fmt(viewKpis.prefixes)}
           icon={<IconServer />}
           iconColor="#47BCDF"
         />
         <KpiCard
           label="Garagens"
-          value={fmt(kpis.garages)}
+          value={fmt(viewKpis.garages)}
           icon={<IconWarehouse />}
           iconColor="#2F87B5"
         />
         <KpiCard
           label="Câmeras retirada"
-          value={fmt(kpis.cameras_removed)}
+          value={
+            viewKpis.cameras_removed == null ? "—" : fmt(viewKpis.cameras_removed)
+          }
           icon={<IconCamera />}
           iconTone="#fee2e2"
           iconColor="#dc2626"
@@ -98,22 +144,32 @@ export function ExecutivoView({ data }: { data: ExecData }) {
               </tr>
             </thead>
             <tbody>
-              {garages.map((g, i) => {
+              {viewGarages.map((g, i) => {
                 const pct = g.maints ? (g.reinc / g.maints) * 100 : 0;
                 const bad = pct > 20;
+                const active = garageFilter === g.name;
                 return (
                   <tr
                     key={g.name}
-                    className={i % 2 ? "bg-[#f5fafc]" : "bg-white"}
+                    className={active ? "bg-[#d7eef8]" : i % 2 ? "bg-[#f5fafc]" : "bg-white"}
                   >
-                    <td className="px-3 py-2 font-medium">{g.name}</td>
+                    <td className="px-3 py-2 font-medium">
+                      <button
+                        type="button"
+                        onClick={() => toggleGarage(g.name)}
+                        aria-pressed={active}
+                        className="text-left underline-offset-2 hover:underline"
+                      >
+                        {g.name}
+                      </button>
+                    </td>
                     <td className="px-3 py-2 text-center">{fmt(g.maints)}</td>
                     <td className="px-3 py-2 text-center">
                       {fmt(g.prefixes ?? 0)}
                     </td>
                     <td className="px-3 py-2 text-center">{fmt(g.reinc)}</td>
                     <td
-                      className={`px-3 py-2 text-center font-bold ${
+                      className={`px-3 py-2 text-center font-normal ${
                         bad ? "text-[var(--danger)]" : "text-[#15803d]"
                       }`}
                     >
@@ -130,16 +186,17 @@ export function ExecutivoView({ data }: { data: ExecData }) {
       <div className="grid gap-3 lg:grid-cols-[1.2fr_0.9fr]">
         <Panel title="Problemas por categoria">
           <VerticalBars
-            items={problemBuckets.map(([label, value]) => ({ label, value }))}
+            items={viewBuckets.map(([label, value]) => ({ label, value }))}
           />
         </Panel>
         <Panel title="Disponibilidade">
-          <div className="flex items-center justify-center gap-6 py-2">
+          <div className="flex h-full min-h-[280px] items-center justify-center gap-16 py-6">
             <Doughnut
-              online={Math.max(kpis.maintenances - switchN, 0)}
+              online={Math.max(viewKpis.maintenances - switchN, 0)}
               offline={switchN}
+              size={250}
             />
-            <div className="space-y-2 text-sm text-[var(--muted)]">
+            <div className="space-y-6 text-base text-[var(--muted)]">
               <div className="inline-flex items-center gap-2">
                 <i className="inline-block h-3 w-3 rounded-sm bg-[#7BC67E]" />{" "}
                 Online
@@ -163,7 +220,7 @@ export function ExecutivoView({ data }: { data: ExecData }) {
               </tr>
             </thead>
             <tbody>
-              {topProblems.map(([label, value], i) => (
+              {viewProblems.map(([label, value], i) => (
                 <tr
                   key={label}
                   className={i % 2 ? "bg-[#f5fafc]" : "bg-white"}
@@ -186,7 +243,14 @@ export function ExecutivoView({ data }: { data: ExecData }) {
               </tr>
             </thead>
             <tbody>
-              {topActions.map(([label, value], i) => (
+              {viewActions.length === 0 ? (
+                <tr>
+                  <td className="px-3 py-3 text-[var(--muted)]" colSpan={2}>
+                    Sem detalhamento de ações para esta garagem.
+                  </td>
+                </tr>
+              ) : null}
+              {viewActions.map(([label, value], i) => (
                 <tr
                   key={label}
                   className={i % 2 ? "bg-[#f5fafc]" : "bg-white"}
@@ -216,7 +280,7 @@ export function ExecutivoView({ data }: { data: ExecData }) {
               </tr>
             </thead>
             <tbody>
-              {occ.map((g, i) => {
+              {viewOcc.map((g, i) => {
                 const b = Object.fromEntries(g.buckets || []);
                 const cab = Number(b["Cabeamento"] || 0);
                 const sw = Number(b["Switch"] || 0);
@@ -227,7 +291,15 @@ export function ExecutivoView({ data }: { data: ExecData }) {
                     key={g.name}
                     className={i % 2 ? "bg-[#f5fafc]" : "bg-white"}
                   >
-                    <td className="px-3 py-2 font-medium">{g.name}</td>
+                    <td className="px-3 py-2 font-medium">
+                      <button
+                        type="button"
+                        onClick={() => toggleGarage(g.name)}
+                        className="text-left underline-offset-2 hover:underline"
+                      >
+                        {g.name}
+                      </button>
+                    </td>
                     <td className="px-3 py-2 text-center">{cab}</td>
                     <td className="px-3 py-2 text-center">{sw}</td>
                     <td className="px-3 py-2 text-center">{cam}</td>

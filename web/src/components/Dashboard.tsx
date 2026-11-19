@@ -5,11 +5,13 @@ export function Panel({
   children,
   className = "",
   right,
+  bodyClassName = "p-4",
 }: {
   title?: string;
   children: ReactNode;
   className?: string;
   right?: ReactNode;
+  bodyClassName?: string;
 }) {
   return (
     <section
@@ -25,7 +27,7 @@ export function Panel({
           {right}
         </header>
       )}
-      <div className="p-4">{children}</div>
+      <div className={bodyClassName}>{children}</div>
     </section>
   );
 }
@@ -36,16 +38,22 @@ export function KpiCard({
   icon,
   iconTone = "var(--p4)",
   iconColor = "var(--p1)",
+  dense = false,
 }: {
   label: string;
   value: string | number;
   icon?: ReactNode;
   iconTone?: string;
   iconColor?: string;
+  dense?: boolean;
 }) {
   return (
-    <div className="rounded-2xl border border-[var(--line)] bg-white px-4 py-3.5 text-left shadow-[0_2px_10px_rgba(19,84,135,.05)]">
-      <div className="mb-2.5 flex items-start justify-between gap-2">
+    <div
+      className={`rounded-2xl border border-[var(--line)] bg-white text-left shadow-[0_2px_10px_rgba(19,84,135,.05)] ${
+        dense ? "px-3 py-2" : "px-4 py-3.5"
+      }`}
+    >
+      <div className={`flex items-start justify-between gap-2 ${dense ? "mb-1" : "mb-2.5"}`}>
         <div className="text-[13px] font-semibold text-[var(--muted)]">{label}</div>
         {icon ? (
           <span
@@ -56,7 +64,11 @@ export function KpiCard({
           </span>
         ) : null}
       </div>
-      <div className="text-[1.85rem] font-extrabold leading-none tracking-tight text-[var(--p1)]">
+      <div
+        className={`font-extrabold leading-none tracking-tight text-[var(--p1)] ${
+          dense ? "text-2xl" : "text-[1.85rem]"
+        }`}
+      >
         {value}
       </div>
     </div>
@@ -95,6 +107,16 @@ export function VerticalBars({
           </div>
         );
       })}
+    </div>
+  );
+}
+
+export function AngledLabel({ text }: { text: string }) {
+  return (
+    <div className="flex h-8 items-end justify-center overflow-visible">
+      <span className="inline-block origin-bottom-left -translate-y-1 -rotate-45 whitespace-nowrap text-[10px] font-medium leading-none text-white">
+        {text}
+      </span>
     </div>
   );
 }

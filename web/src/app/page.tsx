@@ -353,14 +353,10 @@ export default function HomePage() {
         </div>
       ) : null}
 
-      <main className="mx-auto max-w-[1500px] px-3 py-4 md:px-5 md:py-5">
-        <h1 className="mb-3 text-xl font-extrabold text-[#135487] md:text-[22px]">
+      <main className="mx-auto max-w-[1500px] px-3 py-2 md:px-5 md:py-3">
+        <h1 className="mb-2 text-xl font-extrabold text-[#135487] md:text-[22px]">
           {active.title}
         </h1>
-        <p className="mb-3 text-xs text-[var(--muted)]">
-          Versão pública com indicadores agregados e identificadores anonimizados
-          (sem nomes de pessoas nem prefixos reais).
-        </p>
 
         {!mounted || loadingBundle ? (
           <div className="flex min-h-[280px] items-center justify-center rounded-2xl border border-dashed border-[var(--line)] bg-white text-sm text-[var(--muted)]">

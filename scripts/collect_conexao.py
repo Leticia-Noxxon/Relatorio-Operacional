@@ -23,6 +23,29 @@ API = "https://camera-download-api-dot-noxxonsat-nxnet-spt.rj.r.appspot.com"
 EMAIL = os.environ.get("NOXXON_EMAIL", "leticia@noxxonsat.com.br")
 PASSWORD = os.environ.get("NOXXON_PASSWORD", "")
 
+# Nomes reais da última coleta que ainda trazia a razão social (antes do fallback numérico).
+OPERADORA_NOME = {
+    692: "A2 TRANSPORTES",
+    696: "VIA SUDESTE",
+    689: "SANTA BRÍGIDA",
+    684: "VIAÇÃO GRAJAÚ",
+    680: "NORTE BUSS A1",
+    705: "METRÓPOLE - IMPERADOR",
+    693: "NORTE BUSS A2",
+    678: "METRÓPOLE PAULISTA - DEPINEDO",
+    695: "GATO PRETO",
+    704: "METRÓPOLE - IGUATEMI",
+    697: "Alfa Rodobus SPE",
+    702: "METRÓPOLE - AE CARVALHO",
+    706: "METRÓPOLE - ITAIM",
+    660: "ALFA RODOBUS",
+    707: "METRÓPOLE - MBOI - MIRIM",
+    703: "METRÓPOLE - EXPANDIR",
+    698: "GATO PRETO A1",
+    699: "TRANSUNIAO TRANSPORTES D7",
+    661: "TRANS UNIÃO",
+}
+
 REGIAO = {
     692: "Sul",
     660: "Oeste",
@@ -170,12 +193,73 @@ def load_retirada_pairs() -> set[tuple[int, int]]:
     return removed - reinstalled
 
 
+def _names_from_payload(payload) -> dict[int, str]:
+    found: dict[int, str] = {}
+
+    def take(oid, nome) -> None:
+        try:
+            key = int(oid)
+        except (TypeError, ValueError):
+            return
+        text = str(nome or "").strip()
+        if text and not text.isdigit():
+            found[key] = text
+
+    items = payload
+    if isinstance(payload, dict):
+        nested = payload.get("data") or payload.get("content") or payload.get("operadoras")
+        if isinstance(nested, list):
+            items = nested
+        elif isinstance(nested, dict):
+            items = nested
+        else:
+            items = payload
+    if isinstance(items, dict):
+        for key, value in items.items():
+            if isinstance(value, str):
+                take(key, value)
+            elif isinstance(value, dict):
+                take(value.get("id") or value.get("operadoraId") or key, value.get("nome") or value.get("name"))
+    elif isinstance(items, list):
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            take(
+                item.get("id") or item.get("operadoraId") or item.get("id_operadora"),
+                item.get("nome") or item.get("name") or item.get("fantasia") or item.get("razao_social"),
+            )
+    return found
+
+
 def fetch_operadoras(session: requests.Session) -> dict[int, str]:
+    names = dict(OPERADORA_NOME)
     path = OUT / "operadoras.json"
     if path.exists():
         raw = json.loads(path.read_text(encoding="utf-8"))
-        return {int(k): str(v).strip() for k, v in raw.items()}
-    return {}
+        if isinstance(raw, dict):
+            for key, value in raw.items():
+                text = str(value or "").strip()
+                if text and not text.isdigit():
+                    try:
+                        names[int(key)] = text
+                    except ValueError:
+                        pass
+    for url in (f"{API}/operadoras", f"{AUTH}/operadoras", f"{AUTH}/empresas"):
+        try:
+            response = session.get(url, timeout=30)
+        except requests.RequestException:
+            continue
+        if not response.ok:
+            continue
+        try:
+            parsed = _names_from_payload(response.json())
+        except ValueError:
+            continue
+        if parsed:
+            names.update(parsed)
+            print(f"operadoras via API: {len(parsed)}")
+            break
+    return names
 
 
 def fetch_all_vehicles(session: requests.Session, operadora_id: int) -> list[dict]:
@@ -217,6 +301,7 @@ def summarize_unit(
     camera_21_problema = 0
     camera_retirada = 0
     cameras_problema = 0  # offline/sd/login/rec, excluindo retirada e contando cam21 só na coluna dela
+    detalhe: list[dict] = []
 
     for v in vehicles:
         try:
@@ -226,6 +311,7 @@ def summarize_unit(
         cams = v.get("cameras") or []
         veic_has_prob = False
         veic_has_sd = False
+        flags: list[dict] = []
         for cam in cams:
             cnum = cam_num(cam)
             key = (pref, cnum)
@@ -246,11 +332,21 @@ def summarize_unit(
             if sd_err:
                 camera_erro_sd += 1
                 veic_has_sd = True
+            flags.append(
+                {
+                    "pos": cnum,
+                    "off": 1 if offline else 0,
+                    "sd": 1 if sd_err else 0,
+                    "falha": 1 if tech else 0,
+                }
+            )
 
         if veic_has_prob:
             veiculos_problema += 1
         if veic_has_sd:
             veiculos_erro_sd += 1
+        if flags:
+            detalhe.append({"prefixo": str(pref), "cameras": flags})
 
     return {
         "operadora_id": operadora_id,
@@ -265,6 +361,7 @@ def summarize_unit(
         "cameras_problema": cameras_problema,
         "total_veiculos": len(vehicles),
         "metropole": "METRÓPOLE" in nome.upper() or "METROPOLE" in nome.upper(),
+        "veiculos": detalhe,
     }
 
 
@@ -282,8 +379,7 @@ def main() -> int:
 
     ops = fetch_operadoras(session)
     if not ops:
-        # fallback ids conhecidos
-        ops = {k: str(k) for k in REGIAO}
+        ops = {k: OPERADORA_NOME.get(k, str(k)) for k in REGIAO}
 
     rows = []
     meta = {}
@@ -294,7 +390,10 @@ def main() -> int:
             continue
         vehicles = fetch_all_vehicles(session, oid)
         print(f"  {oid} {nome}: {len(vehicles)} veículos")
-        row = summarize_unit(nome.strip(), oid, vehicles, retirada)
+        nome_real = OPERADORA_NOME.get(oid, nome.strip())
+        if str(nome_real).isdigit():
+            nome_real = OPERADORA_NOME.get(oid, nome_real)
+        row = summarize_unit(str(nome_real).strip(), oid, vehicles, retirada)
         rows.append(row)
         meta[str(oid)] = {
             "nome": nome.strip(),
@@ -302,6 +401,12 @@ def main() -> int:
             "sample": vehicles[:1],
         }
 
+    veiculos = []
+    for row in rows:
+        for vehicle in row.pop("veiculos", []):
+            vehicle["garagem"] = row["unidade"]
+            veiculos.append(vehicle)
+    posicoes = sorted({cam["pos"] for vehicle in veiculos for cam in vehicle["cameras"]})
     payload = {
         "coletado_em": datetime.now().isoformat(timespec="seconds"),
         "fonte": f"{API}/status-cameras?todayOnly=true",
@@ -317,6 +422,8 @@ def main() -> int:
             "camera_retirada": "Jotform: removida/sem câmera e sem instalação posterior",
         },
         "rows": rows,
+        "veiculos": veiculos,
+        "posicoes": posicoes,
     }
     out = OUT / "conexao_cameras_resumo.json"
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")

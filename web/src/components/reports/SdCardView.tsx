@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import {
+  AngledLabel,
   KpiCard,
   MonthSeg,
   Panel,
@@ -89,16 +90,18 @@ export function SdCardView({ data }: { data: SdData }) {
   }, [rows]);
 
   return (
-    <div className="space-y-3">
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-        <KpiCard label="Prefixos" value={kpis.prefixes} icon={<IconBus />} />
+    <div className="space-y-2">
+      <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
+        <KpiCard dense label="Prefixos" value={kpis.prefixes} icon={<IconBus />} />
         <KpiCard
+          dense
           label="SD Cards"
           value={kpis.total_cards}
           icon={<IconSd />}
           iconColor="#2F87B5"
         />
         <KpiCard
+          dense
           label="Funcionais"
           value={kpis.ok}
           iconTone="#dcfce7"
@@ -106,6 +109,7 @@ export function SdCardView({ data }: { data: SdData }) {
           icon={<span className="text-sm font-bold">✓</span>}
         />
         <KpiCard
+          dense
           label="Com erro"
           value={kpis.erro}
           iconTone="#fee2e2"
@@ -113,6 +117,7 @@ export function SdCardView({ data }: { data: SdData }) {
           icon={<span className="text-sm font-bold">!</span>}
         />
         <KpiCard
+          dense
           label="Offline"
           value={kpis.offline}
           iconTone="#f1f5f9"
@@ -122,17 +127,29 @@ export function SdCardView({ data }: { data: SdData }) {
       </div>
 
       <Panel
+        bodyClassName="p-2"
         title="Evolução diária"
         right={
-          <MonthSeg
-            months={months.map((m) => m.name)}
-            value={monthFilter}
-            onChange={setMonthFilter}
-          />
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-1 text-[10px] text-[var(--muted)]">
+              <i className="inline-block h-2 w-2 rounded-sm bg-[#7BC67E]" /> OK
+            </span>
+            <span className="inline-flex items-center gap-1 text-[10px] text-[var(--muted)]">
+              <i className="inline-block h-2 w-2 rounded-sm bg-[#E89A9A]" /> Erro
+            </span>
+            <span className="inline-flex items-center gap-1 text-[10px] text-[var(--muted)]">
+              <i className="inline-block h-2 w-2 rounded-sm bg-[#C5CED6]" /> Off
+            </span>
+            <MonthSeg
+              months={months.map((m) => m.name)}
+              value={monthFilter}
+              onChange={setMonthFilter}
+            />
+          </div>
         }
       >
-        <div className="overflow-auto">
-          <table className="w-full border-collapse text-[11px]">
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-[10px] leading-none">
             <thead>
               <tr>
                 <th
@@ -162,9 +179,9 @@ export function SdCardView({ data }: { data: SdData }) {
                   <th
                     key={`${c.month}-${c.day}`}
                     title={c.day}
-                    className="bg-[var(--p1)] px-0.5 py-1 text-center font-semibold text-white"
+                    className="bg-[var(--p1)] px-0 align-bottom"
                   >
-                    {c.label}
+                    <AngledLabel text={c.label} />
                   </th>
                 ))}
               </tr>
@@ -176,12 +193,12 @@ export function SdCardView({ data }: { data: SdData }) {
                     {i === 0 ? (
                       <td
                         rowSpan={cams.length}
-                        className="sticky left-0 z-10 bg-[#eef6fa] px-2 py-1 font-bold text-[var(--p1)]"
+                        className="sticky left-0 z-10 bg-[#eef6fa] px-1.5 py-px font-bold text-[var(--p1)]"
                       >
                         {prefixo}
                       </td>
                     ) : null}
-                    <td className="px-2 py-1 text-center">{row.camera}</td>
+                    <td className="px-1 py-px text-center">{row.camera}</td>
                     {columns.map((c, ci) => {
                       const st = row.seq[ci] || "off";
                       const color =
@@ -190,10 +207,10 @@ export function SdCardView({ data }: { data: SdData }) {
                       return (
                         <td
                           key={`${prefixo}-${row.camera}-${c.day}`}
-                          className="px-0.5 py-1 text-center"
+                          className="px-px py-px text-center"
                         >
                           <span
-                            className="inline-block h-3.5 w-3.5 rounded-[2px]"
+                            className="inline-block h-2 w-2 rounded-[1px]"
                             style={{ background: color }}
                             title={`${prefixo}/${row.camera} · ${c.day} · ${st}`}
                           />
@@ -205,18 +222,6 @@ export function SdCardView({ data }: { data: SdData }) {
               )}
             </tbody>
           </table>
-        </div>
-        <div className="mt-2 flex flex-wrap gap-3 text-xs text-[var(--muted)]">
-          <span className="inline-flex items-center gap-1.5">
-            <i className="inline-block h-3 w-3 rounded-sm bg-[#7BC67E]" />{" "}
-            Funcional
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <i className="inline-block h-3 w-3 rounded-sm bg-[#E89A9A]" /> Erro
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <i className="inline-block h-3 w-3 rounded-sm bg-[#C5CED6]" /> Offline
-          </span>
         </div>
       </Panel>
     </div>

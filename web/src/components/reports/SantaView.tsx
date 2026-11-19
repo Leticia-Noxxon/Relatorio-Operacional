@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import {
+  AngledLabel,
   Doughnut,
   MonthSeg,
   Panel,
@@ -89,11 +90,11 @@ export function SantaView({ data }: { data: SantaData }) {
                       <td className="px-3 py-2 font-bold text-[var(--p1)]">
                         {p}
                       </td>
-                      <td className="px-3 py-2 text-center">{s.total}</td>
-                      <td className="px-3 py-2 text-center font-semibold text-[#15803d]">
+                      <td className="px-3 py-2 text-center font-normal">{s.total}</td>
+                      <td className="px-3 py-2 text-center font-normal text-[#15803d]">
                         {s.ok}
                       </td>
-                      <td className="px-3 py-2 text-center font-semibold text-[var(--danger)]">
+                      <td className="px-3 py-2 text-center font-normal text-[var(--danger)]">
                         {s.bad}
                       </td>
                     </tr>
@@ -105,14 +106,14 @@ export function SantaView({ data }: { data: SantaData }) {
         </Panel>
 
         <Panel title="Disponibilidade por mês">
-          <div className="flex w-full flex-wrap items-center justify-evenly gap-4 py-2">
+          <div className="grid w-full grid-cols-1 items-center justify-items-center gap-10 py-4 sm:grid-cols-3">
             {months.map((m) => (
               <Doughnut
                 key={m.name}
                 online={m.ok}
                 offline={m.bad}
                 label={m.name}
-                size={132}
+                size={210}
               />
             ))}
           </div>
@@ -162,9 +163,9 @@ export function SantaView({ data }: { data: SantaData }) {
                   <th
                     key={`${c.month}-${c.day}`}
                     title={c.day}
-                    className="bg-[var(--p1)] px-0.5 py-1 text-center font-semibold text-white"
+                    className="bg-[var(--p1)] px-0.5 align-bottom"
                   >
-                    {c.label}
+                    <AngledLabel text={c.label} />
                   </th>
                 ))}
               </tr>
