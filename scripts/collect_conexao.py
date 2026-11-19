@@ -114,12 +114,14 @@ def load_retirada_pairs() -> set[tuple[int, int]]:
         records = list((payload.get("records") or {}).values())
         if records:
             frames.append(pd.DataFrame(records))
-    files = sorted(p for p in JOTFORM.glob("*.xlsx") if p.is_file())
-    frames.extend(pd.read_excel(p) for p in files)
+    if not frames:
+        files = sorted(p for p in JOTFORM.glob("*.xlsx") if p.is_file())
+        frames.extend(pd.read_excel(p) for p in files)
     if not frames:
         return set()
     raw = pd.concat(frames, ignore_index=True)
     if "ID do Envio" in raw.columns:
+        raw["ID do Envio"] = raw["ID do Envio"].map(lambda v: "" if v is None else str(v).strip())
         raw = raw.sort_values(["ID do Envio"]).drop_duplicates("ID do Envio", keep="last")
 
     removed: set[tuple[int, int]] = set()
