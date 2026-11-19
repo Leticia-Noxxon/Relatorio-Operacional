@@ -5,60 +5,60 @@
     "label": "05/09 a 19/11/2026"
   },
   "kpis": {
-    "maintenances": 1690,
-    "reincidences": 423,
-    "prefixes": 1267,
+    "maintenances": 1738,
+    "reincidences": 425,
+    "prefixes": 1313,
     "garages": 14,
     "cameras_removed": 26
   },
   "problem_buckets": [
     [
       "Cartão de Memória",
-      847
+      864
     ],
     [
       "Câmera",
-      842
+      847
     ],
     [
       "Cabeamento",
-      300
+      305
     ],
     [
       "Switch",
-      214
+      222
     ]
   ],
   "action_buckets": [
     [
-      "Cartão de Memória",
-      880
+      "Câmera",
+      1066
     ],
     [
-      "Câmera",
-      1039
+      "Cartão de Memória",
+      894
     ],
     [
       "Cabeamento",
-      328
+      333
     ],
     [
       "Switch",
-      218
+      226
     ]
   ],
   "top_problems": [
     [
       "Sem gravação de imagens",
-      2299
+      2340
     ],
     [
       "Configuração incorreta da câmera",
-      1297
+      1300
     ],
     [
       "Câmera mal reposicionada",
-      626
+      629
     ],
     [
       "Câmera inoperante / sem imagem",
@@ -66,11 +66,11 @@
     ],
     [
       "Switch apresentando falha",
-      525
+      533
     ],
     [
       "Cabeamento rompido/danificado",
-      325
+      334
     ],
     [
       "Câmera travada",
@@ -78,15 +78,15 @@
     ],
     [
       "Conexões do switch incorretas",
-      174
-    ],
-    [
-      "RJ45 crimpado incorretamente",
-      174
+      180
     ],
     [
       "Câmera sem cartão de memória",
-      170
+      178
+    ],
+    [
+      "RJ45 crimpado incorretamente",
+      178
     ],
     [
       "Câmera com infiltração",
@@ -100,59 +100,59 @@
   "top_actions": [
     [
       "Formatação do cartão de memória",
-      2465
+      2511
     ],
     [
       "Ajuste da configuração padrão da câmera",
-      2351
+      2424
     ],
     [
       "Inserção ou substituição do cartão de memória",
-      1192
+      1224
     ],
     [
       "Substituição da câmera defeituosa",
-      575
+      596
     ],
     [
       "Reposicionamento adequado da câmera",
-      549
+      552
     ],
     [
       "Substituição do switch",
-      488
+      506
     ],
     [
       "Reinicialização da câmera (Reset)",
-      483
+      489
     ],
     [
       "Crimpagem correta do conector RJ45",
-      294
+      296
     ],
     [
       "Reparo do cabeamento",
-      275
+      277
     ],
     [
       "Ativação da Câmera (Câmera desconectada)",
-      269
+      276
     ],
     [
       "Correção da falha no switch",
-      185
+      186
     ],
     [
       "Substituição do cabeamento",
-      181
+      184
     ]
   ],
   "garages": [
     {
       "name": "A2 Transportes",
-      "maints": 67,
+      "maints": 70,
       "reinc": 6,
-      "prefixes": 61
+      "prefixes": 64
     },
     {
       "name": "Alfa Rodobus",
@@ -162,9 +162,9 @@
     },
     {
       "name": "Alfa Rodobus SPE",
-      "maints": 51,
-      "reinc": 5,
-      "prefixes": 46
+      "maints": 65,
+      "reinc": 6,
+      "prefixes": 59
     },
     {
       "name": "Santa Brigida",
@@ -174,21 +174,21 @@
     },
     {
       "name": "Via Sudeste Cursino",
-      "maints": 19,
+      "maints": 26,
       "reinc": 0,
-      "prefixes": 19
+      "prefixes": 26
     },
     {
       "name": "Via Sudeste Sapopemba",
-      "maints": 258,
+      "maints": 263,
       "reinc": 66,
-      "prefixes": 192
+      "prefixes": 197
     },
     {
       "name": "Viação Grajaú",
-      "maints": 166,
+      "maints": 172,
       "reinc": 21,
-      "prefixes": 145
+      "prefixes": 151
     },
     {
       "name": "Viação Metrópole AE Carvalho",
@@ -204,15 +204,15 @@
     },
     {
       "name": "Viação Metrópole Iguatemi",
-      "maints": 146,
+      "maints": 151,
       "reinc": 42,
-      "prefixes": 104
+      "prefixes": 109
     },
     {
       "name": "Viação Metrópole Imperador",
-      "maints": 161,
+      "maints": 163,
       "reinc": 41,
-      "prefixes": 120
+      "prefixes": 122
     },
     {
       "name": "Viação Metrópole Itaim",
@@ -228,9 +228,9 @@
     },
     {
       "name": "Viação Metrópole Pinedo",
-      "maints": 245,
-      "reinc": 95,
-      "prefixes": 150
+      "maints": 251,
+      "reinc": 96,
+      "prefixes": 155
     }
   ],
   "garage_bucket_problems": [
@@ -238,20 +238,20 @@
       "name": "A2 Transportes",
       "buckets": [
         [
+          "Câmera",
+          63
+        ],
+        [
           "Cabeamento",
           11
         ],
         [
-          "Switch",
-          1
-        ],
-        [
-          "Câmera",
-          61
-        ],
-        [
           "Cartão de Memória",
           10
+        ],
+        [
+          "Switch",
+          1
         ]
       ]
     },
@@ -268,20 +268,20 @@
       "name": "Alfa Rodobus SPE",
       "buckets": [
         [
-          "Cabeamento",
-          7
-        ],
-        [
-          "Switch",
-          3
+          "Cartão de Memória",
+          49
         ],
         [
           "Câmera",
-          16
+          17
         ],
         [
-          "Cartão de Memória",
-          43
+          "Cabeamento",
+          8
+        ],
+        [
+          "Switch",
+          4
         ]
       ]
     },
@@ -289,20 +289,20 @@
       "name": "Santa Brigida",
       "buckets": [
         [
-          "Cabeamento",
-          8
-        ],
-        [
-          "Switch",
-          16
-        ],
-        [
           "Câmera",
           114
         ],
         [
           "Cartão de Memória",
           91
+        ],
+        [
+          "Switch",
+          16
+        ],
+        [
+          "Cabeamento",
+          8
         ]
       ]
     },
@@ -310,20 +310,20 @@
       "name": "Via Sudeste Cursino",
       "buckets": [
         [
-          "Cabeamento",
-          2
-        ],
-        [
-          "Switch",
-          1
+          "Cartão de Memória",
+          21
         ],
         [
           "Câmera",
           5
         ],
         [
-          "Cartão de Memória",
-          18
+          "Cabeamento",
+          3
+        ],
+        [
+          "Switch",
+          2
         ]
       ]
     },
@@ -331,20 +331,20 @@
       "name": "Via Sudeste Sapopemba",
       "buckets": [
         [
-          "Cabeamento",
-          36
-        ],
-        [
-          "Switch",
-          10
+          "Cartão de Memória",
+          170
         ],
         [
           "Câmera",
           76
         ],
         [
-          "Cartão de Memória",
-          169
+          "Cabeamento",
+          36
+        ],
+        [
+          "Switch",
+          10
         ]
       ]
     },
@@ -352,20 +352,20 @@
       "name": "Viação Grajaú",
       "buckets": [
         [
+          "Câmera",
+          116
+        ],
+        [
           "Cabeamento",
-          61
+          63
         ],
         [
           "Switch",
           50
         ],
         [
-          "Câmera",
-          115
-        ],
-        [
           "Cartão de Memória",
-          42
+          43
         ]
       ]
     },
@@ -373,20 +373,20 @@
       "name": "Viação Metrópole AE Carvalho",
       "buckets": [
         [
-          "Cabeamento",
-          10
-        ],
-        [
-          "Switch",
-          11
+          "Cartão de Memória",
+          74
         ],
         [
           "Câmera",
           50
         ],
         [
-          "Cartão de Memória",
-          74
+          "Switch",
+          11
+        ],
+        [
+          "Cabeamento",
+          10
         ]
       ]
     },
@@ -394,20 +394,20 @@
       "name": "Viação Metrópole Brás",
       "buckets": [
         [
-          "Cabeamento",
-          12
+          "Cartão de Memória",
+          32
         ],
         [
-          "Switch",
-          5
+          "Cabeamento",
+          12
         ],
         [
           "Câmera",
           11
         ],
         [
-          "Cartão de Memória",
-          32
+          "Switch",
+          5
         ]
       ]
     },
@@ -415,20 +415,20 @@
       "name": "Viação Metrópole Iguatemi",
       "buckets": [
         [
-          "Cabeamento",
-          10
-        ],
-        [
-          "Switch",
-          20
+          "Cartão de Memória",
+          93
         ],
         [
           "Câmera",
-          69
+          70
         ],
         [
-          "Cartão de Memória",
-          88
+          "Switch",
+          22
+        ],
+        [
+          "Cabeamento",
+          11
         ]
       ]
     },
@@ -436,20 +436,20 @@
       "name": "Viação Metrópole Imperador",
       "buckets": [
         [
-          "Cabeamento",
-          23
-        ],
-        [
-          "Switch",
-          26
-        ],
-        [
           "Câmera",
           116
         ],
         [
           "Cartão de Memória",
           103
+        ],
+        [
+          "Switch",
+          27
+        ],
+        [
+          "Cabeamento",
+          23
         ]
       ]
     },
@@ -457,20 +457,20 @@
       "name": "Viação Metrópole Itaim",
       "buckets": [
         [
-          "Cabeamento",
-          23
-        ],
-        [
-          "Switch",
-          15
-        ],
-        [
           "Câmera",
           50
         ],
         [
           "Cartão de Memória",
           43
+        ],
+        [
+          "Cabeamento",
+          23
+        ],
+        [
+          "Switch",
+          15
         ]
       ]
     },
@@ -478,20 +478,20 @@
       "name": "Viação Metrópole M'Boi Mirim",
       "buckets": [
         [
-          "Cabeamento",
-          24
-        ],
-        [
-          "Switch",
-          13
-        ],
-        [
           "Câmera",
           40
         ],
         [
           "Cartão de Memória",
           29
+        ],
+        [
+          "Cabeamento",
+          24
+        ],
+        [
+          "Switch",
+          13
         ]
       ]
     },
@@ -499,20 +499,20 @@
       "name": "Viação Metrópole Pinedo",
       "buckets": [
         [
-          "Cabeamento",
-          73
-        ],
-        [
-          "Switch",
-          43
-        ],
-        [
           "Câmera",
           118
         ],
         [
           "Cartão de Memória",
-          106
+          107
+        ],
+        [
+          "Cabeamento",
+          73
+        ],
+        [
+          "Switch",
+          46
         ]
       ]
     }
