@@ -22,6 +22,7 @@ type ExecRecord = {
   prefixo: string;
   problems?: string[];
   actions?: string[];
+  problem_buckets?: string[];
 };
 
 type ExecData = {
@@ -39,7 +40,14 @@ type ExecData = {
   problem_buckets: [string, number][];
   top_problems: [string, number][];
   top_actions: [string, number][];
-  garages: { name: string; maints: number; reinc: number; prefixes?: number }[];
+  garages: {
+    name: string;
+    maints: number;
+    reinc: number;
+    prefixes?: number;
+    top_problems?: [string, number][];
+    top_actions?: [string, number][];
+  }[];
   garage_bucket_problems: {
     name: string;
     buckets: [string, number][];
@@ -85,10 +93,12 @@ export function ExecutivoView({
     : problemBuckets;
   const switchN =
     viewBuckets.find(([k]) => k.toLowerCase().includes("switch"))?.[1] || 0;
-  const viewProblems = selectedOcc
-    ? viewBuckets
-    : topProblems;
-  const viewActions = selected ? [] : topActions;
+  const viewProblems = selected?.top_problems?.length
+    ? selected.top_problems
+    : selectedOcc
+      ? viewBuckets
+      : topProblems;
+  const viewActions = selected ? selected.top_actions || [] : topActions;
   const maxP = Math.max(...viewProblems.map(([, v]) => v), 1);
   const maxA = Math.max(...viewActions.map(([, v]) => v), 1);
 
@@ -363,13 +373,32 @@ function sliceExecutivo(data: ExecData, range?: { start: string; end: string }) 
   const byGarage = new Map<string, { maints: number; prefixes: Set<string> }>();
   const problems = new Map<string, number>();
   const actions = new Map<string, number>();
+  const problemBuckets = new Map<string, number>();
+  const garageProblems = new Map<string, Map<string, number>>();
+  const garageActions = new Map<string, Map<string, number>>();
+  const garageBuckets = new Map<string, Map<string, number>>();
   for (const row of records) {
     const garage = byGarage.get(row.garagem) || { maints: 0, prefixes: new Set<string>() };
     garage.maints += 1;
     if (row.prefixo) garage.prefixes.add(row.prefixo);
     byGarage.set(row.garagem, garage);
-    for (const label of row.problems || []) problems.set(label, (problems.get(label) || 0) + 1);
-    for (const label of row.actions || []) actions.set(label, (actions.get(label) || 0) + 1);
+    const gp = garageProblems.get(row.garagem) || new Map<string, number>();
+    const ga = garageActions.get(row.garagem) || new Map<string, number>();
+    const gb = garageBuckets.get(row.garagem) || new Map<string, number>();
+    (row.problems || []).forEach((label, index) => {
+      problems.set(label, (problems.get(label) || 0) + 1);
+      gp.set(label, (gp.get(label) || 0) + 1);
+      const bucket = row.problem_buckets?.[index] || "Câmera";
+      problemBuckets.set(bucket, (problemBuckets.get(bucket) || 0) + 1);
+      gb.set(bucket, (gb.get(bucket) || 0) + 1);
+    });
+    (row.actions || []).forEach((label) => {
+      actions.set(label, (actions.get(label) || 0) + 1);
+      ga.set(label, (ga.get(label) || 0) + 1);
+    });
+    garageProblems.set(row.garagem, gp);
+    garageActions.set(row.garagem, ga);
+    garageBuckets.set(row.garagem, gb);
   }
   const garages = [...byGarage.entries()]
     .map(([name, info]) => ({
@@ -377,6 +406,8 @@ function sliceExecutivo(data: ExecData, range?: { start: string; end: string }) 
       maints: info.maints,
       reinc: 0,
       prefixes: info.prefixes.size,
+      top_problems: [...(garageProblems.get(name) || [])].sort((a, b) => b[1] - a[1]).slice(0, 12) as [string, number][],
+      top_actions: [...(garageActions.get(name) || [])].sort((a, b) => b[1] - a[1]).slice(0, 12) as [string, number][],
     }))
     .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
   const topProblems = [...problems.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
@@ -389,11 +420,14 @@ function sliceExecutivo(data: ExecData, range?: { start: string; end: string }) 
       garages: garages.length,
       cameras_removed: 0,
     },
-    problemBuckets: topProblems.slice(0, 4),
+    problemBuckets: [...problemBuckets.entries()].sort((a, b) => b[1] - a[1]) as [string, number][],
     topProblems,
     topActions,
     garages,
-    occ: garages.map((garage) => ({ name: garage.name, buckets: [] as [string, number][] })),
-    note: `Recorte ${range.start.split("-").reverse().join("/")}–${range.end.split("-").reverse().join("/")}: só os ${records.length} envios com data individual. O lote antigo de ${data.legacy_maintenances || 1690} manutenções não tem data por formulário.`,
+    occ: garages.map((garage) => ({
+      name: garage.name,
+      buckets: [...(garageBuckets.get(garage.name) || [])].sort((a, b) => b[1] - a[1]) as [string, number][],
+    })),
+    note: `Período filtrado: ${records.length} manutenções entre ${range.start.split("-").reverse().join("/")} e ${range.end.split("-").reverse().join("/")}.`,
   };
 }

@@ -74,11 +74,20 @@ def write_status(ok: bool, detail: dict) -> None:
     print("status", payload["updated_at_label"], "ok=", ok)
 
 
+def _history_floor() -> int:
+    path = ROOT / "data" / "jotform" / "historico.json"
+    if not path.is_file():
+        return 0
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    return int(payload.get("baseline_maintenances") or 0)
+
+
 def assert_published_datasets() -> None:
     """Recusa publicar JSON vazio por cima do último dado bom."""
     root = ROOT / "web" / "data" / "datasets"
     checks = {
-        "executivo": lambda d: int((d.get("kpis") or {}).get("maintenances") or 0) >= 1690,
+        "executivo": lambda d: int((d.get("kpis") or {}).get("maintenances") or 0)
+        >= _history_floor(),
         "santa": lambda d: bool(d.get("prefixes")),
         "sdcard": lambda d: int((d.get("kpis") or {}).get("total_cards") or 0) > 0,
         "conexao": lambda d: bool(d.get("all"))

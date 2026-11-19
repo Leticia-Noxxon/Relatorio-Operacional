@@ -236,7 +236,8 @@ def split_multi(value) -> list[str]:
     if pd.isna(value):
         return []
     out = []
-    for part in str(value).replace("\r", "\n").split("\n"):
+    text = str(value).replace("\r", "\n").replace(";", ",")
+    for part in text.replace("\n", ",").split(","):
         part = part.strip(" -;\t")
         if part:
             out.append(part)
@@ -542,6 +543,17 @@ def vehicle_resolution(status: pd.DataFrame | None) -> dict[int, str]:
 
 
 def load_maintenances() -> pd.DataFrame:
+    history_path = DATA_JOTFORM / "historico.json"
+    if history_path.is_file():
+        if str(ROOT / "scripts") not in sys.path:
+            sys.path.insert(0, str(ROOT / "scripts"))
+        from jotform_history import load_history, records_frame
+
+        rows = list(load_history().get("records", {}).values())
+        period = records_frame(rows, PERIOD_START, PERIOD_END)
+        period.attrs["raw_rows"] = len(rows)
+        period.attrs["dedup_rows"] = len(rows)
+        return period
     frames = []
     for path in discover_jotform():
         part = pd.read_excel(path)

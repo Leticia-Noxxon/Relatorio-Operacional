@@ -197,59 +197,113 @@ def build_executivo_payload(period_start: date, period_end: date) -> tuple[dict,
     from generate_report import analyze
 
     history = load_history()
-    legacy = (history.get("legacy") or {}).get("executivo")
-    fresh, duplicates = split_against_legacy(history)
-    delta_df = records_frame(fresh, period_start, period_end)
-    delta = analyze(delta_df) if len(delta_df) else None
-    if legacy:
-        payload = merge_executivo(legacy, delta, period_end)
-    elif delta is not None:
-        raise RuntimeError("Histórico sem legado e o exportador espera o agregado anterior.")
-    else:
-        raise RuntimeError("Histórico Jotform sem dados.")
-
-    legacy_n = int((history.get("legacy") or {}).get("maintenances") or 0)
+    if not len(df := records_frame(list((history.get("records") or {}).values()), period_start, period_end)):
+        raise RuntimeError("Histórico Jotform sem envios no período.")
+    report = analyze(df)
+    payload = _payload_from_report(report, period_start, period_end)
+    floor = int(history.get("baseline_maintenances") or 0)
     total = int(payload["kpis"]["maintenances"])
-    if legacy_n and total < legacy_n:
-        raise RuntimeError(f"executivo {total} abaixo do legado {legacy_n}")
+    if floor and total < floor:
+        raise RuntimeError(f"executivo {total} abaixo da base por envio {floor}")
+    payload["records"] = _slim_records(history, period_start, period_end)
     stats = {
-        "legacy": legacy_n,
         "records": len(history.get("records") or {}),
-        "duplicates": len(duplicates),
-        "new": int(delta.n_maints) if delta is not None else 0,
+        "in_period": total,
         "maintenances": total,
+        "duplicates": 0,
+        "new": total,
+        "legacy": 0,
     }
     print(
         "jotform histórico",
-        f"legado={stats['legacy']}",
         f"registros={stats['records']}",
-        f"duplicatas={stats['duplicates']}",
-        f"novas={stats['new']}",
+        f"no_periodo={stats['in_period']}",
         f"manutencoes={stats['maintenances']}",
     )
-    payload["legacy_period_end"] = str((history.get("legacy") or {}).get("period_end") or LEGACY_PERIOD_END)
-    payload["legacy_maintenances"] = legacy_n
-    payload["records"] = _slim_records(history)
     return payload, stats
 
 
-def _slim_records(history: dict) -> list[dict]:
-    """Envios com data, sem fotos nem texto livre, para o filtro do painel."""
+def _payload_from_report(report, period_start: date, period_end: date) -> dict:
+    from collections import Counter
+
+    def tops(items, garage: str) -> list:
+        counter: Counter[str] = Counter(
+            item.label for item in items if item.garagem == garage
+        )
+        return counter.most_common(12)
+
+    garages = []
+    for name, maints, reinc in report.garage_rows:
+        prefixes = int(report.maints.loc[report.maints["Garagem"] == name, "Prefixo"].nunique())
+        garages.append(
+            {
+                "name": name,
+                "maints": int(maints),
+                "reinc": int(reinc),
+                "prefixes": prefixes,
+                "top_problems": tops(report.problems, name),
+                "top_actions": tops(report.actions, name),
+            }
+        )
+    return {
+        "period": {
+            "start": period_start.isoformat(),
+            "end": period_end.isoformat(),
+            "label": f"{period_start.strftime('%d/%m')} a {period_end.strftime('%d/%m/%Y')}",
+        },
+        "kpis": {
+            "maintenances": int(report.n_maints),
+            "reincidences": int(report.n_reinc),
+            "prefixes": int(report.n_prefix),
+            "garages": int(report.n_garages),
+            "cameras_removed": int(report.n_cameras_retirada),
+        },
+        "problem_buckets": report.top_problem_buckets,
+        "action_buckets": report.top_action_buckets,
+        "top_problems": report.top_problems[:12],
+        "top_actions": report.top_actions[:12],
+        "garages": garages,
+        "garage_bucket_problems": [
+            {"name": name, "buckets": buckets} for name, buckets in report.garage_bucket_problems
+        ],
+    }
+
+
+def _slim_records(history: dict, period_start: date, period_end: date) -> list[dict]:
+    """Envios do período, sem fotos, para o filtro por dia."""
+    from generate_report import (
+        action_bucket,
+        norm_action,
+        norm_problem,
+        problem_bucket,
+        split_multi,
+    )
+
     slim = []
     for row in (history.get("records") or {}).values():
         day = reference_day(row)
-        if day is None:
+        if day is None or day < period_start or day > period_end:
             continue
-        problems = []
-        actions = []
+        problems: list[str] = []
+        actions: list[str] = []
+        problem_buckets: list[str] = []
+        action_buckets: list[str] = []
         for key, value in row.items():
-            text = str(value or "").strip()
-            if not text or text.lower() == "nan":
-                continue
+            chunks = split_multi(value)
             if str(key).startswith("Problemas Detectados"):
-                problems.append(text[:160])
+                for chunk in chunks:
+                    label = norm_problem(chunk)
+                    if not label:
+                        continue
+                    problems.append(label)
+                    problem_buckets.append(problem_bucket(label))
             elif str(key).startswith("Ações"):
-                actions.append(text[:160])
+                for chunk in chunks:
+                    label = norm_action(chunk)
+                    if not label:
+                        continue
+                    actions.append(label)
+                    action_buckets.append(action_bucket(label))
         slim.append(
             {
                 "id": str(row.get("ID do Envio") or ""),
@@ -258,6 +312,8 @@ def _slim_records(history: dict) -> list[dict]:
                 "prefixo": str(row.get("Prefixo") or ""),
                 "problems": problems,
                 "actions": actions,
+                "problem_buckets": problem_buckets,
+                "action_buckets": action_buckets,
             }
         )
     slim.sort(key=lambda item: (item["date"], item["garagem"], item["prefixo"]))

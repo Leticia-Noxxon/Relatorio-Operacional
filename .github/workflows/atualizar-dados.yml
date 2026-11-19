@@ -97,11 +97,12 @@ jobs:
               if not isinstance(data, dict) or not data:
                   raise SystemExit(f"dataset vazio: {path}")
           exec_n = int(json.loads(Path("web/data/datasets/executivo.json").read_text())["kpis"]["maintenances"])
-          if exec_n < 1690:
-              raise SystemExit(f"executivo com {exec_n} manutenções; o histórico exige >= 1690")
           history = json.loads(Path("data/jotform/historico.json").read_text())
-          if not history.get("legacy") or not isinstance(history.get("records"), dict):
+          floor = int(history.get("baseline_maintenances") or 0)
+          if not isinstance(history.get("records"), dict) or floor <= 0:
               raise SystemExit("histórico Jotform inválido")
+          if exec_n < floor:
+              raise SystemExit(f"executivo com {exec_n} manutenções; a base por envio exige >= {floor}")
           PY
           if git diff --cached --quiet; then
             echo "Nenhuma mudança nos datasets."
