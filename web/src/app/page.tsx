@@ -209,19 +209,26 @@ export default function HomePage() {
     }
   }
 
-  function onPdf() {
+  async function onPdf() {
     const full =
       applied.start === (status?.start || start).slice(0, 10) &&
       applied.end === (status?.end || end).slice(0, 10);
+    const href = `${STATIC_EXPORT ? BASE_PATH : ""}/pdfs/${active.pdf}`;
     if (full) {
-      const href = `${STATIC_EXPORT ? BASE_PATH : ""}/pdfs/${active.pdf}`;
-      const link = document.createElement("a");
-      link.href = href;
-      link.download = active.pdf;
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      return;
+      try {
+        const res = await fetch(href, { method: "HEAD" });
+        if (res.ok) {
+          const link = document.createElement("a");
+          link.href = href;
+          link.download = active.pdf;
+          document.body.appendChild(link);
+          link.click();
+          link.remove();
+          return;
+        }
+      } catch {
+        /* cai para impressão */
+      }
     }
     window.print();
   }
