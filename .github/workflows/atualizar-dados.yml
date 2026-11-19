@@ -5,6 +5,10 @@ on:
   schedule:
     - cron: "0 9 * * *"
   workflow_dispatch:
+  # Disparo único: o token desta sessão não pode chamar workflow_dispatch.
+  # Este gatilho sai no commit seguinte.
+  push:
+    branches: [main]
 
 permissions:
   contents: write
