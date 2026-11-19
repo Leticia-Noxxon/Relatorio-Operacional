@@ -7,6 +7,8 @@ import {
   MonthSeg,
   Panel,
   STATUS_COLOR,
+  TableFrame,
+  formatPercent,
 } from "@/components/Dashboard";
 
 type SantaData = {
@@ -98,14 +100,14 @@ export function SantaView({
     <div className="space-y-3">
       <div className="grid gap-3 lg:grid-cols-[1fr_1.2fr]">
         <Panel title="Resumo por prefixo">
-          <div className="overflow-auto">
-            <table className="w-full border-collapse text-sm">
+          <TableFrame>
+            <table className="w-full border-collapse text-[13px] sm:text-sm">
               <thead>
                 <tr className="bg-[var(--p1)] text-white">
                   <th className="px-3 py-2 text-left">Prefixo</th>
-                  <th className="px-3 py-2 text-center">Total de Registro</th>
-                  <th className="px-3 py-2 text-center">Registro OK</th>
-                  <th className="px-3 py-2 text-center">Registro com Falha</th>
+                  <th className="px-3 py-2 text-center">Total de registros</th>
+                  <th className="px-3 py-2 text-center">Registros sem falha</th>
+                  <th className="px-3 py-2 text-center">Registros com falha</th>
                 </tr>
               </thead>
               <tbody>
@@ -131,28 +133,35 @@ export function SantaView({
                 })}
               </tbody>
             </table>
-          </div>
+          </TableFrame>
         </Panel>
 
         <Panel title="Disponibilidade por mês">
-          <div className="grid w-full grid-cols-1 items-center justify-items-center gap-10 py-4 sm:grid-cols-3">
-            {months.map((m) => (
-              <Doughnut
-                key={m.name}
-                online={m.ok}
-                offline={m.bad}
-                label={m.name}
-                size={210}
-              />
-            ))}
-          </div>
-          <div className="mt-2 flex justify-center gap-4 text-sm text-[var(--muted)]">
-            <span className="inline-flex items-center gap-1.5">
-              <i className="inline-block h-3 w-3 rounded-sm bg-[#7BC67E]" /> Online
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <i className="inline-block h-3 w-3 rounded-sm bg-[#E89A9A]" /> Offline
-            </span>
+          <div className="grid w-full grid-cols-1 items-start justify-items-center gap-8 py-2 min-[720px]:grid-cols-3 min-[720px]:gap-4">
+            {months.map((m) => {
+              const total = m.ok + m.bad;
+              return (
+                <div key={m.name} className="flex w-full max-w-[200px] flex-col items-center">
+                  <Doughnut
+                    online={m.ok}
+                    offline={m.bad}
+                    label={m.name}
+                    size={176}
+                  />
+                  <p className="mt-2 text-center text-[11px] font-normal leading-relaxed text-[var(--muted)]">
+                    <span className="inline-flex items-center gap-1">
+                      <i className="inline-block h-2 w-2 rounded-sm bg-[#7BC67E]" />
+                      {formatPercent(m.ok, total)} online
+                    </span>
+                    <span className="mx-1 text-[var(--line)]">·</span>
+                    <span className="inline-flex items-center gap-1">
+                      <i className="inline-block h-2 w-2 rounded-sm bg-[#E89A9A]" />
+                      {formatPercent(m.bad, total)} offline
+                    </span>
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </Panel>
       </div>
@@ -167,13 +176,13 @@ export function SantaView({
           />
         }
       >
-        <div className="overflow-auto">
-          <table className="w-full border-collapse text-[11px]">
+        <TableFrame>
+          <table className="w-max min-w-full border-collapse text-[11px]">
             <thead>
               <tr>
                 <th
                   rowSpan={2}
-                  className="sticky left-0 z-10 bg-[var(--p1)] px-2 py-2 text-left text-white"
+                  className="sticky left-0 z-20 bg-[var(--p1)] px-2 py-2 text-left text-white"
                 >
                   Prefixo
                 </th>
@@ -192,7 +201,7 @@ export function SantaView({
                   <th
                     key={`${c.month}-${c.day}`}
                     title={c.day}
-                    className="bg-[var(--p1)] px-0.5 align-bottom"
+                    className="w-[16px] min-w-[16px] bg-[var(--p1)] px-0 py-1 align-bottom"
                   >
                     <AngledLabel text={c.label} />
                   </th>
@@ -226,17 +235,16 @@ export function SantaView({
               ))}
             </tbody>
           </table>
-        </div>
-        <div className="mt-2 flex flex-wrap gap-3 text-xs text-[var(--muted)]">
+        </TableFrame>
+        <div className="mt-2 flex flex-wrap gap-3 text-xs font-normal text-[var(--muted)]">
           <span className="inline-flex items-center gap-1.5">
-            <i className="inline-block h-3 w-3 rounded-sm bg-[#7BC67E]" /> OK
+            <i className="inline-block h-2.5 w-2.5 rounded-sm bg-[#7BC67E]" /> Sem falha
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <i className="inline-block h-3 w-3 rounded-sm bg-[#E89A9A]" /> Falha
+            <i className="inline-block h-2.5 w-2.5 rounded-sm bg-[#E89A9A]" /> Falha
           </span>
           <span className="inline-flex items-center gap-1.5">
-            <i className="inline-block h-3 w-3 rounded-sm bg-[#C5CED6]" /> Fora do
-            período
+            <i className="inline-block h-2.5 w-2.5 rounded-sm bg-[#C5CED6]" /> Fora do período
           </span>
         </div>
       </Panel>

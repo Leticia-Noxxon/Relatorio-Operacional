@@ -38,14 +38,14 @@ export const REPORTS: ReportDef[] = [
   {
     id: "conexao",
     title: "Conexão das Câmeras",
-    short: "Conexão",
+    short: "Conexão das Câmeras",
     pdf: "Conexao_Cameras_por_Unidade.pdf",
     previewStem: "Conexao_Cameras_por_Unidade",
   },
   {
     id: "retorno",
     title: "Retorno de Switches",
-    short: "Retorno Switches",
+    short: "Retorno de Switches",
     pdf: "Retorno_Falhas_Switches_CFTV.pdf",
     previewStem: "Retorno_Falhas_Switches_CFTV",
   },

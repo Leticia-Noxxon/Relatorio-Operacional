@@ -7,6 +7,7 @@ import {
   MonthSeg,
   Panel,
   STATUS_COLOR,
+  WheelPan,
 } from "@/components/Dashboard";
 import { IconBus, IconSd } from "@/components/Icons";
 
@@ -116,11 +117,11 @@ function toIso(label: string, year: string) {
 
   return (
     <div className="space-y-2">
-      <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
         <KpiCard dense label="Prefixos" value={kpis.prefixes} icon={<IconBus />} />
         <KpiCard
           dense
-          label="SD Cards"
+          label="Cartões SD"
           value={kpis.total_cards}
           icon={<IconSd />}
           iconColor="#2F87B5"
@@ -155,15 +156,15 @@ function toIso(label: string, year: string) {
         bodyClassName="p-2"
         title="Evolução diária"
         right={
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center gap-1 text-[10px] text-[var(--muted)]">
-              <i className="inline-block h-2 w-2 rounded-sm bg-[#7BC67E]" /> OK
+          <div className="flex max-w-full flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-1 text-[11px] font-normal text-[var(--muted)]">
+              <i className="inline-block h-2 w-2 rounded-sm bg-[#7BC67E]" /> Sem falha
             </span>
-            <span className="inline-flex items-center gap-1 text-[10px] text-[var(--muted)]">
-              <i className="inline-block h-2 w-2 rounded-sm bg-[#E89A9A]" /> Erro
+            <span className="inline-flex items-center gap-1 text-[11px] font-normal text-[var(--muted)]">
+              <i className="inline-block h-2 w-2 rounded-sm bg-[#E89A9A]" /> Com erro
             </span>
-            <span className="inline-flex items-center gap-1 text-[10px] text-[var(--muted)]">
-              <i className="inline-block h-2 w-2 rounded-sm bg-[#C5CED6]" /> Off
+            <span className="inline-flex items-center gap-1 text-[11px] font-normal text-[var(--muted)]">
+              <i className="inline-block h-2 w-2 rounded-sm bg-[#C5CED6]" /> Offline
             </span>
             <MonthSeg
               months={months.map((m) => m.name)}
@@ -173,13 +174,13 @@ function toIso(label: string, year: string) {
           </div>
         }
       >
-        <div className="h-[calc(100vh-1rem)] overflow-auto">
-          <table className="w-full border-collapse text-[13px]">
+        <WheelPan className="max-h-[min(720px,calc(100dvh-15rem))] min-h-[240px]">
+          <table className="w-max min-w-full border-collapse text-[13px]">
             <thead className="sticky top-0 z-20">
               <tr>
                 <th
                   rowSpan={2}
-                  className="sticky left-0 z-10 bg-[var(--p1)] px-2 py-2 text-left text-white"
+                  className="sticky left-0 z-30 bg-[var(--p1)] px-2 py-2 text-left text-white"
                 >
                   Prefixo
                 </th>
@@ -187,7 +188,7 @@ function toIso(label: string, year: string) {
                   rowSpan={2}
                   className="bg-[var(--p1)] px-2 py-2 text-center text-white"
                 >
-                  Câm
+                  Câmera
                 </th>
                 {monthSpans.map((m) => (
                   <th
@@ -204,7 +205,7 @@ function toIso(label: string, year: string) {
                   <th
                     key={`${c.month}-${c.day}`}
                     title={c.day}
-                    className="bg-[var(--p1)] px-0 align-bottom"
+                    className="w-[16px] min-w-[16px] bg-[var(--p1)] px-0 py-1 align-bottom"
                   >
                     <AngledLabel text={c.label} />
                   </th>
@@ -232,7 +233,7 @@ function toIso(label: string, year: string) {
                       return (
                         <td
                           key={`${prefixo}-${row.camera}-${c.day}`}
-                          className="px-1 py-1 text-center"
+                          className="px-0.5 py-1 text-center"
                         >
                           <span
                             className="inline-block h-3.5 w-3.5 rounded-[2px]"
@@ -247,7 +248,7 @@ function toIso(label: string, year: string) {
               )}
             </tbody>
           </table>
-        </div>
+        </WheelPan>
       </Panel>
     </div>
   );

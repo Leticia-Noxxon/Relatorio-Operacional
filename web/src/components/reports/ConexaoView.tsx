@@ -108,8 +108,8 @@ export function ConexaoView({
   );
 
   return (
-    <div className="space-y-2">
-      <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="flex flex-col gap-2 lg:min-h-0 lg:flex-1">
+      <div className="grid shrink-0 grid-cols-2 gap-2 lg:grid-cols-4">
         <KpiCard
           dense
           label="Veículos com falha"
@@ -142,11 +142,12 @@ export function ConexaoView({
       </div>
 
       <Panel
-        bodyClassName="p-2"
+        className="lg:flex lg:min-h-0 lg:flex-1 lg:flex-col"
+        bodyClassName="flex min-h-0 flex-1 flex-col p-2 lg:overflow-hidden"
         title="Garagens"
         right={
-          <div className="flex flex-wrap items-center gap-2">
-            <div className="inline-flex rounded-lg bg-[var(--p4)] p-0.5">
+          <div className="flex max-w-full flex-wrap items-center gap-2">
+            <div className="inline-flex max-w-full flex-wrap rounded-lg bg-[var(--p4)] p-0.5">
               <ModeButton active={mode === "prefixo"} onClick={() => setMode("prefixo")}>
                 Por prefixo (veículo)
               </ModeButton>
@@ -155,10 +156,12 @@ export function ConexaoView({
               </ModeButton>
             </div>
             <details className="relative">
-              <summary className="cursor-pointer list-none rounded-lg border border-[var(--line)] bg-white px-2.5 py-1 text-xs font-semibold text-[var(--p1)]">
-                {allSelected ? "Todas as câmeras" : `Câmeras: ${selected.join(", ")}`}
+              <summary className="cursor-pointer list-none rounded-lg border border-[var(--line)] bg-white px-2.5 py-1 text-xs font-medium text-[var(--p1)]">
+                {allSelected
+                  ? "Todas as câmeras"
+                  : `${selected.length} de ${positions.length} câmeras`}
               </summary>
-              <div className="absolute right-0 z-20 mt-1 w-44 rounded-lg border border-[var(--line)] bg-white p-2 shadow-lg">
+              <div className="absolute left-0 z-30 mt-1 w-44 rounded-lg border border-[var(--line)] bg-white p-2 shadow-lg sm:left-auto sm:right-0">
                 {positions.map((pos) => (
                   <label key={pos} className="flex items-center gap-2 py-0.5 text-xs">
                     <input
@@ -188,24 +191,24 @@ export function ConexaoView({
         ) : legacy ? (
           <LegacyTable rows={data.all || []} />
         ) : (
-          <div>
-            <table className="w-full border-collapse text-xs">
-              <thead>
+          <div className="conexao-scroll min-h-0 w-full max-w-full flex-1 overflow-auto">
+            <table className="w-full min-w-[40rem] border-collapse text-[13px]">
+              <thead className="sticky top-0 z-10 bg-[var(--p1)] [&_th]:bg-[var(--p1)]">
                 <tr className="bg-[var(--p1)] text-white">
-                  <th className="px-2 py-1 text-left">Garagem</th>
+                  <th className="px-2 py-1.5 text-left font-semibold">Garagem</th>
                   {mode === "prefixo" ? (
                     <>
-                      <th className="px-2 py-1 text-center">Total de veículos</th>
-                      <th className="px-2 py-1 text-center">Veíc. com falha</th>
-                      <th className="px-2 py-1 text-center">Veíc. 100% offline</th>
-                      <th className="px-2 py-1 text-center">Veíc. erro SD</th>
+                      <th className="px-2 py-1.5 text-center font-semibold leading-tight">Total de veículos</th>
+                      <th className="px-2 py-1.5 text-center font-semibold leading-tight">Veículos com falha</th>
+                      <th className="px-2 py-1.5 text-center font-semibold leading-tight">Veículos 100% offline</th>
+                      <th className="px-2 py-1.5 text-center font-semibold leading-tight">Veículos com erro de SD</th>
                     </>
                   ) : (
                     <>
-                      <th className="px-2 py-1 text-center">Total de câmeras</th>
-                      <th className="px-2 py-1 text-center">Câmeras com falha</th>
-                      <th className="px-2 py-1 text-center">Câmeras 100% offline</th>
-                      <th className="px-2 py-1 text-center">Câmeras com erro de SD</th>
+                      <th className="px-2 py-1.5 text-center font-semibold leading-tight">Total de câmeras</th>
+                      <th className="px-2 py-1.5 text-center font-semibold leading-tight">Câmeras com falha</th>
+                      <th className="px-2 py-1.5 text-center font-semibold leading-tight">Câmeras 100% offline</th>
+                      <th className="px-2 py-1.5 text-center font-semibold leading-tight">Câmeras com erro de SD</th>
                     </>
                   )}
                 </tr>
@@ -283,14 +286,15 @@ function ModeButton({
 
 function LegacyTable({ rows }: { rows: LegacyRow[] }) {
   return (
-    <table className="w-full border-collapse text-xs">
+    <div className="max-w-full overflow-x-auto">
+    <table className="w-full min-w-[40rem] border-collapse text-[13px]">
       <thead>
         <tr className="bg-[var(--p1)] text-white">
-          <th className="px-2 py-1 text-left">Garagem</th>
-          <th className="px-2 py-1 text-center">Total de veículos</th>
-          <th className="px-2 py-1 text-center">Veíc. com falha</th>
-          <th className="px-2 py-1 text-center">Câmeras com falha</th>
-          <th className="px-2 py-1 text-center">Câmeras com erro de SD</th>
+          <th className="px-2 py-1.5 text-left font-semibold">Garagem</th>
+          <th className="px-2 py-1.5 text-center font-semibold leading-tight">Total de veículos</th>
+          <th className="px-2 py-1.5 text-center font-semibold leading-tight">Veículos com falha</th>
+          <th className="px-2 py-1.5 text-center font-semibold leading-tight">Câmeras com falha</th>
+          <th className="px-2 py-1.5 text-center font-semibold leading-tight">Câmeras com erro de SD</th>
         </tr>
       </thead>
       <tbody>
@@ -305,6 +309,7 @@ function LegacyTable({ rows }: { rows: LegacyRow[] }) {
         ))}
       </tbody>
     </table>
+    </div>
   );
 }
 

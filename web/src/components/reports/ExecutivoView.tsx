@@ -6,7 +6,9 @@ import {
   InlineQtyBar,
   KpiCard,
   Panel,
+  TableFrame,
   VerticalBars,
+  formatPercent,
 } from "@/components/Dashboard";
 import {
   IconCamera,
@@ -122,7 +124,7 @@ export function ExecutivoView({
           </span>
         </div>
       ) : null}
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
         <KpiCard
           label="Manutenções"
           value={fmt(viewKpis.maintenances)}
@@ -147,7 +149,7 @@ export function ExecutivoView({
           iconColor="#2F87B5"
         />
         <KpiCard
-          label="Câmeras retirada"
+          label="Câmeras retiradas"
           value={
             viewKpis.cameras_removed == null ? "—" : fmt(viewKpis.cameras_removed)
           }
@@ -158,15 +160,15 @@ export function ExecutivoView({
       </div>
 
       <Panel title="Indicadores por garagem">
-        <div className="overflow-auto">
-          <table className="w-full min-w-[640px] border-collapse text-sm">
+        <TableFrame>
+          <table className="w-full min-w-[680px] border-collapse text-sm">
             <thead>
               <tr className="bg-[var(--p1)] text-white">
                 <th className="px-3 py-2 text-left">Garagem</th>
                 <th className="px-3 py-2 text-center">Manutenções</th>
                 <th className="px-3 py-2 text-center">Prefixos</th>
                 <th className="px-3 py-2 text-center">Reincidências</th>
-                <th className="px-3 py-2 text-center">% reincidências</th>
+                <th className="px-3 py-2 text-center">Percentual de reincidências</th>
               </tr>
             </thead>
             <tbody>
@@ -206,7 +208,7 @@ export function ExecutivoView({
               })}
             </tbody>
           </table>
-        </div>
+        </TableFrame>
       </Panel>
 
       <div className="grid gap-3 lg:grid-cols-[1.2fr_0.9fr]">
@@ -216,33 +218,40 @@ export function ExecutivoView({
           />
         </Panel>
         <Panel title="Disponibilidade">
-          <div className="flex h-full min-h-[280px] items-center justify-center gap-16 py-6">
+          <div className="flex flex-col items-center justify-center gap-5 py-3 sm:flex-row sm:gap-8 sm:py-4">
             <Doughnut
               online={Math.max(viewKpis.maintenances - switchN, 0)}
               offline={switchN}
-              size={250}
+              size={200}
             />
-            <div className="space-y-6 text-base text-[var(--muted)]">
-              <div className="inline-flex items-center gap-2">
-                <i className="inline-block h-3 w-3 rounded-sm bg-[#7BC67E]" />{" "}
-                Online
-              </div>
-              <div className="inline-flex items-center gap-2">
-                <i className="inline-block h-3 w-3 rounded-sm bg-[#E89A9A]" />{" "}
-                Offline
-              </div>
-            </div>
+            <ul className="space-y-2.5 text-[13px] font-normal text-[var(--muted)]">
+              <li className="flex items-center gap-2">
+                <i className="inline-block h-2.5 w-2.5 rounded-sm bg-[#7BC67E]" />
+                <span>Online</span>
+                <span className="tabular-nums text-[var(--ink)]">
+                  {formatPercent(Math.max(viewKpis.maintenances - switchN, 0), viewKpis.maintenances)}
+                </span>
+              </li>
+              <li className="flex items-center gap-2">
+                <i className="inline-block h-2.5 w-2.5 rounded-sm bg-[#E89A9A]" />
+                <span>Offline</span>
+                <span className="tabular-nums text-[var(--ink)]">
+                  {formatPercent(switchN, viewKpis.maintenances)}
+                </span>
+              </li>
+            </ul>
           </div>
         </Panel>
       </div>
 
       <div className="grid gap-3 md:grid-cols-2">
         <Panel title="Problemas mais identificados (Câmera)">
-          <table className="w-full border-collapse text-sm">
+          <TableFrame>
+          <table className="w-full min-w-[280px] border-collapse text-sm">
             <thead>
               <tr className="bg-[var(--p1)] text-white">
                 <th className="px-3 py-2 text-left">Problema</th>
-                <th className="w-[42%] px-3 py-2 text-center">Qtde</th>
+                <th className="w-[42%] px-3 py-2 text-center">Quantidade</th>
               </tr>
             </thead>
             <tbody>
@@ -259,13 +268,15 @@ export function ExecutivoView({
               ))}
             </tbody>
           </table>
+          </TableFrame>
         </Panel>
         <Panel title="Ações mais realizadas (Câmera)">
-          <table className="w-full border-collapse text-sm">
+          <TableFrame>
+          <table className="w-full min-w-[280px] border-collapse text-sm">
             <thead>
               <tr className="bg-[var(--p1)] text-white">
                 <th className="px-3 py-2 text-left">Ação</th>
-                <th className="w-[42%] px-3 py-2 text-center">Qtde</th>
+                <th className="w-[42%] px-3 py-2 text-center">Quantidade</th>
               </tr>
             </thead>
             <tbody>
@@ -289,11 +300,12 @@ export function ExecutivoView({
               ))}
             </tbody>
           </table>
+          </TableFrame>
         </Panel>
       </div>
 
       <Panel title="Resumo de ocorrências por garagem">
-        <div className="overflow-auto">
+        <TableFrame>
           <table className="w-full min-w-[720px] border-collapse text-sm">
             <thead>
               <tr className="bg-[var(--p1)] text-white">
@@ -338,7 +350,7 @@ export function ExecutivoView({
               })}
             </tbody>
           </table>
-        </div>
+        </TableFrame>
       </Panel>
     </div>
   );

@@ -239,13 +239,19 @@ export default function HomePage() {
     setError(null);
   }
 
+  const fitConexao = tab === "conexao";
+
   return (
-    <div className="min-h-screen font-[family-name:var(--font-sans)]">
-      <header className="no-print sticky top-0 z-30 px-3 pt-3 md:px-5 md:pt-4">
+    <div
+      className={`min-h-screen max-w-full font-[family-name:var(--font-sans)] ${
+        fitConexao ? "lg:flex lg:h-dvh lg:max-h-dvh lg:flex-col lg:overflow-hidden" : ""
+      }`}
+    >
+      <header className="no-print sticky top-0 z-30 max-w-full shrink-0 px-3 pt-3 md:px-5 md:pt-4">
         <div className="mx-auto max-w-[1500px] rounded-2xl border border-[var(--line)] bg-white px-2.5 py-2 shadow-[0_8px_24px_rgba(19,84,135,.08)] md:px-3 md:py-2.5">
-          <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-3 xl:flex-nowrap">
+          <div className="flex max-w-full flex-col gap-2 min-[1400px]:flex-row min-[1400px]:items-center min-[1400px]:gap-3">
             <nav
-              className="flex min-w-0 shrink-0 items-center gap-1.5 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              className="flex min-w-0 max-w-full items-center gap-1.5 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
               aria-label="Relatórios"
             >
               {REPORTS.map((r) => {
@@ -262,14 +268,15 @@ export default function HomePage() {
                     }`}
                   >
                     <span className="opacity-90">{TAB_ICON[r.id]}</span>
-                    <span className="whitespace-nowrap">{r.short}</span>
+                    <span className="whitespace-nowrap">{r.title}</span>
                   </button>
                 );
               })}
             </nav>
 
-            <div className="flex min-w-0 flex-1 flex-col gap-2 sm:flex-row sm:items-center sm:justify-between lg:justify-end xl:gap-3">
-              <div className="flex min-w-0 flex-wrap items-center gap-1.5 rounded-xl border-2 border-[#85B0C6] bg-[#f3f8fb] p-1.5 sm:flex-nowrap">
+            <div className="flex min-w-0 max-w-full flex-wrap items-center gap-2 min-[1400px]:ml-auto min-[1400px]:justify-end">
+              <div className="flex min-w-0 max-w-full flex-wrap items-center gap-1.5 rounded-xl border-2 border-[#85B0C6] bg-[#f3f8fb] p-1.5">
+                <div className="flex items-center gap-1.5">
                 <label className="relative inline-flex h-8 items-center">
                   <span className="pointer-events-none absolute left-2 text-[#2F87B5]">
                     <IconCalendar />
@@ -279,7 +286,7 @@ export default function HomePage() {
                     value={start}
                     onChange={(e) => setStart(e.target.value)}
                     aria-label="Data inicial"
-                    className="h-8 w-[8.6rem] rounded-md border border-[#85B0C6] bg-white pl-7 pr-1 text-[12px] text-[#0f2740] outline-none focus:border-[#2F87B5] md:w-[9.2rem] md:text-[13px]"
+                    className="h-8 w-[7.6rem] min-w-0 max-w-full rounded-md border border-[#85B0C6] bg-white pl-7 pr-1 text-[12px] text-[#0f2740] outline-none focus:border-[#2F87B5] sm:w-[8.8rem] sm:text-[13px]"
                   />
                 </label>
                 <span className="hidden text-[#2F87B5] sm:inline">–</span>
@@ -292,9 +299,10 @@ export default function HomePage() {
                     value={end}
                     onChange={(e) => setEnd(e.target.value)}
                     aria-label="Data final"
-                    className="h-8 w-[8.6rem] rounded-md border border-[#85B0C6] bg-white pl-7 pr-1 text-[12px] text-[#0f2740] outline-none focus:border-[#2F87B5] md:w-[9.2rem] md:text-[13px]"
+                    className="h-8 w-[7.6rem] min-w-0 max-w-full rounded-md border border-[#85B0C6] bg-white pl-7 pr-1 text-[12px] text-[#0f2740] outline-none focus:border-[#2F87B5] sm:w-[8.8rem] sm:text-[13px]"
                   />
                 </label>
+                </div>
                 <button
                   type="button"
                   onClick={onApplyFilter}
@@ -363,8 +371,14 @@ export default function HomePage() {
         </div>
       ) : null}
 
-      <main className="mx-auto max-w-[1500px] px-3 py-2 md:px-5 md:py-3">
-        <h1 className="mb-2 text-xl font-extrabold text-[#135487] md:text-[22px]">
+      <main
+        className={`mx-auto min-w-0 max-w-[1500px] px-3 py-2 md:px-5 md:py-3 ${
+          fitConexao
+            ? "lg:flex lg:min-h-0 lg:w-full lg:flex-1 lg:flex-col lg:overflow-hidden lg:py-2"
+            : ""
+        }`}
+      >
+        <h1 className="mb-2 shrink-0 text-lg font-extrabold text-[#135487] sm:text-xl md:text-[22px]">
           {active.title}
         </h1>
 
@@ -377,9 +391,11 @@ export default function HomePage() {
             Sem dados para esta aba. Clique em Atualizar dados.
           </div>
         ) : (
-          <ErrorBoundary label={active.short} key={tab}>
-            <ReportBody id={tab} data={tabData} range={applied} />
-          </ErrorBoundary>
+          <div className={fitConexao ? "lg:flex lg:min-h-0 lg:flex-1 lg:flex-col" : ""}>
+            <ErrorBoundary label={active.title} key={tab}>
+              <ReportBody id={tab} data={tabData} range={applied} />
+            </ErrorBoundary>
+          </div>
         )}
       </main>
     </div>

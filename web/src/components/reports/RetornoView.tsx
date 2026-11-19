@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Panel, VerticalBars } from "@/components/Dashboard";
+import { Panel, TableFrame, VerticalBars } from "@/components/Dashboard";
 
 type RetornoData = {
   trocas: number;
@@ -67,16 +67,16 @@ export function RetornoView({
       </Panel>
 
       <Panel title="Detalhe das trocas">
-        <div className="overflow-auto">
+        <TableFrame>
           <table className="w-full min-w-[820px] border-collapse text-sm">
             <thead>
               <tr className="bg-[var(--p1)] text-white">
                 <th className="px-3 py-2 text-center">Prefixo</th>
                 <th className="px-3 py-2 text-left">Nome</th>
                 <th className="px-3 py-2 text-left">Garagem</th>
-                <th className="px-3 py-2 text-center">Troca</th>
-                <th className="px-3 py-2 text-center">Falha</th>
-                <th className="px-3 py-2 text-center">Dias</th>
+                <th className="px-3 py-2 text-center">Data da troca</th>
+                <th className="px-3 py-2 text-center">Data da falha</th>
+                <th className="px-3 py-2 text-center">Dias até a falha</th>
                 <th className="px-3 py-2 text-center">Faixa</th>
               </tr>
             </thead>
@@ -101,7 +101,7 @@ export function RetornoView({
               ))}
             </tbody>
           </table>
-        </div>
+        </TableFrame>
 
         <div className="mt-3 flex flex-wrap items-center justify-end gap-3 text-xs text-[var(--muted)]">
           <span>
