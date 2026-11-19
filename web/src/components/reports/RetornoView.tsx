@@ -11,9 +11,32 @@ type RetornoData = {
 
 const PAGE_SIZES = [5, 10, 20, 40, 60];
 
-export function RetornoView({ data }: { data: RetornoData }) {
+export function RetornoView({
+  data,
+  range,
+}: {
+  data: RetornoData;
+  range?: { start: string; end: string };
+}) {
   const buckets = data.buckets || [];
-  const rows = data.rows || [];
+  const rows = (data.rows || []).filter((row) => {
+    if (!range) return true;
+    const iso = brDate(row["Data da troca"] || "");
+    return !iso || (iso >= range.start && iso <= range.end);
+  });
+  const shownBuckets = useMemo(() => {
+    if (!range) return buckets;
+    const counts = new Map<string, number>();
+    for (const name of ["sem falha", "1 a 7 dias", "8 a 15 dias", "16 a 30 dias", "31 a 60 dias", "acima de 60 dias"]) {
+      counts.set(name, 0);
+    }
+    for (const row of rows) {
+      const name = (row.Faixa || "").trim();
+      if (!name) continue;
+      counts.set(name, (counts.get(name) || 0) + 1);
+    }
+    return [...counts.entries()].map(([name, count]) => ({ name, count }));
+  }, [range, rows, buckets]);
   const [pageSize, setPageSize] = useState(10);
   const [page, setPage] = useState(1);
 
@@ -34,12 +57,12 @@ export function RetornoView({ data }: { data: RetornoData }) {
         title="Retorno de falhas"
         right={
           <div className="rounded-lg bg-[var(--p4)] px-3 py-1.5 text-sm font-extrabold text-[var(--p1)]">
-            Total: {data.trocas ?? rows.length}
+            Total: {range ? rows.length : data.trocas ?? rows.length}
           </div>
         }
       >
         <VerticalBars
-          items={buckets.map((b) => ({ label: b.name, value: b.count }))}
+          items={shownBuckets.map((b) => ({ label: b.name, value: b.count }))}
         />
       </Panel>
 
@@ -123,4 +146,9 @@ export function RetornoView({ data }: { data: RetornoData }) {
       </Panel>
     </div>
   );
+}
+
+function brDate(value: string) {
+  const match = value.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+  return match ? `${match[3]}-${match[2]}-${match[1]}` : "";
 }

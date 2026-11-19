@@ -4,6 +4,7 @@ import {
   useCallback,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from "react";
@@ -91,6 +92,8 @@ export default function HomePage() {
   const [status, setStatus] = useState<StatusPayload | null>(null);
   const [start, setStart] = useState("2026-09-05");
   const [end, setEnd] = useState("2026-11-17");
+  const [applied, setApplied] = useState({ start: "2026-09-05", end: "2026-11-17" });
+  const seededRange = useRef(false);
   const [busy, setBusy] = useState(false);
   const [busyKind, setBusyKind] = useState<"refresh" | "filter" | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -108,8 +111,14 @@ export default function HomePage() {
     if (!parsed.ok) throw new Error(parsed.error);
     const payload = parsed.data;
     setStatus(payload);
-    if (payload.start) setStart(payload.start.slice(0, 10));
-    if (payload.end) setEnd(payload.end.slice(0, 10));
+    const nextStart = payload.start ? payload.start.slice(0, 10) : start;
+    const nextEnd = payload.end ? payload.end.slice(0, 10) : end;
+    if (payload.start) setStart(nextStart);
+    if (payload.end) setEnd(nextEnd);
+    if (!seededRange.current) {
+      seededRange.current = true;
+      setApplied({ start: nextStart, end: nextEnd });
+    }
     return payload;
   }, []);
 
@@ -200,38 +209,32 @@ export default function HomePage() {
     }
   }
 
-  async function onApplyFilter() {
-    if (STATIC_EXPORT) return;
-    setBusy(true);
-    setBusyKind("filter");
-    setError(null);
-    setToast(null);
-    try {
-      const res = await fetch("/api/refresh", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ start, end, skipCollect: true }),
-      });
-      const parsed = await readJson<{ ok?: boolean; error?: string }>(res);
-      if (!parsed.ok) throw new Error(parsed.error);
-      const payload = parsed.data;
-      if (!res.ok || !payload.ok) {
-        throw new Error(payload.error || "Falha ao filtrar");
-      }
-      await loadStatus();
-      await loadAllData();
-      setToast("Atualização concluída");
-    } catch (e) {
-      setError(e instanceof Error ? e.message : String(e));
-    } finally {
-      setBusy(false);
-      setBusyKind(null);
+  function onPdf() {
+    const full =
+      applied.start === (status?.start || start).slice(0, 10) &&
+      applied.end === (status?.end || end).slice(0, 10);
+    if (full) {
+      const href = `${STATIC_EXPORT ? BASE_PATH : ""}/pdfs/${active.pdf}`;
+      const link = document.createElement("a");
+      link.href = href;
+      link.download = active.pdf;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      return;
     }
+    window.print();
+  }
+
+  function onApplyFilter() {
+    setApplied({ start, end });
+    setToast("Período aplicado");
+    setError(null);
   }
 
   return (
     <div className="min-h-screen font-[family-name:var(--font-sans)]">
-      <header className="sticky top-0 z-30 px-3 pt-3 md:px-5 md:pt-4">
+      <header className="no-print sticky top-0 z-30 px-3 pt-3 md:px-5 md:pt-4">
         <div className="mx-auto max-w-[1500px] rounded-2xl border border-[var(--line)] bg-white px-2.5 py-2 shadow-[0_8px_24px_rgba(19,84,135,.08)] md:px-3 md:py-2.5">
           <div className="flex flex-col gap-2 lg:flex-row lg:items-center lg:gap-3 xl:flex-nowrap">
             <nav
@@ -288,21 +291,21 @@ export default function HomePage() {
                 <button
                   type="button"
                   onClick={onApplyFilter}
-                  disabled
-                  title="Filtro desabilitado neste ambiente"
+                  title="Filtrar o período na tela"
                   aria-label="Filtrar período"
-                  className="inline-flex h-8 w-8 cursor-not-allowed items-center justify-center rounded-md border border-[#85B0C6] bg-white text-[#2F87B5] opacity-50"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-[#85B0C6] bg-white text-[#2F87B5]"
                 >
                   <IconFilter />
                 </button>
-                {/* PDF e prévia exigem o servidor; ficam desabilitados no Pages. */}
-                <span
-                  title="Download de PDF desabilitado"
-                  aria-label="Download de PDF desabilitado"
-                  className="inline-flex h-8 w-8 cursor-not-allowed items-center justify-center rounded-md border border-[#85B0C6] bg-white text-[#85B0C6] opacity-60"
+                <button
+                  type="button"
+                  onClick={onPdf}
+                  title="Baixar o PDF desta aba ou imprimir o recorte filtrado"
+                  aria-label="Download de PDF"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-[#85B0C6] bg-white text-[#135487]"
                 >
                   <IconPdf />
-                </span>
+                </button>
               </div>
 
               <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
@@ -368,7 +371,7 @@ export default function HomePage() {
           </div>
         ) : (
           <ErrorBoundary label={active.short} key={tab}>
-            <ReportBody id={tab} data={tabData} />
+            <ReportBody id={tab} data={tabData} range={applied} />
           </ErrorBoundary>
         )}
       </main>
@@ -379,13 +382,15 @@ export default function HomePage() {
 function ReportBody({
   id,
   data,
+  range,
 }: {
   id: ReportId;
   data: Record<string, unknown>;
+  range: { start: string; end: string };
 }) {
-  if (id === "executivo") return <ExecutivoView data={data as never} />;
-  if (id === "santa") return <SantaView data={data as never} />;
-  if (id === "sdcard") return <SdCardView data={data as never} />;
-  if (id === "conexao") return <ConexaoView data={data as never} />;
-  return <RetornoView data={data as never} />;
+  if (id === "executivo") return <ExecutivoView data={data as never} range={range} />;
+  if (id === "santa") return <SantaView data={data as never} range={range} />;
+  if (id === "sdcard") return <SdCardView data={data as never} range={range} />;
+  if (id === "conexao") return <ConexaoView data={data as never} range={range} />;
+  return <RetornoView data={data as never} range={range} />;
 }

@@ -81,6 +81,9 @@ jobs:
             data/web \
             data/web_status.json \
             data/jotform/historico.json
+          if compgen -G "web/public/pdfs/*.pdf" > /dev/null; then
+            git add -- web/public/pdfs
+          fi
           if git diff --cached --name-only | grep -E '\.(py|yml|ts|tsx|mjs)$'; then
             echo "Recusando commit que inclui código."
             exit 1

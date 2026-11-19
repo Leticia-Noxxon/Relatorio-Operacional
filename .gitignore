@@ -8,6 +8,8 @@ entregas/
 /reports/
 *.pptx
 *.pdf
+!web/public/pdfs/
+!web/public/pdfs/*.pdf
 *.bin
 *.zip
 *.bundle

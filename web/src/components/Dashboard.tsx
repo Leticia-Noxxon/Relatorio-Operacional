@@ -114,7 +114,7 @@ export function VerticalBars({
 export function AngledLabel({ text }: { text: string }) {
   return (
     <div className="flex h-8 items-end justify-center overflow-visible">
-      <span className="inline-block origin-bottom-left -translate-y-1 -rotate-45 whitespace-nowrap text-[10px] font-medium leading-none text-white">
+      <span className="inline-block origin-bottom-left -translate-y-1 -rotate-45 whitespace-nowrap text-[13px] font-medium leading-none text-white">
         {text}
       </span>
     </div>

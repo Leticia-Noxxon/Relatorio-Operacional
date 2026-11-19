@@ -48,7 +48,13 @@ type Agg = {
   cameras_sd: number;
 };
 
-export function ConexaoView({ data }: { data: ConexaoData }) {
+export function ConexaoView({
+  data,
+  range,
+}: {
+  data: ConexaoData;
+  range?: { start: string; end: string };
+}) {
   const vehicles = data.veiculos || [];
   const positions = useMemo(() => {
     const fromData = data.posicoes || [];
@@ -73,6 +79,9 @@ export function ConexaoView({ data }: { data: ConexaoData }) {
 
   const rows = useMemo(() => aggregate(vehicles, selected), [vehicles, selected]);
   const legacy = !vehicles.length;
+  const collected = (data.coletado_em || "").slice(0, 10);
+  const outside =
+    Boolean(range && collected && (collected < range.start || collected > range.end));
 
   const sums = rows.reduce(
     (acc, row) => {
@@ -172,7 +181,11 @@ export function ConexaoView({ data }: { data: ConexaoData }) {
           </div>
         }
       >
-        {legacy ? (
+        {outside ? (
+          <p className="px-2 py-6 text-sm text-[var(--muted)]">
+            A coleta de {collected.split("-").reverse().join("/")} está fora do período selecionado.
+          </p>
+        ) : legacy ? (
           <LegacyTable rows={data.all || []} />
         ) : (
           <div>

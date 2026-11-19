@@ -227,4 +227,38 @@ def build_executivo_payload(period_start: date, period_end: date) -> tuple[dict,
         f"novas={stats['new']}",
         f"manutencoes={stats['maintenances']}",
     )
+    payload["legacy_period_end"] = str((history.get("legacy") or {}).get("period_end") or LEGACY_PERIOD_END)
+    payload["legacy_maintenances"] = legacy_n
+    payload["records"] = _slim_records(history)
     return payload, stats
+
+
+def _slim_records(history: dict) -> list[dict]:
+    """Envios com data, sem fotos nem texto livre, para o filtro do painel."""
+    slim = []
+    for row in (history.get("records") or {}).values():
+        day = reference_day(row)
+        if day is None:
+            continue
+        problems = []
+        actions = []
+        for key, value in row.items():
+            text = str(value or "").strip()
+            if not text or text.lower() == "nan":
+                continue
+            if str(key).startswith("Problemas Detectados"):
+                problems.append(text[:160])
+            elif str(key).startswith("Ações"):
+                actions.append(text[:160])
+        slim.append(
+            {
+                "id": str(row.get("ID do Envio") or ""),
+                "date": day.isoformat(),
+                "garagem": str(row.get("Garagem") or "Não identificado"),
+                "prefixo": str(row.get("Prefixo") or ""),
+                "problems": problems,
+                "actions": actions,
+            }
+        )
+    slim.sort(key=lambda item: (item["date"], item["garagem"], item["prefixo"]))
+    return slim

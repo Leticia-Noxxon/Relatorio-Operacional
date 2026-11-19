@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   Doughnut,
   InlineQtyBar,
@@ -16,8 +16,19 @@ import {
   IconWrench,
 } from "@/components/Icons";
 
+type ExecRecord = {
+  date: string;
+  garagem: string;
+  prefixo: string;
+  problems?: string[];
+  actions?: string[];
+};
+
 type ExecData = {
-  period?: { label?: string };
+  period?: { label?: string; start?: string; end?: string };
+  legacy_period_end?: string;
+  legacy_maintenances?: number;
+  records?: ExecRecord[];
   kpis: {
     maintenances: number;
     reincidences: number;
@@ -35,19 +46,21 @@ type ExecData = {
   }[];
 };
 
-export function ExecutivoView({ data }: { data: ExecData }) {
-  const kpis = data.kpis || {
-    maintenances: 0,
-    reincidences: 0,
-    prefixes: 0,
-    garages: 0,
-    cameras_removed: 0,
-  };
-  const problemBuckets = data.problem_buckets || [];
-  const topProblems = data.top_problems || [];
-  const topActions = data.top_actions || [];
-  const garages = data.garages || [];
-  const occ = data.garage_bucket_problems || [];
+export function ExecutivoView({
+  data,
+  range,
+}: {
+  data: ExecData;
+  range?: { start: string; end: string };
+}) {
+  const sliced = useMemo(() => sliceExecutivo(data, range), [data, range]);
+  const problemBuckets = sliced.problemBuckets;
+  const topProblems = sliced.topProblems;
+  const topActions = sliced.topActions;
+  const garages = sliced.garages;
+  const occ = sliced.occ;
+  const kpis = sliced.kpis;
+  const note = sliced.note;
   const [garageFilter, setGarageFilter] = useState<string | null>(null);
   const selected = garages.find((g) => g.name === garageFilter) || null;
   const selectedOcc = occ.find((g) => g.name === garageFilter) || null;
@@ -81,6 +94,9 @@ export function ExecutivoView({ data }: { data: ExecData }) {
 
   return (
     <div className="space-y-3">
+      {note ? (
+        <p className="rounded-lg bg-[#fff7ed] px-3 py-2 text-sm text-[#9a3412]">{note}</p>
+      ) : null}
       {selected ? (
         <div className="flex flex-wrap items-center gap-2 rounded-xl bg-[#135487] px-3 py-2 text-sm font-semibold text-white">
           <span>Filtro: {selected.name}</span>
@@ -320,4 +336,64 @@ export function ExecutivoView({ data }: { data: ExecData }) {
 
 function fmt(n: number) {
   return n.toLocaleString("pt-BR");
+}
+
+function sliceExecutivo(data: ExecData, range?: { start: string; end: string }) {
+  const base = {
+    kpis: data.kpis || {
+      maintenances: 0,
+      reincidences: 0,
+      prefixes: 0,
+      garages: 0,
+      cameras_removed: 0,
+    },
+    problemBuckets: data.problem_buckets || [],
+    topProblems: data.top_problems || [],
+    topActions: data.top_actions || [],
+    garages: data.garages || [],
+    occ: data.garage_bucket_problems || [],
+    note: "",
+  };
+  const start = data.period?.start;
+  const end = data.period?.end;
+  if (!range || !start || !end || (range.start <= start && range.end >= end)) return base;
+  const records = (data.records || []).filter(
+    (row) => row.date >= range.start && row.date <= range.end,
+  );
+  const byGarage = new Map<string, { maints: number; prefixes: Set<string> }>();
+  const problems = new Map<string, number>();
+  const actions = new Map<string, number>();
+  for (const row of records) {
+    const garage = byGarage.get(row.garagem) || { maints: 0, prefixes: new Set<string>() };
+    garage.maints += 1;
+    if (row.prefixo) garage.prefixes.add(row.prefixo);
+    byGarage.set(row.garagem, garage);
+    for (const label of row.problems || []) problems.set(label, (problems.get(label) || 0) + 1);
+    for (const label of row.actions || []) actions.set(label, (actions.get(label) || 0) + 1);
+  }
+  const garages = [...byGarage.entries()]
+    .map(([name, info]) => ({
+      name,
+      maints: info.maints,
+      reinc: 0,
+      prefixes: info.prefixes.size,
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name, "pt-BR"));
+  const topProblems = [...problems.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
+  const topActions = [...actions.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
+  return {
+    kpis: {
+      maintenances: records.length,
+      reincidences: 0,
+      prefixes: new Set(records.map((row) => row.prefixo).filter(Boolean)).size,
+      garages: garages.length,
+      cameras_removed: 0,
+    },
+    problemBuckets: topProblems.slice(0, 4),
+    topProblems,
+    topActions,
+    garages,
+    occ: garages.map((garage) => ({ name: garage.name, buckets: [] as [string, number][] })),
+    note: `Recorte ${range.start.split("-").reverse().join("/")}–${range.end.split("-").reverse().join("/")}: só os ${records.length} envios com data individual. O lote antigo de ${data.legacy_maintenances || 1690} manutenções não tem data por formulário.`,
+  };
 }

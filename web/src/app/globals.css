@@ -67,3 +67,17 @@ input[type="date"] {
 .toast-in {
   animation: toast-in 0.22s ease-out;
 }
+
+@media print {
+  header,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+}

@@ -11,7 +11,7 @@ import {
 import { IconBus, IconSd } from "@/components/Icons";
 
 type SdData = {
-  period?: { label?: string };
+  period?: { label?: string; start?: string; end?: string };
   kpis: {
     prefixes: number;
     total_cards: number;
@@ -27,7 +27,13 @@ type SdData = {
   }>;
 };
 
-export function SdCardView({ data }: { data: SdData }) {
+export function SdCardView({
+  data,
+  range,
+}: {
+  data: SdData;
+  range?: { start: string; end: string };
+}) {
   const kpis = data.kpis || {
     prefixes: 0,
     total_cards: 0,
@@ -44,40 +50,59 @@ export function SdCardView({ data }: { data: SdData }) {
   }, [monthFilter, months]);
 
   const columns = useMemo(() => {
-    const cols: { month: string; day: string; label: string }[] = [];
+    const year = (data.period?.start || "2026-01-01").slice(0, 4);
+    const cols: { month: string; day: string; label: string; iso: string }[] = [];
     for (const m of visibleMonths) {
-      for (const d of m.days || []) {
-        const [, mo, da] = d.split("-");
+      (m.days || []).forEach((d, index) => {
+        const iso = toIso(d, year);
+        if (range && iso && (iso < range.start || iso > range.end)) return;
         cols.push({
           month: m.name,
           day: d,
-          label: da && mo ? `${da}/${mo}` : d,
-        });
-      }
+          label: d.includes("-") ? d.slice(5) : d,
+          iso,
+          index,
+          monthName: m.name,
+        } as { month: string; day: string; label: string; iso: string });
+      });
     }
     return cols;
-  }, [visibleMonths]);
+  }, [visibleMonths, data.period?.start, range]);
 
-  const monthSpans = visibleMonths.map((m) => ({
-    name: m.name,
-    span: (m.days || []).length,
-  }));
+  const monthSpans = useMemo(() => {
+    const spans: { name: string; span: number }[] = [];
+    for (const col of columns) {
+      const last = spans[spans.length - 1];
+      if (last && last.name === col.month) last.span += 1;
+      else spans.push({ name: col.month, span: 1 });
+    }
+    return spans;
+  }, [columns]);
 
-  // Unified rows from first available month structure; concat seq across months
   const rows = useMemo(() => {
     const base = months[0]?.rows || [];
     return base.map((r) => {
       const seq: string[] = [];
-      for (const m of visibleMonths) {
-        const found = (m.rows || []).find(
+      for (const col of columns) {
+        const month = visibleMonths.find((m) => m.name === col.month);
+        const found = (month?.rows || []).find(
           (x) => x.prefixo === r.prefixo && x.camera === r.camera,
         );
-        if (found) seq.push(...(found.seq || []));
-        else seq.push(...Array((m.days || []).length).fill("off"));
+        const dayIndex = (month?.days || []).indexOf(col.day);
+        seq.push(found?.seq?.[dayIndex] || "off");
       }
       return { prefixo: r.prefixo, camera: r.camera, seq };
     });
-  }, [months, visibleMonths]);
+  }, [months, visibleMonths, columns]);
+
+function toIso(label: string, year: string) {
+  const parts = label.split("/");
+  if (parts.length >= 2 && parts[0] && parts[1]) {
+    const y = parts[2] || year;
+    return `${y}-${parts[1].padStart(2, "0")}-${parts[0].padStart(2, "0")}`;
+  }
+  return /^\d{4}-\d{2}-\d{2}/.test(label) ? label.slice(0, 10) : "";
+}
 
   const grouped = useMemo(() => {
     const map = new Map<string, typeof rows>();
@@ -148,9 +173,9 @@ export function SdCardView({ data }: { data: SdData }) {
           </div>
         }
       >
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse text-[10px] leading-none">
-            <thead>
+        <div className="h-[calc(100vh-1rem)] overflow-auto">
+          <table className="w-full border-collapse text-[13px]">
+            <thead className="sticky top-0 z-20">
               <tr>
                 <th
                   rowSpan={2}
@@ -193,12 +218,12 @@ export function SdCardView({ data }: { data: SdData }) {
                     {i === 0 ? (
                       <td
                         rowSpan={cams.length}
-                        className="sticky left-0 z-10 bg-[#eef6fa] px-1.5 py-px font-bold text-[var(--p1)]"
+                        className="sticky left-0 z-10 bg-[#eef6fa] px-2 py-1 font-bold text-[var(--p1)]"
                       >
                         {prefixo}
                       </td>
                     ) : null}
-                    <td className="px-1 py-px text-center">{row.camera}</td>
+                    <td className="px-2 py-1 text-center">{row.camera}</td>
                     {columns.map((c, ci) => {
                       const st = row.seq[ci] || "off";
                       const color =
@@ -207,10 +232,10 @@ export function SdCardView({ data }: { data: SdData }) {
                       return (
                         <td
                           key={`${prefixo}-${row.camera}-${c.day}`}
-                          className="px-px py-px text-center"
+                          className="px-1 py-1 text-center"
                         >
                           <span
-                            className="inline-block h-2 w-2 rounded-[1px]"
+                            className="inline-block h-3.5 w-3.5 rounded-[2px]"
                             style={{ background: color }}
                             title={`${prefixo}/${row.camera} · ${c.day} · ${st}`}
                           />

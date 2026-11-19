@@ -516,5 +516,1257 @@
         ]
       ]
     }
+  ],
+  "legacy_period_end": "2026-11-17",
+  "legacy_maintenances": 1690,
+  "records": [
+    {
+      "id": "6706003437625471137",
+      "date": "2026-11-15",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "52006",
+      "problems": [
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6706016334127960033",
+      "date": "2026-11-15",
+      "garagem": "Via Sudeste Sapopemba",
+      "prefixo": "52515",
+      "problems": [
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Sem gravação de imagens; Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6706068654129774647",
+      "date": "2026-11-15",
+      "garagem": "Via Sudeste Sapopemba",
+      "prefixo": "52529",
+      "problems": [
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6706056291011385780",
+      "date": "2026-11-15",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61066",
+      "problems": [
+        "Câmera mal reposicionada; Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Switch apresentando falha",
+        "Switch apresentando falha",
+        "Switch apresentando falha; Cabeamento rompido/danificado"
+      ],
+      "actions": [
+        "Reposicionamento adequado da câmera; Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Substituição do switch",
+        "Substituição do switch",
+        "Substituição do switch; Substituição do cabeamento"
+      ]
+    },
+    {
+      "id": "6706053237929520689",
+      "date": "2026-11-15",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61743",
+      "problems": [
+        "Switch apresentando falha; Sem gravação de imagens; Conexões do switch incorretas",
+        "Switch apresentando falha; Falha na conexão dos cabos",
+        "Switch apresentando falha",
+        "Sem gravação de imagens",
+        "Falha na conexão dos cabos",
+        "Switch apresentando falha; Conexões do switch incorretas"
+      ],
+      "actions": [
+        "Correção da falha no switch; Correção e ajuste da configuração da câmera",
+        "Fixação adequada do switch; Correção e ajuste da configuração da câmera",
+        "Correção da falha no switch; Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção da falha no switch; Correção das conexões do switch; Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6706355078121970849",
+      "date": "2026-11-16",
+      "garagem": "A2 Transportes",
+      "prefixo": "68040",
+      "problems": [
+        "Câmera travada; Câmera mal reposicionada; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Reinicialização da câmera; Reposicionamento adequado da câmera; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6706352848121305353",
+      "date": "2026-11-16",
+      "garagem": "A2 Transportes",
+      "prefixo": "68104",
+      "problems": [
+        "Câmera travada; Câmera mal reposicionada; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Reinicialização da câmera; Reposicionamento adequado da câmera; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6706350368128309158",
+      "date": "2026-11-16",
+      "garagem": "A2 Transportes",
+      "prefixo": "68290",
+      "problems": [
+        "Câmera travada; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Reinicialização da câmera; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6706087380028765178",
+      "date": "2026-11-16",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "52844",
+      "problems": [
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens",
+        "Normalização da gravação de imagens",
+        "Normalização da gravação de imagens",
+        "Normalização da gravação de imagens",
+        "Normalização da gravação de imagens",
+        "Normalização da gravação de imagens"
+      ]
+    },
+    {
+      "id": "6706164034121262897",
+      "date": "2026-11-16",
+      "garagem": "Via Sudeste Sapopemba",
+      "prefixo": "52510",
+      "problems": [
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6706103714125364320",
+      "date": "2026-11-16",
+      "garagem": "Via Sudeste Sapopemba",
+      "prefixo": "52542",
+      "problems": [
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6706094437922232301",
+      "date": "2026-11-16",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61455",
+      "problems": [
+        "Câmera inoperante",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Crimpagem correta do conector RJ45",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6706107001018730800",
+      "date": "2026-11-16",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61656",
+      "problems": [
+        "Câmera mal reposicionada",
+        "Switch apresentando falha",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Reposicionamento adequado da câmera",
+        "Normalização da gravação de imagens; Correção da falha no switch; Correção na conexão dos cabos",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6706089857922977504",
+      "date": "2026-11-16",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61763",
+      "problems": [
+        "Câmera mal reposicionada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Câmera inoperante; Câmera travada; Cabeamento rompido/danificado"
+      ],
+      "actions": [
+        "Reposicionamento adequado da câmera",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Reparo do cabeamento; Substituição do cabeamento; Crimpagem correta do conector RJ45"
+      ]
+    },
+    {
+      "id": "6706086211715031072",
+      "date": "2026-11-16",
+      "garagem": "Viação Metrópole Itaim",
+      "prefixo": "32131",
+      "problems": [
+        "Nenhuma anomalia identificada",
+        "Câmera mal reposicionada"
+      ],
+      "actions": [
+        "Nenhuma ação realizada",
+        "Reposicionamento adequado da câmera"
+      ]
+    },
+    {
+      "id": "6706081901713862128",
+      "date": "2026-11-16",
+      "garagem": "Viação Metrópole Itaim",
+      "prefixo": "32163",
+      "problems": [
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6706236717471738366",
+      "date": "2026-11-16",
+      "garagem": "Viação Metrópole Itaim",
+      "prefixo": "32514",
+      "problems": [
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6706158970139787511",
+      "date": "2026-11-16",
+      "garagem": "Viação Metrópole Pinedo",
+      "prefixo": "73306",
+      "problems": [
+        "Câmera inoperante; Câmera travada; Sem gravação de imagens"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Substituição da câmera defeituosa; Reinicialização da câmera; Reposicionamento adequado da câmera; Correção e ajuste da con"
+      ]
+    },
+    {
+      "id": "6706143150139477466",
+      "date": "2026-11-16",
+      "garagem": "Viação Metrópole Pinedo",
+      "prefixo": "73812",
+      "problems": [
+        "Switch apresentando falha; Configuração incorreta da câmera",
+        "Switch apresentando falha; Configuração incorreta da câmera",
+        "Switch apresentando falha; Configuração incorreta da câmera",
+        "Switch apresentando falha; Configuração incorreta da câmera",
+        "Switch apresentando falha; Configuração incorreta da câmera",
+        "Switch apresentando falha; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Substituição do switch; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6707782385498417314",
+      "date": "2026-11-17",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35769",
+      "problems": [
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6707747103924612327",
+      "date": "2026-11-17",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "51153",
+      "problems": [
+        "Sem gravação de imagens",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6707743413929494531",
+      "date": "2026-11-17",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "51417",
+      "problems": [
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6707779282325641660",
+      "date": "2026-11-17",
+      "garagem": "Via Sudeste Sapopemba",
+      "prefixo": "52537",
+      "problems": [
+        "Sem gravação de imagens; Configuração incorreta da câmera",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Sem gravação de imagens; Câmera sem cartão de memória"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Substituição da câmera defeituosa; Correção e ajuste da configuração da câmera",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6707746705412079238",
+      "date": "2026-11-17",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61354",
+      "problems": [
+        "Câmera inoperante",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Crimpagem correta do conector RJ45; Correção e ajuste da configuração da câmera",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6707764795413930216",
+      "date": "2026-11-17",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61775",
+      "problems": [
+        "Conexões do switch incorretas"
+      ],
+      "actions": [
+        "Correção da falha no switch"
+      ]
+    },
+    {
+      "id": "6707752445418647561",
+      "date": "2026-11-17",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61814",
+      "problems": [
+        "Câmera removida por terceiros"
+      ],
+      "actions": [
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6707781513923588688",
+      "date": "2026-11-17",
+      "garagem": "Viação Metrópole Iguatemi",
+      "prefixo": "31287",
+      "problems": [],
+      "actions": []
+    },
+    {
+      "id": "6707744713924519317",
+      "date": "2026-11-17",
+      "garagem": "Viação Metrópole Iguatemi",
+      "prefixo": "31425",
+      "problems": [],
+      "actions": []
+    },
+    {
+      "id": "6707767816813952507",
+      "date": "2026-11-17",
+      "garagem": "Viação Metrópole Imperador",
+      "prefixo": "31015",
+      "problems": [],
+      "actions": []
+    },
+    {
+      "id": "6707765462423908331",
+      "date": "2026-11-17",
+      "garagem": "Viação Metrópole Pinedo",
+      "prefixo": "73871",
+      "problems": [
+        "Câmera inoperante; Sem gravação de imagens; Cabeamento rompido/danificado; RJ45 crimpado incorretamente; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Reinicialização da câmera; Reparo do cabeamento; Crimpagem correta do conector RJ45; Correção e ajuste da configuração da c"
+      ]
+    },
+    {
+      "id": "6707934620329232633",
+      "date": "2026-11-18",
+      "garagem": "A2 Transportes",
+      "prefixo": "68041",
+      "problems": [
+        "Câmera travada; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Reinicialização da câmera; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6707954478014534808",
+      "date": "2026-11-18",
+      "garagem": "A2 Transportes",
+      "prefixo": "68288",
+      "problems": [
+        "Câmera travada; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Reinicialização da câmera; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6707977702415287927",
+      "date": "2026-11-18",
+      "garagem": "A2 Transportes",
+      "prefixo": "68749",
+      "problems": [
+        "Câmera travada; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Reinicialização da câmera; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6707852435434338676",
+      "date": "2026-11-18",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35239",
+      "problems": [
+        "Sem gravação de imagens"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Reinicialização da câmera"
+      ]
+    },
+    {
+      "id": "6707806827353401803",
+      "date": "2026-11-18",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35718",
+      "problems": [
+        "Câmera travada; Sem gravação de imagens"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Reinicialização da câmera"
+      ]
+    },
+    {
+      "id": "6708660724959992691",
+      "date": "2026-11-18",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35808",
+      "problems": [
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708640751768187681",
+      "date": "2026-11-18",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35826",
+      "problems": [
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708653620327443441",
+      "date": "2026-11-18",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35915",
+      "problems": [
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6707840445433209485",
+      "date": "2026-11-18",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35915",
+      "problems": [
+        "Câmera travada; Sem gravação de imagens"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Substituição da câmera defeituosa; Reinicialização da câmera"
+      ]
+    },
+    {
+      "id": "6708630444111579803",
+      "date": "2026-11-18",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35953",
+      "problems": [
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6707930237025327259",
+      "date": "2026-11-18",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "51020",
+      "problems": [
+        "Switch apresentando falha; Sem gravação de imagens; Falha na conexão dos cabos",
+        "Switch apresentando falha; Sem gravação de imagens; Falha na conexão dos cabos",
+        "Switch apresentando falha; Sem gravação de imagens; Falha na conexão dos cabos"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Substituição do switch; Correção na conexão dos cabos; Crimpagem correta do conector RJ45; Correção e ajuste da configuraçã",
+        "Normalização da gravação de imagens; Substituição do switch; Correção na conexão dos cabos; Crimpagem correta do conector RJ45; Correção e ajuste da configuraçã",
+        "Normalização da gravação de imagens; Substituição do switch; Correção na conexão dos cabos; Crimpagem correta do conector RJ45; Correção e ajuste da configuraçã"
+      ]
+    },
+    {
+      "id": "6707806367027566161",
+      "date": "2026-11-18",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "51036",
+      "problems": [
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Câmera inoperante; Sem gravação de imagens"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Substituição da câmera defeituosa; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708637427458101183",
+      "date": "2026-11-18",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "51222",
+      "problems": [
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens"
+      ],
+      "actions": [
+        "Inserção ou substituição do cartão de memória",
+        "Normalização da gravação de imagens",
+        "Normalização da gravação de imagens",
+        "Normalização da gravação de imagens",
+        "Normalização da gravação de imagens",
+        "Normalização da gravação de imagens"
+      ]
+    },
+    {
+      "id": "6708617227457459344",
+      "date": "2026-11-18",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "51306",
+      "problems": [
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Sem gravação de imagens"
+      ],
+      "actions": [
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Normalização da gravação de imagens"
+      ]
+    },
+    {
+      "id": "6707871517028235623",
+      "date": "2026-11-18",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "51453",
+      "problems": [
+        "Câmera inoperante; Sem gravação de imagens; Cabeamento rompido/danificado; Falha na conexão dos cabos",
+        "Sem gravação de imagens; Câmera sem cartão de memória",
+        "Sem gravação de imagens"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Substituição da câmera defeituosa; Reposicionamento adequado da câmera; Correção na conexão dos cabos; Reparo do cabeamento",
+        "Nenhuma ação realizada",
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708657880714163319",
+      "date": "2026-11-18",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "51589",
+      "problems": [
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens; Cabeamento rompido/danificado; Falha na conexão dos cabos"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Correção na conexão dos cabos; Reparo do cabeamento; Substituição do cabeamento; Crimpagem correta do conector RJ45"
+      ]
+    },
+    {
+      "id": "6707874622328922388",
+      "date": "2026-11-18",
+      "garagem": "Via Sudeste Sapopemba",
+      "prefixo": "52505",
+      "problems": [
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Sem gravação de imagens; Configuração incorreta da câmera",
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708632769315421573",
+      "date": "2026-11-18",
+      "garagem": "Via Sudeste Sapopemba",
+      "prefixo": "52511",
+      "problems": [
+        "Sem gravação de imagens; Configuração incorreta da câmera",
+        "Sem gravação de imagens; Configuração incorreta da câmera",
+        "Sem gravação de imagens; Configuração incorreta da câmera",
+        "Sem gravação de imagens; Configuração incorreta da câmera",
+        "Sem gravação de imagens; Configuração incorreta da câmera",
+        "Sem gravação de imagens; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6707931052321288850",
+      "date": "2026-11-18",
+      "garagem": "Via Sudeste Sapopemba",
+      "prefixo": "52532",
+      "problems": [
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708590032429508114",
+      "date": "2026-11-18",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61546",
+      "problems": [
+        "Nenhuma anomalia identificada",
+        "Sem gravação de imagens",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Sem gravação de imagens",
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Nenhuma ação realizada",
+        "Normalização da gravação de imagens; Reinicialização da câmera; Correção e ajuste da configuração da câmera",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Normalização da gravação de imagens; Reinicialização da câmera; Correção e ajuste da configuração da câmera",
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6708604442426214839",
+      "date": "2026-11-18",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61566",
+      "problems": [
+        "Câmera mal reposicionada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Reposicionamento adequado da câmera",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6708624282427926792",
+      "date": "2026-11-18",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61610",
+      "problems": [
+        "Câmera mal reposicionada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "RJ45 crimpado incorretamente"
+      ],
+      "actions": [
+        "Reposicionamento adequado da câmera",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Crimpagem correta do conector RJ45"
+      ]
+    },
+    {
+      "id": "6708660386221515465",
+      "date": "2026-11-18",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61682",
+      "problems": [
+        "Nenhuma anomalia identificada",
+        "Câmera mal reposicionada",
+        "Câmera mal reposicionada",
+        "Nenhuma anomalia identificada",
+        "Cabeamento rompido/danificado",
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Nenhuma ação realizada",
+        "Reposicionamento adequado da câmera",
+        "Reposicionamento adequado da câmera",
+        "Nenhuma ação realizada",
+        "Substituição do cabeamento",
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6707896453925693177",
+      "date": "2026-11-18",
+      "garagem": "Viação Metrópole Iguatemi",
+      "prefixo": "31095",
+      "problems": [],
+      "actions": []
+    },
+    {
+      "id": "6707831133929903645",
+      "date": "2026-11-18",
+      "garagem": "Viação Metrópole Iguatemi",
+      "prefixo": "31096",
+      "problems": [],
+      "actions": []
+    },
+    {
+      "id": "6707804513724864488",
+      "date": "2026-11-18",
+      "garagem": "Viação Metrópole Iguatemi",
+      "prefixo": "31262",
+      "problems": [],
+      "actions": []
+    },
+    {
+      "id": "6708628466813471805",
+      "date": "2026-11-18",
+      "garagem": "Viação Metrópole Imperador",
+      "prefixo": "31134",
+      "problems": [
+        "Switch apresentando falha",
+        "Switch apresentando falha; Falha na conexão dos cabos",
+        "Switch apresentando falha; Falha na conexão dos cabos",
+        "Switch apresentando falha; Falha na conexão dos cabos",
+        "Switch apresentando falha; Falha na conexão dos cabos"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Correção da falha no switch; Correção na conexão dos cabos",
+        "Normalização da gravação de imagens; Correção da falha no switch; Correção na conexão dos cabos",
+        "Inserção ou substituição do cartão de memória; Correção da falha no switch; Correção na conexão dos cabos",
+        "Normalização da gravação de imagens; Correção da falha no switch; Correção na conexão dos cabos",
+        "Normalização da gravação de imagens; Correção da falha no switch; Correção na conexão dos cabos"
+      ]
+    },
+    {
+      "id": "6707828666812567403",
+      "date": "2026-11-18",
+      "garagem": "Viação Metrópole Imperador",
+      "prefixo": "31186",
+      "problems": [],
+      "actions": []
+    },
+    {
+      "id": "6707804362422917079",
+      "date": "2026-11-18",
+      "garagem": "Viação Metrópole Pinedo",
+      "prefixo": "73851",
+      "problems": [
+        "Switch apresentando falha; Sem gravação de imagens; Configuração incorreta da câmera",
+        "Switch apresentando falha; Sem gravação de imagens; Configuração incorreta da câmera",
+        "Switch apresentando falha; Sem gravação de imagens; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Substituição do switch; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6707831722428551885",
+      "date": "2026-11-18",
+      "garagem": "Viação Metrópole Pinedo",
+      "prefixo": "73888",
+      "problems": [
+        "Switch apresentando falha; Câmera inoperante; Sem gravação de imagens; Conexões do switch incorretas; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Reinicialização da câmera; Correção da falha no switch; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708642785527570771",
+      "date": "2026-11-18",
+      "garagem": "Viação Metrópole Pinedo",
+      "prefixo": "73889",
+      "problems": [
+        "Sem gravação de imagens; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Inserção ou substituição do cartão de memória; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708720758018786824",
+      "date": "2026-11-19",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35717",
+      "problems": [
+        "Falha na conexão dos cabos; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção na conexão dos cabos; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708702911653872539",
+      "date": "2026-11-19",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35721",
+      "problems": [
+        "Sem gravação de imagens"
+      ],
+      "actions": [
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6708757888819001920",
+      "date": "2026-11-19",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35737",
+      "problems": [
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708707265218809450",
+      "date": "2026-11-19",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35757",
+      "problems": [
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708696971651625767",
+      "date": "2026-11-19",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35765",
+      "problems": [
+        "Sem gravação de imagens"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Reinicialização da câmera"
+      ]
+    },
+    {
+      "id": "6708671519434782991",
+      "date": "2026-11-19",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35990",
+      "problems": [
+        "Sem gravação de imagens; RJ45 crimpado incorretamente"
+      ],
+      "actions": [
+        "Crimpagem correta do conector RJ45; Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6708697427023265504",
+      "date": "2026-11-19",
+      "garagem": "Alfa Rodobus SPE",
+      "prefixo": "35991",
+      "problems": [
+        "Falha na conexão dos cabos"
+      ],
+      "actions": [
+        "Correção na conexão dos cabos"
+      ]
+    },
+    {
+      "id": "6708710440718824799",
+      "date": "2026-11-19",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "52809",
+      "problems": [
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Nenhuma anomalia identificada",
+        "Câmera inoperante; Sem gravação de imagens",
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Nenhuma ação realizada",
+        "Normalização da gravação de imagens; Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6708688569315513516",
+      "date": "2026-11-19",
+      "garagem": "Via Sudeste Sapopemba",
+      "prefixo": "52509",
+      "problems": [
+        "Sem gravação de imagens; Configuração incorreta da câmera",
+        "Sem gravação de imagens; Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708755649311677254",
+      "date": "2026-11-19",
+      "garagem": "Via Sudeste Sapopemba",
+      "prefixo": "52514",
+      "problems": [
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera",
+        "Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708686806225295106",
+      "date": "2026-11-19",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61567",
+      "problems": [
+        "Nenhuma anomalia identificada",
+        "Câmera travada; Falha na conexão dos cabos",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Nenhuma ação realizada",
+        "Reinicialização da câmera; Correção na conexão dos cabos",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6708712880523931484",
+      "date": "2026-11-19",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61670",
+      "problems": [
+        "Sem gravação de imagens",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada",
+        "Nenhuma anomalia identificada"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Correção e ajuste da configuração da câmera",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada",
+        "Nenhuma ação realizada"
+      ]
+    },
+    {
+      "id": "6708695802112368725",
+      "date": "2026-11-19",
+      "garagem": "Viação Metrópole Iguatemi",
+      "prefixo": "31093",
+      "problems": [],
+      "actions": []
+    },
+    {
+      "id": "6708728112118357085",
+      "date": "2026-11-19",
+      "garagem": "Viação Metrópole Iguatemi",
+      "prefixo": "31855",
+      "problems": [],
+      "actions": []
+    },
+    {
+      "id": "6708745315752129089",
+      "date": "2026-11-19",
+      "garagem": "Viação Metrópole Pinedo",
+      "prefixo": "73831",
+      "problems": [
+        "Switch apresentando falha; Sem gravação de imagens",
+        "Switch apresentando falha; Sem gravação de imagens",
+        "Switch apresentando falha; Sem gravação de imagens",
+        "Switch apresentando falha; Sem gravação de imagens",
+        "Switch apresentando falha; Sem gravação de imagens",
+        "Switch apresentando falha; Sem gravação de imagens"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Substituição do switch; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708705395751162538",
+      "date": "2026-11-19",
+      "garagem": "Viação Metrópole Pinedo",
+      "prefixo": "73851",
+      "problems": [
+        "Switch apresentando falha; Sem gravação de imagens; Configuração incorreta da câmera",
+        "Switch apresentando falha; Sem gravação de imagens; Câmera sem cartão de memória",
+        "Switch apresentando falha; Sem gravação de imagens; Configuração incorreta da câmera",
+        "Switch apresentando falha; Sem gravação de imagens; Configuração incorreta da câmera",
+        "Switch apresentando falha; Sem gravação de imagens; Configuração incorreta da câmera",
+        "Switch apresentando falha; Sem gravação de imagens; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Reinicialização da câmera; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Reinicialização da câmera; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Reinicialização da câmera; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Reinicialização da câmera; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Reinicialização da câmera; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Reinicialização da câmera; Substituição do switch; Correção e ajuste da configuração da câmera"
+      ]
+    },
+    {
+      "id": "6708673355524265288",
+      "date": "2026-11-19",
+      "garagem": "Viação Metrópole Pinedo",
+      "prefixo": "73899",
+      "problems": [
+        "Switch apresentando falha; Sem gravação de imagens",
+        "Switch apresentando falha; Sem gravação de imagens; Configuração incorreta da câmera",
+        "Switch apresentando falha; Sem gravação de imagens; Configuração incorreta da câmera",
+        "Switch apresentando falha; Sem gravação de imagens; Configuração incorreta da câmera",
+        "Switch apresentando falha; Sem gravação de imagens; Configuração incorreta da câmera",
+        "Switch apresentando falha; Sem gravação de imagens; Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Normalização da gravação de imagens; Reinicialização da câmera; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Reinicialização da câmera; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Reinicialização da câmera; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Reinicialização da câmera; Substituição do switch; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Reinicialização da câmera; Correção e ajuste da configuração da câmera",
+        "Normalização da gravação de imagens; Substituição da câmera defeituosa; Substituição do switch; Correção e ajuste da configuração da câmera"
+      ]
+    }
   ]
 }

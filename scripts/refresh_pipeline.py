@@ -177,8 +177,11 @@ def main() -> int:
         if (ROOT / "web").exists():
             web_reports.mkdir(parents=True, exist_ok=True)
             web_previews.mkdir(parents=True, exist_ok=True)
+            published_pdfs = ROOT / "web" / "public" / "pdfs"
+            published_pdfs.mkdir(parents=True, exist_ok=True)
             for pdf in (ROOT / "reports").glob("*.pdf"):
                 (web_reports / pdf.name).write_bytes(pdf.read_bytes())
+                (published_pdfs / pdf.name).write_bytes(pdf.read_bytes())
             for png in (ROOT / "reports" / "previews").glob("*.png"):
                 (web_previews / png.name).write_bytes(png.read_bytes())
             if STATUS.exists():

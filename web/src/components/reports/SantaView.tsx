@@ -10,7 +10,7 @@ import {
 } from "@/components/Dashboard";
 
 type SantaData = {
-  period?: { label?: string };
+  period?: { label?: string; start?: string; end?: string };
   prefixes: string[];
   stats: Record<
     string,
@@ -26,7 +26,13 @@ type SantaData = {
   }>;
 };
 
-export function SantaView({ data }: { data: SantaData }) {
+export function SantaView({
+  data,
+  range,
+}: {
+  data: SantaData;
+  range?: { start: string; end: string };
+}) {
   const prefixes = data.prefixes || [];
   const months = data.months || [];
   const stats = data.stats || {};
@@ -38,10 +44,13 @@ export function SantaView({ data }: { data: SantaData }) {
   }, [monthFilter, months]);
 
   const columns = useMemo(() => {
+    const year = (data.period?.start || "2026-01-01").slice(0, 4);
     const cols: { month: string; day: string; label: string }[] = [];
     for (const m of visibleMonths) {
       for (const d of m.days || []) {
-        const [y, mo, da] = d.split("-");
+        const iso = dayIso(d, year);
+        if (range && iso && (iso < range.start || iso > range.end)) continue;
+        const [da, mo] = d.split("/");
         cols.push({
           month: m.name,
           day: d,
@@ -50,7 +59,7 @@ export function SantaView({ data }: { data: SantaData }) {
       }
     }
     return cols;
-  }, [visibleMonths]);
+  }, [visibleMonths, data.period?.start, range]);
 
   const statusAt = (prefixIdx: number, day: string) => {
     for (const m of visibleMonths) {
@@ -60,10 +69,30 @@ export function SantaView({ data }: { data: SantaData }) {
     return "na";
   };
 
-  const monthSpans = visibleMonths.map((m) => ({
-    name: m.name,
-    span: (m.days || []).length,
-  }));
+  const monthSpans = useMemo(() => {
+    const spans: { name: string; span: number }[] = [];
+    for (const col of columns) {
+      const last = spans[spans.length - 1];
+      if (last && last.name === col.month) last.span += 1;
+      else spans.push({ name: col.month, span: 1 });
+    }
+    return spans;
+  }, [columns]);
+
+  const shownStats = useMemo(() => {
+    const out: SantaData["stats"] = {};
+    prefixes.forEach((p, pi) => {
+      let ok = 0;
+      let bad = 0;
+      for (const col of columns) {
+        const st = statusAt(pi, col.day);
+        if (st === "ok") ok += 1;
+        else if (st === "bad") bad += 1;
+      }
+      out[p] = { ok, bad, total: ok + bad };
+    });
+    return out;
+  }, [prefixes, columns, visibleMonths]);
 
   return (
     <div className="space-y-3">
@@ -81,7 +110,7 @@ export function SantaView({ data }: { data: SantaData }) {
               </thead>
               <tbody>
                 {prefixes.map((p, i) => {
-                  const s = stats[p] || { total: 0, ok: 0, bad: 0 };
+                  const s = shownStats[p] || stats[p] || { total: 0, ok: 0, bad: 0 };
                   return (
                     <tr
                       key={p}
@@ -213,4 +242,13 @@ export function SantaView({ data }: { data: SantaData }) {
       </Panel>
     </div>
   );
+}
+
+function dayIso(label: string, year: string) {
+  const parts = label.split("/");
+  if (parts.length >= 2 && parts[0] && parts[1]) {
+    const y = parts[2] || year;
+    return `${y}-${parts[1].padStart(2, "0")}-${parts[0].padStart(2, "0")}`;
+  }
+  return /^\d{4}-\d{2}-\d{2}/.test(label) ? label.slice(0, 10) : "";
 }
