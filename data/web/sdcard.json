@@ -1,8 +1,8 @@
 {
   "period": {
     "start": "2026-09-02",
-    "end": "2026-11-19",
-    "label": "02/09 a 19/11/2026"
+    "end": "2026-11-20",
+    "label": "02/09 a 20/11/2026"
   },
   "kpis": {
     "prefixes": 10,
@@ -20,99 +20,99 @@
       "inicio": "2026-09-02",
       "fim": null,
       "ok": 3,
-      "erro": 76,
-      "pct_ok": 3.79746835443038,
-      "pct_erro": 96.20253164556962
+      "erro": 77,
+      "pct_ok": 3.75,
+      "pct_erro": 96.25
     },
     {
       "prefixo": "32708",
       "camera": 22,
       "inicio": "2026-09-02",
       "fim": "2026-10-10",
-      "ok": 40,
+      "ok": 41,
       "erro": 38,
-      "pct_ok": 50.63291139240506,
-      "pct_erro": 48.10126582278481
+      "pct_ok": 51.24999999999999,
+      "pct_erro": 47.5
     },
     {
       "prefixo": "32709",
       "camera": 22,
       "inicio": "2026-09-03",
-      "fim": null,
-      "ok": 42,
+      "fim": "2026-11-19",
+      "ok": 43,
       "erro": 37,
-      "pct_ok": 53.16455696202531,
-      "pct_erro": 46.835443037974684
+      "pct_ok": 53.75,
+      "pct_erro": 46.25
     },
     {
       "prefixo": "32712",
       "camera": 22,
       "inicio": "2026-09-02",
       "fim": "2026-10-08",
-      "ok": 42,
+      "ok": 43,
       "erro": 37,
-      "pct_ok": 53.16455696202531,
-      "pct_erro": 46.835443037974684
+      "pct_ok": 53.75,
+      "pct_erro": 46.25
     },
     {
       "prefixo": "32712",
       "camera": 21,
       "inicio": "2026-09-10",
       "fim": "2026-11-17",
-      "ok": 43,
+      "ok": 44,
       "erro": 36,
-      "pct_ok": 54.43037974683544,
-      "pct_erro": 45.56962025316456
+      "pct_ok": 55.00000000000001,
+      "pct_erro": 45.0
     },
     {
       "prefixo": "32710",
       "camera": 21,
       "inicio": "2026-09-02",
       "fim": "2026-09-08",
-      "ok": 73,
+      "ok": 74,
       "erro": 6,
-      "pct_ok": 92.40506329113924,
-      "pct_erro": 7.59493670886076
+      "pct_ok": 92.5,
+      "pct_erro": 7.5
     },
     {
       "prefixo": "32711",
       "camera": 21,
       "inicio": "2026-09-04",
       "fim": "2026-09-09",
-      "ok": 71,
+      "ok": 72,
       "erro": 3,
-      "pct_ok": 89.87341772151899,
-      "pct_erro": 3.79746835443038
+      "pct_ok": 90.0,
+      "pct_erro": 3.75
     },
     {
       "prefixo": "32705",
       "camera": 23,
       "inicio": "2026-11-06",
       "fim": "2026-11-06",
-      "ok": 78,
+      "ok": 79,
       "erro": 1,
-      "pct_ok": 98.73417721518987,
-      "pct_erro": 1.2658227848101267
+      "pct_ok": 98.75,
+      "pct_erro": 1.25
     },
     {
       "prefixo": "32710",
       "camera": 22,
       "inicio": "2026-09-04",
       "fim": "2026-09-04",
-      "ok": 78,
+      "ok": 79,
       "erro": 1,
-      "pct_ok": 98.73417721518987,
-      "pct_erro": 1.2658227848101267
+      "pct_ok": 98.75,
+      "pct_erro": 1.25
     },
     {
       "prefixo": "32710",
       "camera": 23,
       "inicio": "2026-09-03",
       "fim": "2026-09-03",
-      "ok": 78,
+      "ok": 79,
       "erro": 1,
-      "pct_ok": 98.73417721518987,
-      "pct_erro": 1.2658227848101267
+      "pct_ok": 98.75,
+      "pct_erro": 1.25
     }
   ],
   "months": [
@@ -2357,7 +2357,7 @@
     {
       "month": 11,
       "name": "Novembro",
-      "label": "Novembro (01/11 a 19/11)",
+      "label": "Novembro (01/11 a 20/11)",
       "days": [
         "01/11",
         "02/11",
@@ -2377,13 +2377,15 @@
         "16/11",
         "17/11",
         "18/11",
-        "19/11"
+        "19/11",
+        "20/11"
       ],
       "rows": [
         {
           "prefixo": "32704",
           "camera": 21,
           "seq": [
+            "ok",
             "ok",
             "ok",
             "ok",
@@ -2423,6 +2425,7 @@
             "ok",
             "ok",
             "ok",
+            "off",
             "off",
             "off",
             "off",
@@ -2452,6 +2455,7 @@
             "ok",
             "ok",
             "ok",
+            "ok",
             "ok"
           ]
         },
@@ -2477,6 +2481,7 @@
             "ok",
             "ok",
             "ok",
+            "ok",
             "ok"
           ]
         },
@@ -2484,6 +2489,7 @@
           "prefixo": "32705",
           "camera": 22,
           "seq": [
+            "ok",
             "ok",
             "ok",
             "ok",
@@ -2527,6 +2533,7 @@
             "ok",
             "ok",
             "ok",
+            "ok",
             "ok"
           ]
         },
@@ -2534,6 +2541,7 @@
           "prefixo": "32706",
           "camera": 21,
           "seq": [
+            "ok",
             "ok",
             "ok",
             "ok",
@@ -2577,6 +2585,7 @@
             "ok",
             "ok",
             "ok",
+            "ok",
             "ok"
           ]
         },
@@ -2584,6 +2593,7 @@
           "prefixo": "32706",
           "camera": 23,
           "seq": [
+            "ok",
             "ok",
             "ok",
             "ok",
@@ -2627,6 +2637,7 @@
             "ok",
             "ok",
             "ok",
+            "ok",
             "ok"
           ]
         },
@@ -2652,6 +2663,7 @@
             "ok",
             "ok",
             "ok",
+            "ok",
             "ok"
           ]
         },
@@ -2677,6 +2689,7 @@
             "ok",
             "ok",
             "ok",
+            "ok",
             "ok"
           ]
         },
@@ -2702,6 +2715,7 @@
             "ok",
             "ok",
             "ok",
+            "ok",
             "ok"
           ]
         },
@@ -2709,6 +2723,7 @@
           "prefixo": "32708",
           "camera": 22,
           "seq": [
+            "ok",
             "ok",
             "ok",
             "ok",
@@ -2752,6 +2767,7 @@
             "ok",
             "ok",
             "ok",
+            "ok",
             "ok"
           ]
         },
@@ -2759,6 +2775,7 @@
           "prefixo": "32709",
           "camera": 21,
           "seq": [
+            "ok",
             "ok",
             "ok",
             "ok",
@@ -2802,263 +2819,275 @@
             "ok",
             "ok",
             "ok",
+            "erro",
+            "ok"
+          ]
+        },
+        {
+          "prefixo": "32709",
+          "camera": 23,
+          "seq": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "prefixo": "32710",
+          "camera": 21,
+          "seq": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "prefixo": "32710",
+          "camera": 22,
+          "seq": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "prefixo": "32710",
+          "camera": 23,
+          "seq": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "prefixo": "32711",
+          "camera": 21,
+          "seq": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "prefixo": "32711",
+          "camera": 22,
+          "seq": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "prefixo": "32711",
+          "camera": 23,
+          "seq": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "prefixo": "32712",
+          "camera": 21,
+          "seq": [
+            "erro",
+            "erro",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "erro",
+            "ok",
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "prefixo": "32712",
+          "camera": 22,
+          "seq": [
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "prefixo": "32712",
+          "camera": 23,
+          "seq": [
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
+            "erro",
             "erro"
           ]
         },
         {
-          "prefixo": "32709",
-          "camera": 23,
-          "seq": [
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok"
-          ]
-        },
-        {
-          "prefixo": "32710",
-          "camera": 21,
-          "seq": [
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok"
-          ]
-        },
-        {
-          "prefixo": "32710",
-          "camera": 22,
-          "seq": [
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok"
-          ]
-        },
-        {
-          "prefixo": "32710",
-          "camera": 23,
-          "seq": [
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok"
-          ]
-        },
-        {
-          "prefixo": "32711",
-          "camera": 21,
-          "seq": [
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok"
-          ]
-        },
-        {
-          "prefixo": "32711",
-          "camera": 22,
-          "seq": [
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok"
-          ]
-        },
-        {
-          "prefixo": "32711",
-          "camera": 23,
-          "seq": [
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok"
-          ]
-        },
-        {
-          "prefixo": "32712",
-          "camera": 21,
-          "seq": [
-            "erro",
-            "erro",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "erro",
-            "ok",
-            "ok"
-          ]
-        },
-        {
-          "prefixo": "32712",
-          "camera": 22,
-          "seq": [
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok",
-            "ok"
-          ]
-        },
-        {
-          "prefixo": "32712",
-          "camera": 23,
-          "seq": [
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro",
-            "erro"
-          ]
-        },
-        {
           "prefixo": "32713",
           "camera": 21,
           "seq": [
+            "ok",
             "ok",
             "ok",
             "ok",
@@ -3102,6 +3131,7 @@
             "ok",
             "ok",
             "ok",
+            "ok",
             "ok"
           ]
         },
@@ -3109,6 +3139,7 @@
           "prefixo": "32713",
           "camera": 23,
           "seq": [
+            "ok",
             "ok",
             "ok",
             "ok",
