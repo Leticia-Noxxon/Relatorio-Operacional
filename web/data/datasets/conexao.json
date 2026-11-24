@@ -1,5 +1,5 @@
 {
-  "coletado_em": "2026-11-24T15:12:29",
+  "coletado_em": "2026-11-24T19:57:51",
   "posicoes": [
     21,
     22,
@@ -920,8 +920,8 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
-          "sd": 0,
+          "off": 0,
+          "sd": 1,
           "falha": 1
         },
         {
@@ -1132,6 +1132,18 @@
       "garagem": "A2 TRANSPORTES"
     },
     {
+      "prefixo": "68202",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        }
+      ],
+      "garagem": "A2 TRANSPORTES"
+    },
+    {
       "prefixo": "68203",
       "cameras": [
         {
@@ -1268,8 +1280,8 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
-          "sd": 0,
+          "off": 0,
+          "sd": 1,
           "falha": 1
         }
       ],
@@ -1502,9 +1514,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
+        }
+      ],
+      "garagem": "A2 TRANSPORTES"
+    },
+    {
+      "prefixo": "68276",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
         }
       ],
       "garagem": "A2 TRANSPORTES"
@@ -1862,9 +1886,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "A2 TRANSPORTES"
@@ -2470,30 +2494,6 @@
       "garagem": "A2 TRANSPORTES"
     },
     {
-      "prefixo": "68424",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "A2 TRANSPORTES"
-    },
-    {
-      "prefixo": "68425",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "A2 TRANSPORTES"
-    },
-    {
       "prefixo": "68368",
       "cameras": [
         {
@@ -2573,6 +2573,30 @@
           "off": 1,
           "sd": 0,
           "falha": 1
+        }
+      ],
+      "garagem": "A2 TRANSPORTES"
+    },
+    {
+      "prefixo": "68424",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "A2 TRANSPORTES"
+    },
+    {
+      "prefixo": "68425",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
         }
       ],
       "garagem": "A2 TRANSPORTES"
@@ -2666,9 +2690,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "A2 TRANSPORTES"
@@ -2984,15 +3008,15 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "A2 TRANSPORTES"
@@ -3902,15 +3926,15 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "A2 TRANSPORTES"
@@ -4163,42 +4187,6 @@
           "off": 0,
           "sd": 0,
           "falha": 0
-        }
-      ],
-      "garagem": "A2 TRANSPORTES"
-    },
-    {
-      "prefixo": "68578",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "A2 TRANSPORTES"
-    },
-    {
-      "prefixo": "68580",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
         }
       ],
       "garagem": "A2 TRANSPORTES"
@@ -4526,9 +4514,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "A2 TRANSPORTES"
@@ -5374,6 +5362,42 @@
       "garagem": "A2 TRANSPORTES"
     },
     {
+      "prefixo": "68578",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "A2 TRANSPORTES"
+    },
+    {
+      "prefixo": "68580",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        }
+      ],
+      "garagem": "A2 TRANSPORTES"
+    },
+    {
       "prefixo": "68581",
       "cameras": [
         {
@@ -5504,9 +5528,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -6496,6 +6520,18 @@
       "garagem": "ALFA RODOBUS"
     },
     {
+      "prefixo": "86023",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "ALFA RODOBUS"
+    },
+    {
       "prefixo": "86024",
       "cameras": [
         {
@@ -6524,9 +6560,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "ALFA RODOBUS"
@@ -6593,6 +6629,18 @@
     },
     {
       "prefixo": "86033",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "ALFA RODOBUS"
+    },
+    {
+      "prefixo": "86034",
       "cameras": [
         {
           "pos": 21,
@@ -6764,9 +6812,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "ALFA RODOBUS"
@@ -7460,9 +7508,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "ALFA RODOBUS"
@@ -7625,6 +7673,18 @@
     },
     {
       "prefixo": "86200",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "ALFA RODOBUS"
+    },
+    {
+      "prefixo": "86201",
       "cameras": [
         {
           "pos": 21,
@@ -9561,14 +9621,14 @@
         {
           "pos": 21,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 22,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         }
       ],
       "garagem": "Alfa Rodobus SPE"
@@ -9596,8 +9656,8 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
-          "sd": 1,
+          "off": 1,
+          "sd": 0,
           "falha": 1
         }
       ],
@@ -9807,8 +9867,8 @@
         {
           "pos": 21,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         }
       ],
       "garagem": "Alfa Rodobus SPE"
@@ -10136,9 +10196,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "Alfa Rodobus SPE"
@@ -10449,8 +10509,8 @@
         {
           "pos": 21,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         }
       ],
       "garagem": "Alfa Rodobus SPE"
@@ -10586,9 +10646,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "Alfa Rodobus SPE"
@@ -10934,9 +10994,9 @@
         },
         {
           "pos": 26,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "GATO PRETO"
@@ -11073,8 +11133,8 @@
         {
           "pos": 21,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 22,
@@ -11085,8 +11145,8 @@
         {
           "pos": 23,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 24,
@@ -11097,8 +11157,8 @@
         {
           "pos": 25,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 26,
@@ -11480,9 +11540,9 @@
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "GATO PRETO"
@@ -12362,15 +12422,15 @@
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "GATO PRETO"
@@ -13400,9 +13460,9 @@
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "GATO PRETO"
@@ -13916,21 +13976,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "GATO PRETO"
@@ -14354,9 +14414,9 @@
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
@@ -15200,9 +15260,9 @@
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "GATO PRETO"
@@ -15932,9 +15992,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
@@ -16336,6 +16396,30 @@
       "garagem": "GATO PRETO"
     },
     {
+      "prefixo": "82787",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "GATO PRETO"
+    },
+    {
       "prefixo": "82788",
       "cameras": [
         {
@@ -16412,9 +16496,33 @@
       "cameras": [
         {
           "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
           "off": 1,
           "sd": 0,
           "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "GATO PRETO"
+    },
+    {
+      "prefixo": "82792",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 22,
@@ -17613,8 +17721,8 @@
         {
           "pos": 22,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 23,
@@ -17726,21 +17834,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "GATO PRETO A1"
@@ -18134,21 +18242,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "GATO PRETO A1"
@@ -18716,9 +18824,9 @@
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
@@ -18848,6 +18956,30 @@
         }
       ],
       "garagem": "GATO PRETO A1"
+    },
+    {
+      "prefixo": "32001",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
     },
     {
       "prefixo": "32002",
@@ -19114,6 +19246,30 @@
       "garagem": "METRÓPOLE - AE CARVALHO"
     },
     {
+      "prefixo": "32013",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
       "prefixo": "32014",
       "cameras": [
         {
@@ -19169,6 +19325,30 @@
           "off": 0,
           "sd": 1,
           "falha": 1
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
+      "prefixo": "32017",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 22,
@@ -19262,15 +19442,15 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
@@ -19402,6 +19582,30 @@
       "garagem": "METRÓPOLE - AE CARVALHO"
     },
     {
+      "prefixo": "32029",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
       "prefixo": "32030",
       "cameras": [
         {
@@ -19493,6 +19697,30 @@
           "off": 1,
           "sd": 0,
           "falha": 1
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
+      "prefixo": "32034",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
         }
       ],
       "garagem": "METRÓPOLE - AE CARVALHO"
@@ -19706,9 +19934,33 @@
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
+      "prefixo": "32044",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
         }
       ],
       "garagem": "METRÓPOLE - AE CARVALHO"
@@ -19718,8 +19970,8 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
-          "sd": 1,
+          "off": 1,
+          "sd": 0,
           "falha": 1
         },
         {
@@ -20054,9 +20306,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -20318,21 +20570,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE - AE CARVALHO"
@@ -20818,12 +21070,12 @@
       "garagem": "METRÓPOLE - AE CARVALHO"
     },
     {
-      "prefixo": "32173",
+      "prefixo": "32171",
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
-          "sd": 0,
+          "off": 0,
+          "sd": 1,
           "falha": 1
         },
         {
@@ -20831,6 +21083,54 @@
           "off": 1,
           "sd": 0,
           "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
+      "prefixo": "32173",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
+      "prefixo": "32174",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 23,
@@ -21158,21 +21458,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "METRÓPOLE - AE CARVALHO"
@@ -21896,9 +22196,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
@@ -22157,198 +22457,6 @@
     },
     {
       "prefixo": "32409",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - AE CARVALHO"
-    },
-    {
-      "prefixo": "32410",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - AE CARVALHO"
-    },
-    {
-      "prefixo": "32414",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 1,
-          "falha": 1
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - AE CARVALHO"
-    },
-    {
-      "prefixo": "32416",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - AE CARVALHO"
-    },
-    {
-      "prefixo": "32417",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - AE CARVALHO"
-    },
-    {
-      "prefixo": "32418",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - AE CARVALHO"
-    },
-    {
-      "prefixo": "32419",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - AE CARVALHO"
-    },
-    {
-      "prefixo": "32427",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 22,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 23,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        }
-      ],
-      "garagem": "METRÓPOLE - AE CARVALHO"
-    },
-    {
-      "prefixo": "32428",
       "cameras": [
         {
           "pos": 21,
@@ -23680,6 +23788,150 @@
       "garagem": "METRÓPOLE - AE CARVALHO"
     },
     {
+      "prefixo": "32410",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
+      "prefixo": "32414",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
+      "prefixo": "32416",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
+      "prefixo": "32417",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
+      "prefixo": "32418",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
+      "prefixo": "32419",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
       "prefixo": "32420",
       "cameras": [
         {
@@ -23777,6 +24029,54 @@
     },
     {
       "prefixo": "32426",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
+      "prefixo": "32427",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 22,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
+      "prefixo": "32428",
       "cameras": [
         {
           "pos": 21,
@@ -23945,6 +24245,30 @@
     },
     {
       "prefixo": "32437",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - AE CARVALHO"
+    },
+    {
+      "prefixo": "32438",
       "cameras": [
         {
           "pos": 21,
@@ -24251,24 +24575,6 @@
           "off": 0,
           "sd": 0,
           "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 25,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 26,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE - EXPANDIR"
@@ -25874,9 +26180,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
@@ -26090,21 +26396,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE - EXPANDIR"
@@ -26114,21 +26420,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE - EXPANDIR"
@@ -26878,6 +27184,48 @@
       "garagem": "METRÓPOLE - IGUATEMI"
     },
     {
+      "prefixo": "31014",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
       "prefixo": "31037",
       "cameras": [
         {
@@ -27014,39 +27362,39 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 24,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 25,
-          "off": 1,
-          "sd": 0,
+          "off": 0,
+          "sd": 1,
           "falha": 1
         },
         {
           "pos": 26,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "METRÓPOLE - IGUATEMI"
@@ -27056,39 +27404,39 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
-          "sd": 1,
+          "off": 1,
+          "sd": 0,
           "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
-          "sd": 1,
+          "off": 1,
+          "sd": 0,
           "falha": 1
         },
         {
           "pos": 24,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 25,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE - IGUATEMI"
@@ -27140,20 +27488,20 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
-          "sd": 0,
+          "off": 0,
+          "sd": 1,
           "falha": 1
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
-          "sd": 0,
+          "off": 0,
+          "sd": 1,
           "falha": 1
         },
         {
@@ -27392,39 +27740,39 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 24,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 25,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 26,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "METRÓPOLE - IGUATEMI"
@@ -28172,9 +28520,9 @@
         },
         {
           "pos": 25,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 26,
@@ -28517,6 +28865,48 @@
           "off": 0,
           "sd": 0,
           "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
+      "prefixo": "31287",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE - IGUATEMI"
@@ -29072,21 +29462,21 @@
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 24,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 25,
@@ -29096,9 +29486,9 @@
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE - IGUATEMI"
@@ -29630,21 +30020,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "METRÓPOLE - IGUATEMI"
@@ -30083,6 +30473,246 @@
     },
     {
       "prefixo": "31676",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
+      "prefixo": "31717",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
+      "prefixo": "31718",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
+      "prefixo": "31719",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
+      "prefixo": "31720",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
+      "prefixo": "31721",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
+      "prefixo": "31722",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
+      "prefixo": "31723",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
+      "prefixo": "31724",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
+      "prefixo": "31725",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
+      "prefixo": "31726",
       "cameras": [
         {
           "pos": 21,
@@ -31227,8 +31857,8 @@
         {
           "pos": 21,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 22,
@@ -31474,6 +32104,90 @@
       "garagem": "METRÓPOLE - IGUATEMI"
     },
     {
+      "prefixo": "31917",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
+      "prefixo": "31918",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
       "prefixo": "31948",
       "cameras": [
         {
@@ -31550,9 +32264,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
@@ -31562,9 +32276,9 @@
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE - IGUATEMI"
@@ -31619,6 +32333,30 @@
     },
     {
       "prefixo": "31956",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IGUATEMI"
+    },
+    {
+      "prefixo": "31957",
       "cameras": [
         {
           "pos": 21,
@@ -31772,15 +32510,15 @@
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "METRÓPOLE - IMPERADOR"
@@ -32018,9 +32756,9 @@
         },
         {
           "pos": 25,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 26,
@@ -33002,21 +33740,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 24,
@@ -33128,8 +33866,8 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
-          "sd": 1,
+          "off": 1,
+          "sd": 0,
           "falha": 1
         },
         {
@@ -34353,8 +35091,8 @@
         {
           "pos": 22,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 23,
@@ -34640,39 +35378,39 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 24,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 25,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE - IMPERADOR"
@@ -37258,6 +37996,24 @@
       "garagem": "METRÓPOLE - IMPERADOR"
     },
     {
+      "prefixo": "31360",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 22,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
       "prefixo": "31379",
       "cameras": [
         {
@@ -37312,7 +38068,223 @@
       "garagem": "METRÓPOLE - IMPERADOR"
     },
     {
+      "prefixo": "31505",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31506",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31507",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31508",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31509",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31510",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
       "prefixo": "31515",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31520",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31521",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31522",
       "cameras": [
         {
           "pos": 21,
@@ -37370,9 +38342,9 @@
         },
         {
           "pos": 26,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "METRÓPOLE - IMPERADOR"
@@ -37502,21 +38474,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE - IMPERADOR"
@@ -37642,7 +38614,31 @@
       "garagem": "METRÓPOLE - IMPERADOR"
     },
     {
-      "prefixo": "31701",
+      "prefixo": "31727",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31728",
       "cameras": [
         {
           "pos": 21,
@@ -37666,7 +38662,55 @@
       "garagem": "METRÓPOLE - IMPERADOR"
     },
     {
-      "prefixo": "31702",
+      "prefixo": "31729",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31730",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31731",
       "cameras": [
         {
           "pos": 21,
@@ -38386,30 +39430,6 @@
       "garagem": "METRÓPOLE - IMPERADOR"
     },
     {
-      "prefixo": "31780",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - IMPERADOR"
-    },
-    {
       "prefixo": "31802",
       "cameras": [
         {
@@ -38578,48 +39598,6 @@
       "garagem": "METRÓPOLE - IMPERADOR"
     },
     {
-      "prefixo": "31814",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 1,
-          "falha": 1
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - IMPERADOR"
-    },
-    {
       "prefixo": "31919",
       "cameras": [
         {
@@ -38692,468 +39670,6 @@
           "pos": 25,
           "off": 1,
           "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 26,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        }
-      ],
-      "garagem": "METRÓPOLE - IMPERADOR"
-    },
-    {
-      "prefixo": "31921",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - IMPERADOR"
-    },
-    {
-      "prefixo": "31922",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 23,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 24,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - IMPERADOR"
-    },
-    {
-      "prefixo": "31923",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 1,
-          "falha": 1
-        },
-        {
-          "pos": 25,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 26,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        }
-      ],
-      "garagem": "METRÓPOLE - IMPERADOR"
-    },
-    {
-      "prefixo": "31924",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 22,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 25,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 26,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        }
-      ],
-      "garagem": "METRÓPOLE - IMPERADOR"
-    },
-    {
-      "prefixo": "31925",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - IMPERADOR"
-    },
-    {
-      "prefixo": "31926",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - IMPERADOR"
-    },
-    {
-      "prefixo": "31927",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - IMPERADOR"
-    },
-    {
-      "prefixo": "31928",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - IMPERADOR"
-    },
-    {
-      "prefixo": "31944",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - IMPERADOR"
-    },
-    {
-      "prefixo": "31945",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - IMPERADOR"
-    },
-    {
-      "prefixo": "31946",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 1,
           "falha": 1
         },
         {
@@ -39628,6 +40144,78 @@
       "garagem": "METRÓPOLE - IMPERADOR"
     },
     {
+      "prefixo": "31701",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31702",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31780",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
       "prefixo": "31782",
       "cameras": [
         {
@@ -39765,8 +40353,8 @@
         {
           "pos": 23,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         }
       ],
       "garagem": "METRÓPOLE - IMPERADOR"
@@ -40031,6 +40619,552 @@
           "off": 0,
           "sd": 0,
           "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31813",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        },
+        {
+          "pos": 26,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31814",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31921",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31922",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 24,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31923",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        },
+        {
+          "pos": 25,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 26,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31924",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 22,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 25,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 26,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31925",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31926",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31927",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31928",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31944",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31945",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - IMPERADOR"
+    },
+    {
+      "prefixo": "31946",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        },
+        {
+          "pos": 26,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE - IMPERADOR"
@@ -40712,9 +41846,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -41171,6 +42305,78 @@
           "off": 0,
           "sd": 0,
           "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - ITAIM"
+    },
+    {
+      "prefixo": "31557",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - ITAIM"
+    },
+    {
+      "prefixo": "31558",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - ITAIM"
+    },
+    {
+      "prefixo": "31559",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE - ITAIM"
@@ -41858,9 +43064,9 @@
         },
         {
           "pos": 25,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 26,
@@ -43695,8 +44901,8 @@
         {
           "pos": 21,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 22,
@@ -44061,8 +45267,8 @@
         {
           "pos": 23,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         }
       ],
       "garagem": "METRÓPOLE - ITAIM"
@@ -44528,9 +45734,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -44774,9 +45980,9 @@
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
@@ -45538,132 +46744,6 @@
       "garagem": "METRÓPOLE - ITAIM"
     },
     {
-      "prefixo": "32503",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - ITAIM"
-    },
-    {
-      "prefixo": "32504",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - ITAIM"
-    },
-    {
-      "prefixo": "32505",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "METRÓPOLE - ITAIM"
-    },
-    {
       "prefixo": "32602",
       "cameras": [
         {
@@ -45716,15 +46796,15 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
@@ -46582,6 +47662,132 @@
       "garagem": "METRÓPOLE - ITAIM"
     },
     {
+      "prefixo": "32503",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - ITAIM"
+    },
+    {
+      "prefixo": "32504",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - ITAIM"
+    },
+    {
+      "prefixo": "32505",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - ITAIM"
+    },
+    {
       "prefixo": "32506",
       "cameras": [
         {
@@ -47408,21 +48614,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE - ITAIM"
@@ -47765,6 +48971,30 @@
     },
     {
       "prefixo": "32675",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - ITAIM"
+    },
+    {
+      "prefixo": "32677",
       "cameras": [
         {
           "pos": 21,
@@ -51326,21 +52556,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "METRÓPOLE - MBOI - MIRIM"
@@ -51398,9 +52628,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -51926,9 +53156,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
@@ -53278,6 +54508,48 @@
       "garagem": "METRÓPOLE - MBOI - MIRIM"
     },
     {
+      "prefixo": "73646",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - MBOI - MIRIM"
+    },
+    {
       "prefixo": "73647",
       "cameras": [
         {
@@ -54098,9 +55370,9 @@
         },
         {
           "pos": 24,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 25,
@@ -54149,6 +55421,48 @@
           "off": 0,
           "sd": 1,
           "falha": 1
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "METRÓPOLE - MBOI - MIRIM"
+    },
+    {
+      "prefixo": "73942",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 26,
@@ -54866,9 +56180,9 @@
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 24,
@@ -55166,9 +56480,9 @@
         },
         {
           "pos": 24,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 25,
@@ -55772,21 +57086,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE PAULISTA - DEPINEDO"
@@ -56852,9 +58166,9 @@
         },
         {
           "pos": 25,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 26,
@@ -56942,8 +58256,8 @@
         },
         {
           "pos": 26,
-          "off": 1,
-          "sd": 0,
+          "off": 0,
+          "sd": 1,
           "falha": 1
         }
       ],
@@ -57015,8 +58329,8 @@
         {
           "pos": 24,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 25,
@@ -57164,21 +58478,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 24,
@@ -57944,9 +59258,9 @@
         },
         {
           "pos": 25,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 26,
@@ -58737,8 +60051,8 @@
         {
           "pos": 26,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         }
       ],
       "garagem": "METRÓPOLE PAULISTA - DEPINEDO"
@@ -59024,9 +60338,9 @@
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE PAULISTA - DEPINEDO"
@@ -60086,21 +61400,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 24,
@@ -60968,15 +62282,15 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
@@ -60986,21 +62300,21 @@
         },
         {
           "pos": 24,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 25,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 26,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "METRÓPOLE PAULISTA - DEPINEDO"
@@ -61503,8 +62817,8 @@
         {
           "pos": 26,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         }
       ],
       "garagem": "METRÓPOLE PAULISTA - DEPINEDO"
@@ -62258,9 +63572,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -63890,9 +65204,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
@@ -65402,15 +66716,15 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "NORTE BUSS A1"
@@ -66374,15 +67688,15 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "NORTE BUSS A1"
@@ -66644,15 +67958,15 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "NORTE BUSS A1"
@@ -67994,15 +69308,15 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "NORTE BUSS A1"
@@ -69074,15 +70388,15 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "NORTE BUSS A1"
@@ -71306,9 +72620,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
@@ -71357,6 +72671,24 @@
     },
     {
       "prefixo": "16500",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "NORTE BUSS A1"
+    },
+    {
+      "prefixo": "16502",
       "cameras": [
         {
           "pos": 21,
@@ -71456,9 +72788,9 @@
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "NORTE BUSS A1"
@@ -71792,15 +73124,15 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "NORTE BUSS A1"
@@ -72998,15 +74330,15 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "NORTE BUSS A1"
@@ -73340,9 +74672,9 @@
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "NORTE BUSS A1"
@@ -73718,9 +75050,9 @@
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "NORTE BUSS A1"
@@ -73839,14 +75171,14 @@
         {
           "pos": 21,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 22,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         }
       ],
       "garagem": "NORTE BUSS A1"
@@ -74075,24 +75407,6 @@
           "off": 1,
           "sd": 0,
           "falha": 1
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "NORTE BUSS A1"
-    },
-    {
-      "prefixo": "16971",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
         },
         {
           "pos": 22,
@@ -74453,6 +75767,24 @@
     },
     {
       "prefixo": "16970",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "NORTE BUSS A1"
+    },
+    {
+      "prefixo": "16971",
       "cameras": [
         {
           "pos": 21,
@@ -75770,9 +77102,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "NORTE BUSS A2"
@@ -77048,9 +78380,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -77546,9 +78878,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "NORTE BUSS A2"
@@ -78182,9 +79514,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "NORTE BUSS A2"
@@ -78376,6 +79708,18 @@
       "garagem": "NORTE BUSS A2"
     },
     {
+      "prefixo": "26460",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "NORTE BUSS A2"
+    },
+    {
       "prefixo": "26462",
       "cameras": [
         {
@@ -78429,8 +79773,8 @@
         {
           "pos": 21,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 22,
@@ -78446,9 +79790,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "NORTE BUSS A2"
@@ -79418,9 +80762,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "NORTE BUSS A2"
@@ -79583,6 +80927,18 @@
     },
     {
       "prefixo": "26917",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "NORTE BUSS A2"
+    },
+    {
+      "prefixo": "26918",
       "cameras": [
         {
           "pos": 21,
@@ -79874,39 +81230,39 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
-          "sd": 1,
+          "off": 1,
+          "sd": 0,
           "falha": 1
         },
         {
           "pos": 24,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 25,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -80582,8 +81938,8 @@
         },
         {
           "pos": 23,
-          "off": 0,
-          "sd": 1,
+          "off": 1,
+          "sd": 0,
           "falha": 1
         }
       ],
@@ -81434,9 +82790,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -81758,9 +83114,9 @@
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 24,
@@ -82352,9 +83708,9 @@
         },
         {
           "pos": 24,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 25,
@@ -82616,9 +83972,9 @@
         },
         {
           "pos": 26,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -82919,6 +84275,48 @@
     },
     {
       "prefixo": "11042",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "SANTA BRÍGIDA"
+    },
+    {
+      "prefixo": "11043",
       "cameras": [
         {
           "pos": 21,
@@ -83300,39 +84698,39 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 24,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 25,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 26,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -83697,8 +85095,8 @@
         {
           "pos": 24,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 25,
@@ -85448,21 +86846,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -85541,30 +86939,6 @@
     },
     {
       "prefixo": "11520",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "SANTA BRÍGIDA"
-    },
-    {
-      "prefixo": "11521",
       "cameras": [
         {
           "pos": 21,
@@ -86204,21 +87578,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
-          "sd": 1,
+          "off": 1,
+          "sd": 0,
           "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -86900,9 +88274,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -87560,9 +88934,9 @@
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 24,
@@ -88040,6 +89414,30 @@
         },
         {
           "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "SANTA BRÍGIDA"
+    },
+    {
+      "prefixo": "11521",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
           "off": 0,
           "sd": 0,
           "falha": 0
@@ -88532,9 +89930,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -88544,9 +89942,9 @@
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -90856,30 +92254,6 @@
       "garagem": "SANTA BRÍGIDA"
     },
     {
-      "prefixo": "11741",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "SANTA BRÍGIDA"
-    },
-    {
       "prefixo": "10008",
       "cameras": [
         {
@@ -90986,9 +92360,9 @@
         },
         {
           "pos": 24,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 25,
@@ -91028,9 +92402,9 @@
         },
         {
           "pos": 24,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 25,
@@ -92009,6 +93383,30 @@
           "off": 0,
           "sd": 1,
           "falha": 1
+        }
+      ],
+      "garagem": "SANTA BRÍGIDA"
+    },
+    {
+      "prefixo": "11741",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -93722,21 +95120,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -94550,9 +95948,9 @@
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -95057,54 +96455,6 @@
           "off": 0,
           "sd": 1,
           "falha": 1
-        }
-      ],
-      "garagem": "SANTA BRÍGIDA"
-    },
-    {
-      "prefixo": "11874",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "SANTA BRÍGIDA"
-    },
-    {
-      "prefixo": "11878",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -95726,9 +97076,9 @@
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -96083,6 +97433,30 @@
           "off": 0,
           "sd": 1,
           "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "SANTA BRÍGIDA"
+    },
+    {
+      "prefixo": "11995",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 23,
@@ -96566,9 +97940,9 @@
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 24,
@@ -96740,6 +98114,30 @@
       "cameras": [
         {
           "pos": 21,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "SANTA BRÍGIDA"
+    },
+    {
+      "prefixo": "11874",
+      "cameras": [
+        {
+          "pos": 21,
           "off": 0,
           "sd": 0,
           "falha": 0
@@ -96788,27 +98186,51 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "SANTA BRÍGIDA"
     },
     {
       "prefixo": "11877",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "SANTA BRÍGIDA"
+    },
+    {
+      "prefixo": "11878",
       "cameras": [
         {
           "pos": 21,
@@ -96860,21 +98282,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
-          "sd": 0,
+          "off": 0,
+          "sd": 1,
           "falha": 1
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -97233,8 +98655,8 @@
         {
           "pos": 23,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -97340,21 +98762,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "SANTA BRÍGIDA"
@@ -98684,9 +100106,9 @@
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "VIA SUDESTE"
@@ -98937,8 +100359,8 @@
         {
           "pos": 21,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 22,
@@ -100694,9 +102116,9 @@
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
@@ -100952,21 +102374,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIA SUDESTE"
@@ -102086,39 +103508,39 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
-          "sd": 1,
+          "off": 1,
+          "sd": 0,
           "falha": 1
         },
         {
           "pos": 24,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 25,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIA SUDESTE"
@@ -102938,21 +104360,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIA SUDESTE"
@@ -103106,9 +104528,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
@@ -103202,21 +104624,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIA SUDESTE"
@@ -103376,9 +104798,9 @@
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
@@ -103682,15 +105104,15 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
@@ -103946,9 +105368,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
@@ -104176,6 +105598,48 @@
       "garagem": "VIA SUDESTE"
     },
     {
+      "prefixo": "51580",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "VIA SUDESTE"
+    },
+    {
       "prefixo": "51582",
       "cameras": [
         {
@@ -104204,15 +105668,15 @@
         },
         {
           "pos": 25,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 26,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "VIA SUDESTE"
@@ -107055,8 +108519,8 @@
         {
           "pos": 21,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 22,
@@ -107918,9 +109382,9 @@
         },
         {
           "pos": 25,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 26,
@@ -108980,39 +110444,39 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 24,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 25,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIA SUDESTE"
@@ -109438,48 +110902,6 @@
       "garagem": "VIA SUDESTE"
     },
     {
-      "prefixo": "52778",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "VIA SUDESTE"
-    },
-    {
       "prefixo": "51159",
       "cameras": [
         {
@@ -109820,9 +111242,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -110691,8 +112113,8 @@
         {
           "pos": 23,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 24,
@@ -110775,8 +112197,8 @@
         {
           "pos": 23,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 24,
@@ -110973,8 +112395,8 @@
         {
           "pos": 21,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 22,
@@ -111147,8 +112569,8 @@
         {
           "pos": 22,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 23,
@@ -111164,8 +112586,8 @@
         },
         {
           "pos": 25,
-          "off": 1,
-          "sd": 0,
+          "off": 0,
+          "sd": 1,
           "falha": 1
         },
         {
@@ -111201,8 +112623,8 @@
         {
           "pos": 24,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 25,
@@ -111304,7 +112726,7 @@
       "garagem": "VIA SUDESTE"
     },
     {
-      "prefixo": "52524",
+      "prefixo": "52778",
       "cameras": [
         {
           "pos": 21,
@@ -111674,9 +113096,9 @@
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIA SUDESTE"
@@ -114122,9 +115544,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
@@ -114794,9 +116216,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
@@ -114824,9 +116246,9 @@
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIA SUDESTE"
@@ -114884,9 +116306,9 @@
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
@@ -116852,39 +118274,39 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 24,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 25,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIA SUDESTE"
@@ -117323,6 +118745,48 @@
           "off": 0,
           "sd": 1,
           "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "VIA SUDESTE"
+    },
+    {
+      "prefixo": "52524",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 23,
@@ -118011,8 +119475,8 @@
         {
           "pos": 25,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 26,
@@ -118167,8 +119631,8 @@
         {
           "pos": 23,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 24,
@@ -118436,9 +119900,9 @@
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -118574,39 +120038,39 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 24,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 25,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 26,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -118748,9 +120212,9 @@
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
@@ -119696,21 +121160,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -119984,21 +121448,21 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -120110,14 +121574,14 @@
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
-          "sd": 1,
+          "off": 1,
+          "sd": 0,
           "falha": 1
         }
       ],
@@ -121480,7 +122944,7 @@
       "garagem": "VIAÇÃO GRAJAÚ"
     },
     {
-      "prefixo": "61322",
+      "prefixo": "61321",
       "cameras": [
         {
           "pos": 21,
@@ -121490,9 +122954,9 @@
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
@@ -121502,9 +122966,9 @@
         },
         {
           "pos": 24,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 25,
@@ -121517,6 +122981,48 @@
           "off": 0,
           "sd": 0,
           "falha": 0
+        }
+      ],
+      "garagem": "VIAÇÃO GRAJAÚ"
+    },
+    {
+      "prefixo": "61322",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 22,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 24,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 25,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
+        },
+        {
+          "pos": 26,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -122366,21 +123872,21 @@
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 24,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 25,
@@ -122390,9 +123896,9 @@
         },
         {
           "pos": 26,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -122744,9 +124250,9 @@
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
@@ -122768,9 +124274,9 @@
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -123326,9 +124832,9 @@
         },
         {
           "pos": 22,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 23,
@@ -124846,48 +126352,6 @@
       "garagem": "VIAÇÃO GRAJAÚ"
     },
     {
-      "prefixo": "61551",
-      "cameras": [
-        {
-          "pos": 21,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 22,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 23,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 24,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        },
-        {
-          "pos": 25,
-          "off": 1,
-          "sd": 0,
-          "falha": 1
-        },
-        {
-          "pos": 26,
-          "off": 0,
-          "sd": 0,
-          "falha": 0
-        }
-      ],
-      "garagem": "VIAÇÃO GRAJAÚ"
-    },
-    {
       "prefixo": "61405",
       "cameras": [
         {
@@ -125600,9 +127064,9 @@
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -125699,6 +127163,30 @@
           "off": 0,
           "sd": 1,
           "falha": 1
+        }
+      ],
+      "garagem": "VIAÇÃO GRAJAÚ"
+    },
+    {
+      "prefixo": "61456",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -125841,38 +127329,38 @@
         {
           "pos": 21,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 22,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 23,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 24,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 25,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         },
         {
           "pos": 26,
           "off": 0,
-          "sd": 1,
-          "falha": 1
+          "sd": 0,
+          "falha": 0
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -126161,6 +127649,48 @@
           "off": 0,
           "sd": 0,
           "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        }
+      ],
+      "garagem": "VIAÇÃO GRAJAÚ"
+    },
+    {
+      "prefixo": "61551",
+      "cameras": [
+        {
+          "pos": 21,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 1,
+          "sd": 0,
+          "falha": 1
         },
         {
           "pos": 26,
@@ -126897,8 +128427,8 @@
         {
           "pos": 22,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 23,
@@ -126909,8 +128439,8 @@
         {
           "pos": 24,
           "off": 0,
-          "sd": 0,
-          "falha": 0
+          "sd": 1,
+          "falha": 1
         },
         {
           "pos": 25,
@@ -127004,9 +128534,9 @@
         },
         {
           "pos": 26,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -127826,9 +129356,9 @@
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 24,
@@ -127922,9 +129452,9 @@
         },
         {
           "pos": 25,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 26,
@@ -128318,9 +129848,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -128528,39 +130058,39 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
-          "off": 1,
-          "sd": 0,
+          "off": 0,
+          "sd": 1,
           "falha": 1
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 24,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 25,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 26,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -128738,9 +130268,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -129050,21 +130580,21 @@
         },
         {
           "pos": 24,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 25,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -130592,9 +132122,9 @@
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
@@ -131060,9 +132590,9 @@
         },
         {
           "pos": 23,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 24,
@@ -131330,9 +132860,9 @@
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -131426,9 +132956,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -131684,33 +133214,33 @@
         },
         {
           "pos": 22,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 23,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 24,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 25,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         },
         {
           "pos": 26,
-          "off": 0,
+          "off": 1,
           "sd": 0,
-          "falha": 0
+          "falha": 1
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -131888,9 +133418,9 @@
       "cameras": [
         {
           "pos": 21,
-          "off": 1,
+          "off": 0,
           "sd": 0,
-          "falha": 1
+          "falha": 0
         },
         {
           "pos": 22,
@@ -132089,6 +133619,42 @@
           "off": 0,
           "sd": 0,
           "falha": 0
+        }
+      ],
+      "garagem": "VIAÇÃO GRAJAÚ"
+    },
+    {
+      "prefixo": "61814",
+      "cameras": [
+        {
+          "pos": 22,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
+        },
+        {
+          "pos": 23,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 24,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 25,
+          "off": 0,
+          "sd": 0,
+          "falha": 0
+        },
+        {
+          "pos": 26,
+          "off": 0,
+          "sd": 1,
+          "falha": 1
         }
       ],
       "garagem": "VIAÇÃO GRAJAÚ"
@@ -132305,10 +133871,10 @@
     }
   ],
   "totais": {
-    "veiculos_problema": 1452,
-    "cameras_problema": 2459,
-    "veiculos_erro_sd": 632,
-    "cameras_erro_sd": 803,
+    "veiculos_problema": 1466,
+    "cameras_problema": 2473,
+    "veiculos_erro_sd": 645,
+    "cameras_erro_sd": 816,
     "unidades": 19
   },
   "all": [
@@ -132316,14 +133882,14 @@
       "operadora_id": 696,
       "unidade": "VIA SUDESTE",
       "regiao": "Sudeste",
-      "veiculos_problema": 207,
+      "veiculos_problema": 214,
       "veiculos_erro_sd": 115,
-      "camera_100_offline": 234,
-      "camera_erro_sd": 158,
-      "camera_21_problema": 89,
+      "camera_100_offline": 260,
+      "camera_erro_sd": 159,
+      "camera_21_problema": 98,
       "camera_retirada": 0,
-      "cameras_problema": 393,
-      "total_veiculos": 630,
+      "cameras_problema": 420,
+      "total_veiculos": 631,
       "metropole": false
     },
     {
@@ -132331,194 +133897,194 @@
       "unidade": "A2 TRANSPORTES",
       "regiao": "Sul",
       "veiculos_problema": 204,
-      "veiculos_erro_sd": 26,
-      "camera_100_offline": 215,
-      "camera_erro_sd": 27,
-      "camera_21_problema": 172,
+      "veiculos_erro_sd": 28,
+      "camera_100_offline": 212,
+      "camera_erro_sd": 29,
+      "camera_21_problema": 171,
       "camera_retirada": 3,
-      "cameras_problema": 242,
-      "total_veiculos": 455,
+      "cameras_problema": 241,
+      "total_veiculos": 457,
       "metropole": false
     },
     {
       "operadora_id": 689,
       "unidade": "SANTA BRÍGIDA",
       "regiao": "Leste",
-      "veiculos_problema": 174,
-      "veiculos_erro_sd": 135,
-      "camera_100_offline": 89,
-      "camera_erro_sd": 156,
-      "camera_21_problema": 65,
+      "veiculos_problema": 166,
+      "veiculos_erro_sd": 133,
+      "camera_100_offline": 72,
+      "camera_erro_sd": 154,
+      "camera_21_problema": 59,
       "camera_retirada": 0,
-      "cameras_problema": 245,
-      "total_veiculos": 654,
+      "cameras_problema": 226,
+      "total_veiculos": 656,
       "metropole": false
     },
     {
       "operadora_id": 684,
       "unidade": "VIAÇÃO GRAJAÚ",
       "regiao": "Sul",
-      "veiculos_problema": 168,
-      "veiculos_erro_sd": 59,
-      "camera_100_offline": 357,
-      "camera_erro_sd": 85,
-      "camera_21_problema": 84,
-      "camera_retirada": 9,
-      "cameras_problema": 442,
-      "total_veiculos": 392,
+      "veiculos_problema": 166,
+      "veiculos_erro_sd": 60,
+      "camera_100_offline": 347,
+      "camera_erro_sd": 83,
+      "camera_21_problema": 76,
+      "camera_retirada": 10,
+      "cameras_problema": 430,
+      "total_veiculos": 395,
       "metropole": false
     },
     {
       "operadora_id": 680,
       "unidade": "NORTE BUSS A1",
       "regiao": "Norte",
-      "veiculos_problema": 106,
-      "veiculos_erro_sd": 31,
-      "camera_100_offline": 96,
-      "camera_erro_sd": 33,
+      "veiculos_problema": 104,
+      "veiculos_erro_sd": 30,
+      "camera_100_offline": 95,
+      "camera_erro_sd": 31,
       "camera_21_problema": 65,
       "camera_retirada": 0,
-      "cameras_problema": 129,
-      "total_veiculos": 641,
+      "cameras_problema": 126,
+      "total_veiculos": 642,
       "metropole": false
     },
     {
       "operadora_id": 705,
       "unidade": "METRÓPOLE - IMPERADOR",
       "regiao": "Leste",
-      "veiculos_problema": 90,
+      "veiculos_problema": 98,
       "veiculos_erro_sd": 42,
-      "camera_100_offline": 163,
+      "camera_100_offline": 175,
       "camera_erro_sd": 51,
-      "camera_21_problema": 38,
+      "camera_21_problema": 44,
       "camera_retirada": 0,
-      "cameras_problema": 214,
-      "total_veiculos": 228,
+      "cameras_problema": 226,
+      "total_veiculos": 244,
       "metropole": true
     },
     {
       "operadora_id": 693,
       "unidade": "NORTE BUSS A2",
       "regiao": "Norte",
-      "veiculos_problema": 77,
-      "veiculos_erro_sd": 23,
-      "camera_100_offline": 65,
-      "camera_erro_sd": 24,
-      "camera_21_problema": 58,
+      "veiculos_problema": 80,
+      "veiculos_erro_sd": 24,
+      "camera_100_offline": 67,
+      "camera_erro_sd": 25,
+      "camera_21_problema": 61,
       "camera_retirada": 0,
-      "cameras_problema": 89,
-      "total_veiculos": 340,
+      "cameras_problema": 92,
+      "total_veiculos": 342,
+      "metropole": false
+    },
+    {
+      "operadora_id": 695,
+      "unidade": "GATO PRETO",
+      "regiao": "Oeste",
+      "veiculos_problema": 75,
+      "veiculos_erro_sd": 28,
+      "camera_100_offline": 79,
+      "camera_erro_sd": 35,
+      "camera_21_problema": 47,
+      "camera_retirada": 0,
+      "cameras_problema": 114,
+      "total_veiculos": 259,
       "metropole": false
     },
     {
       "operadora_id": 678,
       "unidade": "METRÓPOLE PAULISTA - DEPINEDO",
       "regiao": "Sul",
-      "veiculos_problema": 75,
-      "veiculos_erro_sd": 40,
-      "camera_100_offline": 67,
-      "camera_erro_sd": 82,
-      "camera_21_problema": 20,
+      "veiculos_problema": 71,
+      "veiculos_erro_sd": 42,
+      "camera_100_offline": 56,
+      "camera_erro_sd": 84,
+      "camera_21_problema": 17,
       "camera_retirada": 7,
-      "cameras_problema": 150,
+      "cameras_problema": 141,
       "total_veiculos": 219,
       "metropole": true
-    },
-    {
-      "operadora_id": 695,
-      "unidade": "GATO PRETO",
-      "regiao": "Oeste",
-      "veiculos_problema": 72,
-      "veiculos_erro_sd": 28,
-      "camera_100_offline": 76,
-      "camera_erro_sd": 34,
-      "camera_21_problema": 45,
-      "camera_retirada": 0,
-      "cameras_problema": 110,
-      "total_veiculos": 257,
-      "metropole": false
     },
     {
       "operadora_id": 704,
       "unidade": "METRÓPOLE - IGUATEMI",
       "regiao": "Leste",
-      "veiculos_problema": 57,
-      "veiculos_erro_sd": 23,
-      "camera_100_offline": 106,
-      "camera_erro_sd": 26,
-      "camera_21_problema": 35,
+      "veiculos_problema": 61,
+      "veiculos_erro_sd": 29,
+      "camera_100_offline": 102,
+      "camera_erro_sd": 34,
+      "camera_21_problema": 34,
       "camera_retirada": 0,
-      "cameras_problema": 132,
-      "total_veiculos": 163,
+      "cameras_problema": 136,
+      "total_veiculos": 178,
       "metropole": true
     },
     {
       "operadora_id": 706,
       "unidade": "METRÓPOLE - ITAIM",
       "regiao": "Leste",
-      "veiculos_problema": 47,
-      "veiculos_erro_sd": 33,
+      "veiculos_problema": 48,
+      "veiculos_erro_sd": 35,
       "camera_100_offline": 20,
-      "camera_erro_sd": 40,
+      "camera_erro_sd": 42,
       "camera_21_problema": 19,
       "camera_retirada": 0,
-      "cameras_problema": 60,
-      "total_veiculos": 310,
+      "cameras_problema": 62,
+      "total_veiculos": 314,
       "metropole": true
     },
     {
       "operadora_id": 702,
       "unidade": "METRÓPOLE - AE CARVALHO",
       "regiao": "Leste",
-      "veiculos_problema": 44,
+      "veiculos_problema": 43,
       "veiculos_erro_sd": 23,
-      "camera_100_offline": 40,
+      "camera_100_offline": 37,
       "camera_erro_sd": 23,
-      "camera_21_problema": 21,
+      "camera_21_problema": 20,
       "camera_retirada": 0,
-      "cameras_problema": 63,
-      "total_veiculos": 228,
+      "cameras_problema": 60,
+      "total_veiculos": 237,
       "metropole": true
     },
     {
       "operadora_id": 660,
       "unidade": "ALFA RODOBUS",
       "regiao": "Oeste",
-      "veiculos_problema": 34,
+      "veiculos_problema": 33,
       "veiculos_erro_sd": 6,
-      "camera_100_offline": 33,
+      "camera_100_offline": 32,
       "camera_erro_sd": 6,
-      "camera_21_problema": 21,
+      "camera_21_problema": 20,
       "camera_retirada": 0,
-      "cameras_problema": 39,
-      "total_veiculos": 175,
+      "cameras_problema": 38,
+      "total_veiculos": 178,
       "metropole": false
     },
     {
       "operadora_id": 707,
       "unidade": "METRÓPOLE - MBOI - MIRIM",
       "regiao": "Leste",
-      "veiculos_problema": 34,
+      "veiculos_problema": 32,
       "veiculos_erro_sd": 16,
-      "camera_100_offline": 44,
+      "camera_100_offline": 40,
       "camera_erro_sd": 17,
-      "camera_21_problema": 13,
+      "camera_21_problema": 12,
       "camera_retirada": 0,
-      "cameras_problema": 61,
-      "total_veiculos": 186,
+      "cameras_problema": 57,
+      "total_veiculos": 188,
       "metropole": true
     },
     {
       "operadora_id": 703,
       "unidade": "METRÓPOLE - EXPANDIR",
       "regiao": "Leste",
-      "veiculos_problema": 25,
+      "veiculos_problema": 27,
       "veiculos_erro_sd": 17,
-      "camera_100_offline": 12,
+      "camera_100_offline": 16,
       "camera_erro_sd": 24,
-      "camera_21_problema": 10,
+      "camera_21_problema": 13,
       "camera_retirada": 0,
-      "cameras_problema": 36,
+      "cameras_problema": 40,
       "total_veiculos": 96,
       "metropole": true
     },
@@ -132526,13 +134092,13 @@
       "operadora_id": 697,
       "unidade": "Alfa Rodobus SPE",
       "regiao": "Oeste",
-      "veiculos_problema": 23,
-      "veiculos_erro_sd": 9,
-      "camera_100_offline": 16,
-      "camera_erro_sd": 9,
-      "camera_21_problema": 20,
+      "veiculos_problema": 25,
+      "veiculos_erro_sd": 10,
+      "camera_100_offline": 17,
+      "camera_erro_sd": 10,
+      "camera_21_problema": 21,
       "camera_retirada": 0,
-      "cameras_problema": 25,
+      "cameras_problema": 27,
       "total_veiculos": 156,
       "metropole": false
     },
@@ -132540,13 +134106,13 @@
       "operadora_id": 698,
       "unidade": "GATO PRETO A1",
       "regiao": "Oeste",
-      "veiculos_problema": 12,
-      "veiculos_erro_sd": 6,
-      "camera_100_offline": 14,
-      "camera_erro_sd": 8,
-      "camera_21_problema": 3,
+      "veiculos_problema": 16,
+      "veiculos_erro_sd": 7,
+      "camera_100_offline": 21,
+      "camera_erro_sd": 9,
+      "camera_21_problema": 5,
       "camera_retirada": 0,
-      "cameras_problema": 22,
+      "cameras_problema": 30,
       "total_veiculos": 91,
       "metropole": false
     },
@@ -132584,27 +134150,27 @@
       "operadora_id": 705,
       "unidade": "METRÓPOLE - IMPERADOR",
       "regiao": "Leste",
-      "veiculos_problema": 90,
+      "veiculos_problema": 98,
       "veiculos_erro_sd": 42,
-      "camera_100_offline": 163,
+      "camera_100_offline": 175,
       "camera_erro_sd": 51,
-      "camera_21_problema": 38,
+      "camera_21_problema": 44,
       "camera_retirada": 0,
-      "cameras_problema": 214,
-      "total_veiculos": 228,
+      "cameras_problema": 226,
+      "total_veiculos": 244,
       "metropole": true
     },
     {
       "operadora_id": 678,
       "unidade": "METRÓPOLE PAULISTA - DEPINEDO",
       "regiao": "Sul",
-      "veiculos_problema": 75,
-      "veiculos_erro_sd": 40,
-      "camera_100_offline": 67,
-      "camera_erro_sd": 82,
-      "camera_21_problema": 20,
+      "veiculos_problema": 71,
+      "veiculos_erro_sd": 42,
+      "camera_100_offline": 56,
+      "camera_erro_sd": 84,
+      "camera_21_problema": 17,
       "camera_retirada": 7,
-      "cameras_problema": 150,
+      "cameras_problema": 141,
       "total_veiculos": 219,
       "metropole": true
     },
@@ -132612,69 +134178,69 @@
       "operadora_id": 704,
       "unidade": "METRÓPOLE - IGUATEMI",
       "regiao": "Leste",
-      "veiculos_problema": 57,
-      "veiculos_erro_sd": 23,
-      "camera_100_offline": 106,
-      "camera_erro_sd": 26,
-      "camera_21_problema": 35,
+      "veiculos_problema": 61,
+      "veiculos_erro_sd": 29,
+      "camera_100_offline": 102,
+      "camera_erro_sd": 34,
+      "camera_21_problema": 34,
       "camera_retirada": 0,
-      "cameras_problema": 132,
-      "total_veiculos": 163,
+      "cameras_problema": 136,
+      "total_veiculos": 178,
       "metropole": true
     },
     {
       "operadora_id": 706,
       "unidade": "METRÓPOLE - ITAIM",
       "regiao": "Leste",
-      "veiculos_problema": 47,
-      "veiculos_erro_sd": 33,
+      "veiculos_problema": 48,
+      "veiculos_erro_sd": 35,
       "camera_100_offline": 20,
-      "camera_erro_sd": 40,
+      "camera_erro_sd": 42,
       "camera_21_problema": 19,
       "camera_retirada": 0,
-      "cameras_problema": 60,
-      "total_veiculos": 310,
+      "cameras_problema": 62,
+      "total_veiculos": 314,
       "metropole": true
     },
     {
       "operadora_id": 702,
       "unidade": "METRÓPOLE - AE CARVALHO",
       "regiao": "Leste",
-      "veiculos_problema": 44,
+      "veiculos_problema": 43,
       "veiculos_erro_sd": 23,
-      "camera_100_offline": 40,
+      "camera_100_offline": 37,
       "camera_erro_sd": 23,
-      "camera_21_problema": 21,
+      "camera_21_problema": 20,
       "camera_retirada": 0,
-      "cameras_problema": 63,
-      "total_veiculos": 228,
+      "cameras_problema": 60,
+      "total_veiculos": 237,
       "metropole": true
     },
     {
       "operadora_id": 707,
       "unidade": "METRÓPOLE - MBOI - MIRIM",
       "regiao": "Leste",
-      "veiculos_problema": 34,
+      "veiculos_problema": 32,
       "veiculos_erro_sd": 16,
-      "camera_100_offline": 44,
+      "camera_100_offline": 40,
       "camera_erro_sd": 17,
-      "camera_21_problema": 13,
+      "camera_21_problema": 12,
       "camera_retirada": 0,
-      "cameras_problema": 61,
-      "total_veiculos": 186,
+      "cameras_problema": 57,
+      "total_veiculos": 188,
       "metropole": true
     },
     {
       "operadora_id": 703,
       "unidade": "METRÓPOLE - EXPANDIR",
       "regiao": "Leste",
-      "veiculos_problema": 25,
+      "veiculos_problema": 27,
       "veiculos_erro_sd": 17,
-      "camera_100_offline": 12,
+      "camera_100_offline": 16,
       "camera_erro_sd": 24,
-      "camera_21_problema": 10,
+      "camera_21_problema": 13,
       "camera_retirada": 0,
-      "cameras_problema": 36,
+      "cameras_problema": 40,
       "total_veiculos": 96,
       "metropole": true
     }
