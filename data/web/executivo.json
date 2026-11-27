@@ -1,76 +1,76 @@
 {
   "period": {
     "start": "2026-09-05",
-    "end": "2026-11-26",
-    "label": "05/09 a 26/11/2026"
+    "end": "2026-11-27",
+    "label": "05/09 a 27/11/2026"
   },
   "kpis": {
-    "maintenances": 1759,
-    "reincidences": 426,
-    "prefixes": 1333,
+    "maintenances": 1780,
+    "reincidences": 436,
+    "prefixes": 1344,
     "garages": 14,
-    "cameras_removed": 27
+    "cameras_removed": 29
   },
   "problem_buckets": [
     [
       "Cartão de Memória",
-      758
+      761
     ],
     [
       "Câmera",
-      804
+      806
     ],
     [
       "Cabeamento",
-      279
+      283
     ],
     [
       "Switch",
-      184
+      187
     ]
   ],
   "action_buckets": [
     [
       "Cartão de Memória",
-      772
+      775
     ],
     [
       "Câmera",
-      925
+      931
     ],
     [
       "Cabeamento",
-      319
+      324
     ],
     [
       "Switch",
-      189
+      192
     ]
   ],
   "top_problems": [
     [
       "Sem gravação de imagens",
-      1894
+      1901
     ],
     [
       "Configuração incorreta da câmera",
-      1172
+      1174
     ],
     [
       "Câmera mal reposicionada",
-      525
+      529
     ],
     [
       "Câmera inoperante / sem imagem",
-      462
+      464
     ],
     [
       "Switch apresentando falha",
-      430
+      433
     ],
     [
       "Cabeamento rompido/danificado",
-      282
+      283
     ],
     [
       "Câmera travada",
@@ -78,7 +78,7 @@
     ],
     [
       "RJ45 crimpado incorretamente",
-      160
+      163
     ],
     [
       "Câmera sem cartão de memória",
@@ -100,15 +100,15 @@
   "top_actions": [
     [
       "Formatação do cartão de memória",
-      2020
+      2027
     ],
     [
       "Ajuste da configuração padrão da câmera",
-      1926
+      1932
     ],
     [
       "Inserção ou substituição do cartão de memória",
-      647
+      654
     ],
     [
       "Reposicionamento adequado da câmera",
@@ -120,23 +120,23 @@
     ],
     [
       "Substituição do switch",
-      380
+      382
     ],
     [
       "Substituição da câmera defeituosa",
-      325
+      336
     ],
     [
       "Crimpagem correta do conector RJ45",
-      276
+      278
     ],
     [
       "Reparo do cabeamento",
-      223
+      225
     ],
     [
       "Ativação da Câmera (Câmera desconectada)",
-      203
+      206
     ],
     [
       "Correção na conexão dos cabos",
@@ -144,7 +144,7 @@
     ],
     [
       "Substituição do cabeamento",
-      142
+      143
     ]
   ],
   "garages": [
@@ -470,9 +470,9 @@
     },
     {
       "name": "Via Sudeste Cursino",
-      "maints": 51,
+      "maints": 54,
       "reinc": 2,
-      "prefixes": 49,
+      "prefixes": 52,
       "top_problems": [
         [
           "Sem gravação de imagens",
@@ -488,7 +488,7 @@
         ],
         [
           "Cabeamento rompido/danificado",
-          3
+          4
         ],
         [
           "Câmera inoperante / sem imagem",
@@ -514,7 +514,7 @@
         ],
         [
           "Substituição da câmera defeituosa",
-          8
+          9
         ],
         [
           "Substituição do switch",
@@ -535,14 +535,18 @@
         [
           "Reparo do cabeamento",
           2
+        ],
+        [
+          "Substituição do cabeamento",
+          1
         ]
       ]
     },
     {
       "name": "Via Sudeste Sapopemba",
-      "maints": 215,
-      "reinc": 33,
-      "prefixes": 182,
+      "maints": 218,
+      "reinc": 34,
+      "prefixes": 184,
       "top_problems": [
         [
           "Sem gravação de imagens",
@@ -558,7 +562,7 @@
         ],
         [
           "RJ45 crimpado incorretamente",
-          27
+          28
         ],
         [
           "Câmera travada",
@@ -596,7 +600,7 @@
       "top_actions": [
         [
           "Ajuste da configuração padrão da câmera",
-          382
+          383
         ],
         [
           "Formatação do cartão de memória",
@@ -612,7 +616,7 @@
         ],
         [
           "Reparo do cabeamento",
-          25
+          26
         ],
         [
           "Substituição da câmera defeituosa",
@@ -646,9 +650,9 @@
     },
     {
       "name": "Viação Grajaú",
-      "maints": 180,
-      "reinc": 23,
-      "prefixes": 157,
+      "maints": 184,
+      "reinc": 25,
+      "prefixes": 159,
       "top_problems": [
         [
           "Switch apresentando falha",
@@ -660,7 +664,7 @@
         ],
         [
           "Sem gravação de imagens",
-          77
+          79
         ],
         [
           "Cabeamento rompido/danificado",
@@ -692,7 +696,7 @@
         ],
         [
           "Câmera removida por terceiros",
-          14
+          15
         ],
         [
           "Fusível queimado",
@@ -702,7 +706,7 @@
       "top_actions": [
         [
           "Formatação do cartão de memória",
-          98
+          100
         ],
         [
           "Reposicionamento adequado da câmera",
@@ -714,7 +718,7 @@
         ],
         [
           "Substituição da câmera defeituosa",
-          62
+          64
         ],
         [
           "Reinicialização da câmera (Reset)",
@@ -730,7 +734,7 @@
         ],
         [
           "Reparo do cabeamento",
-          54
+          55
         ],
         [
           "Correção na conexão dos cabos",
@@ -742,7 +746,7 @@
         ],
         [
           "Inserção ou substituição do cartão de memória",
-          29
+          31
         ],
         [
           "Crimpagem correta do conector RJ45",
@@ -752,33 +756,33 @@
     },
     {
       "name": "Viação Metrópole AE Carvalho",
-      "maints": 139,
-      "reinc": 55,
-      "prefixes": 84,
+      "maints": 143,
+      "reinc": 57,
+      "prefixes": 86,
       "top_problems": [
         [
           "Sem gravação de imagens",
-          226
+          230
         ],
         [
           "Câmera mal reposicionada",
-          61
+          65
         ],
         [
           "Configuração incorreta da câmera",
-          30
+          32
         ],
         [
           "Switch apresentando falha",
-          25
+          26
         ],
         [
           "Câmera inoperante / sem imagem",
-          21
+          23
         ],
         [
           "RJ45 crimpado incorretamente",
-          14
+          15
         ],
         [
           "Câmera travada",
@@ -808,7 +812,7 @@
       "top_actions": [
         [
           "Formatação do cartão de memória",
-          223
+          227
         ],
         [
           "Reinicialização da câmera (Reset)",
@@ -816,7 +820,7 @@
         ],
         [
           "Ajuste da configuração padrão da câmera",
-          47
+          49
         ],
         [
           "Reposicionamento adequado da câmera",
@@ -824,7 +828,7 @@
         ],
         [
           "Inserção ou substituição do cartão de memória",
-          33
+          37
         ],
         [
           "Substituição do switch",
@@ -832,11 +836,11 @@
         ],
         [
           "Substituição da câmera defeituosa",
-          19
+          24
         ],
         [
           "Crimpagem correta do conector RJ45",
-          14
+          15
         ],
         [
           "Ativação da Câmera (Câmera desconectada)",
@@ -844,7 +848,7 @@
         ],
         [
           "Correção da falha no switch",
-          4
+          5
         ],
         [
           "Correção das conexões do switch",
@@ -1038,9 +1042,9 @@
     },
     {
       "name": "Viação Metrópole Imperador",
-      "maints": 172,
-      "reinc": 46,
-      "prefixes": 126,
+      "maints": 175,
+      "reinc": 48,
+      "prefixes": 127,
       "top_problems": [
         [
           "Configuração incorreta da câmera",
@@ -1048,11 +1052,11 @@
         ],
         [
           "Sem gravação de imagens",
-          285
+          286
         ],
         [
           "Switch apresentando falha",
-          75
+          76
         ],
         [
           "Câmera inoperante / sem imagem",
@@ -1098,11 +1102,11 @@
         ],
         [
           "Formatação do cartão de memória",
-          248
+          249
         ],
         [
           "Inserção ou substituição do cartão de memória",
-          70
+          71
         ],
         [
           "Ativação da Câmera (Câmera desconectada)",
@@ -1110,7 +1114,7 @@
         ],
         [
           "Substituição do switch",
-          48
+          49
         ],
         [
           "Crimpagem correta do conector RJ45",
@@ -1129,11 +1133,11 @@
           24
         ],
         [
-          "Correção na conexão dos cabos",
-          23
+          "Substituição da câmera defeituosa",
+          24
         ],
         [
-          "Substituição da câmera defeituosa",
+          "Correção na conexão dos cabos",
           23
         ],
         [
@@ -1356,9 +1360,9 @@
     },
     {
       "name": "Viação Metrópole Pinedo",
-      "maints": 263,
-      "reinc": 107,
-      "prefixes": 156,
+      "maints": 267,
+      "reinc": 110,
+      "prefixes": 157,
       "top_problems": [
         [
           "Sem gravação de imagens",
@@ -1366,7 +1370,7 @@
         ],
         [
           "Switch apresentando falha",
-          106
+          107
         ],
         [
           "Câmera inoperante / sem imagem",
@@ -1398,7 +1402,7 @@
         ],
         [
           "RJ45 crimpado incorretamente",
-          29
+          30
         ],
         [
           "Conexões do switch incorretas",
@@ -1416,11 +1420,11 @@
         ],
         [
           "Ajuste da configuração padrão da câmera",
-          379
+          382
         ],
         [
           "Crimpagem correta do conector RJ45",
-          112
+          113
         ],
         [
           "Reposicionamento adequado da câmera",
@@ -1428,7 +1432,7 @@
         ],
         [
           "Substituição do switch",
-          106
+          107
         ],
         [
           "Inserção ou substituição do cartão de memória",
@@ -1443,16 +1447,16 @@
           71
         ],
         [
+          "Substituição da câmera defeituosa",
+          54
+        ],
+        [
           "Correção na conexão dos cabos",
           54
         ],
         [
           "Substituição do fusível",
           53
-        ],
-        [
-          "Substituição da câmera defeituosa",
-          52
         ],
         [
           "Fixação adequada da câmera",
@@ -1539,7 +1543,7 @@
       "buckets": [
         [
           "Cabeamento",
-          5
+          6
         ],
         [
           "Switch",
@@ -1560,7 +1564,7 @@
       "buckets": [
         [
           "Cabeamento",
-          33
+          34
         ],
         [
           "Switch",
@@ -1593,7 +1597,7 @@
         ],
         [
           "Cartão de Memória",
-          39
+          40
         ]
       ]
     },
@@ -1602,19 +1606,19 @@
       "buckets": [
         [
           "Cabeamento",
-          11
-        ],
-        [
-          "Switch",
           12
         ],
         [
+          "Switch",
+          13
+        ],
+        [
           "Câmera",
-          56
+          58
         ],
         [
           "Cartão de Memória",
-          80
+          82
         ]
       ]
     },
@@ -1669,7 +1673,7 @@
         ],
         [
           "Switch",
-          25
+          26
         ],
         [
           "Câmera",
@@ -1728,11 +1732,11 @@
       "buckets": [
         [
           "Cabeamento",
-          70
+          71
         ],
         [
           "Switch",
-          44
+          45
         ],
         [
           "Câmera",
@@ -49425,6 +49429,88 @@
       ]
     },
     {
+      "id": "6715542260374207608",
+      "date": "2026-11-26",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "52860",
+      "problems": [
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Sem gravação de imagens",
+        "Cabeamento rompido/danificado",
+        "Falha na conexão dos cabos",
+        "Sem gravação de imagens"
+      ],
+      "actions": [
+        "Formatação do cartão de memória",
+        "Ajuste da configuração padrão da câmera",
+        "Formatação do cartão de memória",
+        "Formatação do cartão de memória",
+        "Ajuste da configuração padrão da câmera",
+        "Formatação do cartão de memória",
+        "Ajuste da configuração padrão da câmera",
+        "Formatação do cartão de memória",
+        "Correção na conexão dos cabos",
+        "Reparo do cabeamento",
+        "Crimpagem correta do conector RJ45",
+        "Correção das conexões do switch",
+        "Ajuste da configuração padrão da câmera",
+        "Formatação do cartão de memória",
+        "Ajuste da configuração padrão da câmera"
+      ],
+      "problem_buckets": [
+        "Cartão de Memória",
+        "Cartão de Memória",
+        "Cartão de Memória",
+        "Cartão de Memória",
+        "Cabeamento",
+        "Cabeamento",
+        "Cartão de Memória"
+      ],
+      "action_buckets": [
+        "Cartão de Memória",
+        "Câmera",
+        "Cartão de Memória",
+        "Cartão de Memória",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Cartão de Memória",
+        "Cabeamento",
+        "Cabeamento",
+        "Cabeamento",
+        "Switch",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera"
+      ]
+    },
+    {
+      "id": "6715570005461024919",
+      "date": "2026-11-26",
+      "garagem": "Via Sudeste Sapopemba",
+      "prefixo": "51576",
+      "problems": [
+        "Câmera removida por terceiros",
+        "Câmera removida por terceiros",
+        "Câmera removida por terceiros",
+        "Câmera removida por terceiros",
+        "Câmera removida por terceiros",
+        "Câmera removida por terceiros"
+      ],
+      "actions": [],
+      "problem_buckets": [
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Câmera"
+      ],
+      "action_buckets": []
+    },
+    {
       "id": "6714753009227467345",
       "date": "2026-11-26",
       "garagem": "Via Sudeste Sapopemba",
@@ -49508,6 +49594,28 @@
         "Câmera",
         "Câmera",
         "Câmera"
+      ]
+    },
+    {
+      "id": "6715538749466498009",
+      "date": "2026-11-26",
+      "garagem": "Via Sudeste Sapopemba",
+      "prefixo": "52904",
+      "problems": [
+        "Sem gravação de imagens",
+        "Cabeamento rompido/danificado"
+      ],
+      "actions": [
+        "Formatação do cartão de memória",
+        "Reparo do cabeamento"
+      ],
+      "problem_buckets": [
+        "Cartão de Memória",
+        "Cabeamento"
+      ],
+      "action_buckets": [
+        "Cartão de Memória",
+        "Cabeamento"
       ]
     },
     {
@@ -49629,6 +49737,48 @@
       ]
     },
     {
+      "id": "6715535972336743443",
+      "date": "2026-11-26",
+      "garagem": "Viação Metrópole Imperador",
+      "prefixo": "31122",
+      "problems": [
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Switch apresentando falha",
+        "Câmera inoperante / sem imagem",
+        "Sem gravação de imagens",
+        "Switch apresentando falha",
+        "Câmera inoperante / sem imagem",
+        "Sem gravação de imagens"
+      ],
+      "actions": [
+        "Ajuste da configuração padrão da câmera",
+        "Ajuste da configuração padrão da câmera",
+        "Ajuste da configuração padrão da câmera",
+        "Ajuste da configuração padrão da câmera"
+      ],
+      "problem_buckets": [
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Switch",
+        "Câmera",
+        "Cartão de Memória",
+        "Switch",
+        "Câmera",
+        "Cartão de Memória"
+      ],
+      "action_buckets": [
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Câmera"
+      ]
+    },
+    {
       "id": "6714803639273174075",
       "date": "2026-11-26",
       "garagem": "Viação Metrópole Imperador",
@@ -49743,6 +49893,616 @@
         "Cabeamento"
       ],
       "action_buckets": []
+    },
+    {
+      "id": "6715566368825843287",
+      "date": "2026-11-26",
+      "garagem": "Viação Metrópole Pinedo",
+      "prefixo": "73832",
+      "problems": [
+        "Câmera inoperante / sem imagem",
+        "Sem gravação de imagens",
+        "Cabeamento rompido/danificado",
+        "Câmera com infiltração"
+      ],
+      "actions": [
+        "Formatação do cartão de memória",
+        "Reinicialização da câmera (Reset)",
+        "Reparo do cabeamento",
+        "Substituição do cabeamento",
+        "Ajuste da configuração padrão da câmera"
+      ],
+      "problem_buckets": [
+        "Câmera",
+        "Cartão de Memória",
+        "Cabeamento",
+        "Câmera"
+      ],
+      "action_buckets": [
+        "Cartão de Memória",
+        "Câmera",
+        "Cabeamento",
+        "Cabeamento",
+        "Câmera"
+      ]
+    },
+    {
+      "id": "6715536948825054303",
+      "date": "2026-11-26",
+      "garagem": "Viação Metrópole Pinedo",
+      "prefixo": "73909",
+      "problems": [
+        "Câmera inoperante / sem imagem",
+        "Sem gravação de imagens",
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Formatação do cartão de memória",
+        "Substituição da câmera defeituosa",
+        "Reinicialização da câmera (Reset)",
+        "Reposicionamento adequado da câmera",
+        "Ajuste da configuração padrão da câmera"
+      ],
+      "problem_buckets": [
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera"
+      ],
+      "action_buckets": [
+        "Cartão de Memória",
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Câmera"
+      ]
+    },
+    {
+      "id": "6715547738827119840",
+      "date": "2026-11-26",
+      "garagem": "Viação Metrópole Pinedo",
+      "prefixo": "73915",
+      "problems": [
+        "Câmera inoperante / sem imagem",
+        "Sem gravação de imagens",
+        "Câmera desligada manualmente"
+      ],
+      "actions": [
+        "Formatação do cartão de memória",
+        "Reinicialização da câmera (Reset)",
+        "Ajuste da configuração padrão da câmera",
+        "Ativação da Câmera (Câmera desconectada)"
+      ],
+      "problem_buckets": [
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera"
+      ],
+      "action_buckets": [
+        "Cartão de Memória",
+        "Câmera",
+        "Câmera",
+        "Câmera"
+      ]
+    },
+    {
+      "id": "6715603130375696244",
+      "date": "2026-11-27",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "51217",
+      "problems": [
+        "Sem gravação de imagens",
+        "Cabeamento rompido/danificado",
+        "Falha na conexão dos cabos",
+        "Sem gravação de imagens",
+        "Cabeamento rompido/danificado",
+        "Falha na conexão dos cabos"
+      ],
+      "actions": [
+        "Formatação do cartão de memória",
+        "Formatação do cartão de memória",
+        "Formatação do cartão de memória",
+        "Formatação do cartão de memória",
+        "Formatação do cartão de memória",
+        "Correção na conexão dos cabos",
+        "Reparo do cabeamento",
+        "Substituição do cabeamento",
+        "Crimpagem correta do conector RJ45",
+        "Ajuste da configuração padrão da câmera",
+        "Formatação do cartão de memória",
+        "Correção na conexão dos cabos",
+        "Reparo do cabeamento",
+        "Substituição do cabeamento",
+        "Crimpagem correta do conector RJ45",
+        "Ajuste da configuração padrão da câmera"
+      ],
+      "problem_buckets": [
+        "Cartão de Memória",
+        "Cabeamento",
+        "Cabeamento",
+        "Cartão de Memória",
+        "Cabeamento",
+        "Cabeamento"
+      ],
+      "action_buckets": [
+        "Cartão de Memória",
+        "Cartão de Memória",
+        "Cartão de Memória",
+        "Cartão de Memória",
+        "Cartão de Memória",
+        "Cabeamento",
+        "Cabeamento",
+        "Cabeamento",
+        "Cabeamento",
+        "Câmera",
+        "Cartão de Memória",
+        "Cabeamento",
+        "Cabeamento",
+        "Cabeamento",
+        "Cabeamento",
+        "Câmera"
+      ]
+    },
+    {
+      "id": "6715751940378093684",
+      "date": "2026-11-27",
+      "garagem": "Via Sudeste Cursino",
+      "prefixo": "51232",
+      "problems": [
+        "Sem gravação de imagens",
+        "Cabeamento rompido/danificado",
+        "Falha na conexão dos cabos"
+      ],
+      "actions": [
+        "Formatação do cartão de memória",
+        "Formatação do cartão de memória",
+        "Formatação do cartão de memória",
+        "Formatação do cartão de memória",
+        "Formatação do cartão de memória",
+        "Formatação do cartão de memória",
+        "Correção da falha no switch",
+        "Correção na conexão dos cabos",
+        "Reparo do cabeamento",
+        "Substituição do cabeamento",
+        "Crimpagem correta do conector RJ45",
+        "Correção das conexões do switch",
+        "Ajuste da configuração padrão da câmera"
+      ],
+      "problem_buckets": [
+        "Cartão de Memória",
+        "Cabeamento",
+        "Cabeamento"
+      ],
+      "action_buckets": [
+        "Cartão de Memória",
+        "Cartão de Memória",
+        "Cartão de Memória",
+        "Cartão de Memória",
+        "Cartão de Memória",
+        "Cartão de Memória",
+        "Switch",
+        "Cabeamento",
+        "Cabeamento",
+        "Cabeamento",
+        "Cabeamento",
+        "Switch",
+        "Câmera"
+      ]
+    },
+    {
+      "id": "6715629593305416828",
+      "date": "2026-11-27",
+      "garagem": "Via Sudeste Sapopemba",
+      "prefixo": "51125",
+      "problems": [
+        "Sem gravação de imagens",
+        "Configuração incorreta da câmera",
+        "Sem gravação de imagens",
+        "Configuração incorreta da câmera",
+        "Sem gravação de imagens",
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Formatação do cartão de memória",
+        "Ajuste da configuração padrão da câmera",
+        "Formatação do cartão de memória",
+        "Ajuste da configuração padrão da câmera",
+        "Formatação do cartão de memória",
+        "Ajuste da configuração padrão da câmera"
+      ],
+      "problem_buckets": [
+        "Cartão de Memória",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera"
+      ],
+      "action_buckets": [
+        "Cartão de Memória",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera"
+      ]
+    },
+    {
+      "id": "6715635982717075305",
+      "date": "2026-11-27",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61519",
+      "problems": [
+        "Câmera mal reposicionada",
+        "Câmera mal reposicionada"
+      ],
+      "actions": [
+        "Fixação adequada da câmera",
+        "Fixação adequada da câmera"
+      ],
+      "problem_buckets": [
+        "Câmera",
+        "Câmera"
+      ],
+      "action_buckets": [
+        "Câmera",
+        "Câmera"
+      ]
+    },
+    {
+      "id": "6715632132711403317",
+      "date": "2026-11-27",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61533",
+      "problems": [
+        "Sem gravação de imagens",
+        "Câmera mal reposicionada",
+        "Câmera sem cartão de memória",
+        "Câmera inoperante / sem imagem",
+        "Sem gravação de imagens",
+        "Câmera travada",
+        "Sem gravação de imagens"
+      ],
+      "actions": [
+        "Substituição da câmera defeituosa",
+        "Fixação adequada da câmera",
+        "Ajuste da configuração padrão da câmera",
+        "Substituição da câmera defeituosa",
+        "Reinicialização da câmera (Reset)",
+        "Correção da falha no switch",
+        "Formatação do cartão de memória"
+      ],
+      "problem_buckets": [
+        "Cartão de Memória",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Cartão de Memória"
+      ],
+      "action_buckets": [
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Switch",
+        "Cartão de Memória"
+      ]
+    },
+    {
+      "id": "6715639262715942429",
+      "date": "2026-11-27",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61668",
+      "problems": [],
+      "actions": [],
+      "problem_buckets": [],
+      "action_buckets": []
+    },
+    {
+      "id": "6715650952717576597",
+      "date": "2026-11-27",
+      "garagem": "Viação Grajaú",
+      "prefixo": "61814",
+      "problems": [
+        "Câmera removida por terceiros"
+      ],
+      "actions": [],
+      "problem_buckets": [
+        "Câmera"
+      ],
+      "action_buckets": []
+    },
+    {
+      "id": "6715633363215956517",
+      "date": "2026-11-27",
+      "garagem": "Viação Metrópole AE Carvalho",
+      "prefixo": "32053",
+      "problems": [
+        "Sem gravação de imagens",
+        "Câmera mal reposicionada",
+        "Configuração incorreta da câmera",
+        "Câmera mal reposicionada"
+      ],
+      "actions": [
+        "Formatação do cartão de memória",
+        "Reposicionamento adequado da câmera",
+        "Ajuste da configuração padrão da câmera",
+        "Reposicionamento adequado da câmera"
+      ],
+      "problem_buckets": [
+        "Cartão de Memória",
+        "Câmera",
+        "Câmera",
+        "Câmera"
+      ],
+      "action_buckets": [
+        "Cartão de Memória",
+        "Câmera",
+        "Câmera",
+        "Câmera"
+      ]
+    },
+    {
+      "id": "6715587893214082673",
+      "date": "2026-11-27",
+      "garagem": "Viação Metrópole AE Carvalho",
+      "prefixo": "32057",
+      "problems": [
+        "Câmera inoperante / sem imagem",
+        "Sem gravação de imagens",
+        "Cabeamento rompido/danificado",
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Formatação do cartão de memória",
+        "Substituição do cabeamento",
+        "Ajuste da configuração padrão da câmera",
+        "Ativação da Câmera (Câmera desconectada)"
+      ],
+      "problem_buckets": [
+        "Câmera",
+        "Cartão de Memória",
+        "Cabeamento",
+        "Câmera"
+      ],
+      "action_buckets": [
+        "Cartão de Memória",
+        "Cabeamento",
+        "Câmera",
+        "Câmera"
+      ]
+    },
+    {
+      "id": "6715613943217936177",
+      "date": "2026-11-27",
+      "garagem": "Viação Metrópole AE Carvalho",
+      "prefixo": "32088",
+      "problems": [
+        "Sem gravação de imagens",
+        "Câmera mal reposicionada",
+        "Configuração incorreta da câmera",
+        "Câmera mal reposicionada"
+      ],
+      "actions": [
+        "Reposicionamento adequado da câmera",
+        "Reposicionamento adequado da câmera"
+      ],
+      "problem_buckets": [
+        "Cartão de Memória",
+        "Câmera",
+        "Câmera",
+        "Câmera"
+      ],
+      "action_buckets": [
+        "Câmera",
+        "Câmera"
+      ]
+    },
+    {
+      "id": "6715681913211702961",
+      "date": "2026-11-27",
+      "garagem": "Viação Metrópole AE Carvalho",
+      "prefixo": "32223",
+      "problems": [
+        "Falha na conexão dos cabos",
+        "Falha na conexão dos cabos",
+        "Falha na conexão dos cabos"
+      ],
+      "actions": [
+        "Correção na conexão dos cabos",
+        "Correção na conexão dos cabos",
+        "Correção na conexão dos cabos"
+      ],
+      "problem_buckets": [
+        "Cabeamento",
+        "Cabeamento",
+        "Cabeamento"
+      ],
+      "action_buckets": [
+        "Cabeamento",
+        "Cabeamento",
+        "Cabeamento"
+      ]
+    },
+    {
+      "id": "6715737222335587601",
+      "date": "2026-11-27",
+      "garagem": "Viação Metrópole Imperador",
+      "prefixo": "31146",
+      "problems": [
+        "Configuração incorreta da câmera",
+        "Sem gravação de imagens",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera",
+        "Câmera travada",
+        "Sem gravação de imagens",
+        "RJ45 crimpado incorretamente",
+        "Configuração incorreta da câmera",
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Ajuste da configuração padrão da câmera",
+        "Ajuste da configuração padrão da câmera",
+        "Ajuste da configuração padrão da câmera",
+        "Ajuste da configuração padrão da câmera",
+        "Formatação do cartão de memória",
+        "Crimpagem correta do conector RJ45",
+        "Ajuste da configuração padrão da câmera",
+        "Ajuste da configuração padrão da câmera"
+      ],
+      "problem_buckets": [
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Cartão de Memória",
+        "Cabeamento",
+        "Câmera",
+        "Câmera"
+      ],
+      "action_buckets": [
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Câmera",
+        "Cartão de Memória",
+        "Cabeamento",
+        "Câmera",
+        "Câmera"
+      ]
+    },
+    {
+      "id": "6715579981524881462",
+      "date": "2026-11-27",
+      "garagem": "Viação Metrópole Imperador",
+      "prefixo": "31743",
+      "problems": [
+        "Câmera inoperante / sem imagem",
+        "Cabeamento rompido/danificado"
+      ],
+      "actions": [
+        "Formatação do cartão de memória",
+        "Substituição do cabeamento",
+        "Ajuste da configuração padrão da câmera"
+      ],
+      "problem_buckets": [
+        "Câmera",
+        "Cabeamento"
+      ],
+      "action_buckets": [
+        "Cartão de Memória",
+        "Cabeamento",
+        "Câmera"
+      ]
+    },
+    {
+      "id": "6715650078829496880",
+      "date": "2026-11-27",
+      "garagem": "Viação Metrópole Pinedo",
+      "prefixo": "73803",
+      "problems": [
+        "Switch apresentando falha",
+        "Sem gravação de imagens",
+        "Câmera com infiltração",
+        "Switch apresentando falha",
+        "Câmera inoperante / sem imagem",
+        "Sem gravação de imagens",
+        "Configuração incorreta da câmera",
+        "Switch apresentando falha",
+        "Câmera inoperante / sem imagem",
+        "Sem gravação de imagens",
+        "Configuração incorreta da câmera",
+        "Switch apresentando falha",
+        "Câmera inoperante / sem imagem",
+        "Sem gravação de imagens",
+        "Configuração incorreta da câmera",
+        "Switch apresentando falha",
+        "Câmera inoperante / sem imagem",
+        "Sem gravação de imagens",
+        "Configuração incorreta da câmera",
+        "Switch apresentando falha",
+        "Câmera inoperante / sem imagem",
+        "Sem gravação de imagens",
+        "Configuração incorreta da câmera"
+      ],
+      "actions": [
+        "Formatação do cartão de memória",
+        "Substituição da câmera defeituosa",
+        "Reinicialização da câmera (Reset)",
+        "Substituição do switch",
+        "Formatação do cartão de memória",
+        "Reposicionamento adequado da câmera",
+        "Substituição do switch",
+        "Ajuste da configuração padrão da câmera",
+        "Formatação do cartão de memória",
+        "Reinicialização da câmera (Reset)",
+        "Ajuste da configuração padrão da câmera",
+        "Formatação do cartão de memória",
+        "Reinicialização da câmera (Reset)",
+        "Substituição do switch",
+        "Ajuste da configuração padrão da câmera",
+        "Formatação do cartão de memória",
+        "Reinicialização da câmera (Reset)",
+        "Substituição do switch",
+        "Ajuste da configuração padrão da câmera",
+        "Formatação do cartão de memória",
+        "Reinicialização da câmera (Reset)",
+        "Ajuste da configuração padrão da câmera"
+      ],
+      "problem_buckets": [
+        "Switch",
+        "Cartão de Memória",
+        "Câmera",
+        "Switch",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Switch",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Switch",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Switch",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Switch",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera"
+      ],
+      "action_buckets": [
+        "Cartão de Memória",
+        "Câmera",
+        "Câmera",
+        "Switch",
+        "Cartão de Memória",
+        "Câmera",
+        "Switch",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Switch",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Switch",
+        "Câmera",
+        "Cartão de Memória",
+        "Câmera",
+        "Câmera"
+      ]
     }
   ]
 }
